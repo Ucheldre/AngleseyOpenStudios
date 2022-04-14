@@ -16,7 +16,7 @@ var map = new ol.Map({
         zoom: 11,
         maxZoom: 18
     })
-
+    
 });
 var myExtent = map.getView().calculateExtent(map.getSize());
 map.setView(
@@ -32,7 +32,7 @@ var markers = new ol.layer.Vector({
     style: new ol.style.Style({
         image: new ol.style.Icon({
             anchor: [0.5, 1],
-            src: 'marker.png'
+            src: 'marker.png?time=' + Date.now()
         })
 
     })
@@ -331,9 +331,9 @@ var marker55 = new ol.Feature({
 markers.getSource().addFeature(marker55);
 
 
-map.on('click', function(evt) {
+map.on('click', function (evt) {
     var feature = map.forEachFeatureAtPixel(evt.pixel,
-        function(feature) {
+        function (feature) {
             return feature;
         });
     if (feature == marker1) {
@@ -439,7 +439,7 @@ map.on('click', function(evt) {
 function infoPageContent(name, url) {
 
     // document.getElementById("infoPageHeading").innerHTML = name;
-
+    
     document.getElementById("infoPage").style.display = "block";
     document.getElementById("hideMap").style.display = "block";
     document.getElementById("infoPageContent").data = url;
@@ -447,29 +447,18 @@ function infoPageContent(name, url) {
 }
 
 var idleTime = 0;
-$(document).ready(function() {
+$(document).ready(function () {
     // Increment the idle time counter every minute.
     var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
 
     // Zero the idle timer on mouse movement.
-    $(this).mousemove(function(e) {
+    $(this).mousemove(function (e) {
         idleTime = 0;
     });
-    $(this).keypress(function(e) {
+    $(this).keypress(function (e) {
         idleTime = 0;
     });
 });
-
-// if esc button pressed, close infoPage
-$(document).keyup(function(e) {
-
-    if (e.key === "Escape") {
-        if (document.getElementById("infoPage").style.display !== "none") {
-            closeInfoPage();
-        }
-    }
-});
-
 
 function timerIncrement() {
     idleTime = idleTime + 1;
@@ -480,12 +469,12 @@ function timerIncrement() {
     }
 }
 var hideMap = document.getElementById("hideMap");
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
     if (hideMap == event.target && hideMap.contains(event.target)) {
-        window.location.reload();
+        closeInfoPage();
     }
 });
-closeInfoPage = function() {
-    window.location.reload();
+closeInfoPage = function () {
+    window.location.reload(true);
     //document.getElementById("infoPage").style.display = "none";
 }
