@@ -15,7 +15,7 @@ var map = new ol.Map({
         new ol.layer.Tile({
             source: new ol.source.OSM({
                 attributions: [
-                    'Maps © OpenSeaMap | Project © Damian Hall-Beal',
+                    'Maps © OpenStreetMap | Project © Damian Hall-Beal',
                 ],
             })
         })
