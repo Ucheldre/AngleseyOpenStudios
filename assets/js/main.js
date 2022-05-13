@@ -468,6 +468,7 @@ function timerIncrement() {
     // if (document.getElementById("infoPage").style.display == "block") {
     if (idleTime > 0) { // if idle for more than one minute, then close the info page
         closeInfoPage();
+        idleTime = 0;
     }
     // }
 }
@@ -477,7 +478,44 @@ document.addEventListener("click", function(event) {
         closeInfoPage();
     }
 });
+
 closeInfoPage = function() {
-    window.location.reload(true);
+    if (navigator.onLine) {
+        window.location.reload(true);
+    }
     //document.getElementById("infoPage").style.display = "none";
 }
+
+toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": true,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": true,
+    "onclick": null,
+    "showDuration": "10000",
+    "hideDuration": "10000",
+    "timeOut": "10000",
+    "extendedTimeOut": "5000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+    }
+    var offlineInterval;
+    window.addEventListener('offline', () => {
+        toastr.error('You are offline!');
+        if (!offlineInterval) {
+            offlineInterval = setInterval(() => {
+                toastr.error('You are offline!');
+            }, 5000);
+        }
+    });
+
+    window.addEventListener('online', () => {
+
+            clearInterval(offlineInterval);
+            offlineInterval = null;
+        toastr.success('You are back online!');
+    });
