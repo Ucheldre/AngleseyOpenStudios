@@ -4,11 +4,20 @@ var interactions = new ol.interaction.defaults({
 });
 var map = new ol.Map({
     target: 'map',
-    controls: [],
+    controls: ol.control.defaults({
+        attributionOptions: ({ collapsible: false })
+    }).extend([
+        new ol.control.ZoomSlider(),
+        new ol.control.ScaleLine()
+    ]),
     interactions: interactions,
     layers: [
         new ol.layer.Tile({
-            source: new ol.source.OSM()
+            source: new ol.source.OSM({
+                attributions: [
+                    'Maps © OpenSeaMap | Project © Damian Hall-Beal',
+                ],
+            })
         })
     ],
     view: new ol.View({
@@ -331,9 +340,9 @@ var marker55 = new ol.Feature({
 markers.getSource().addFeature(marker55);
 
 
-map.on('click', function(evt) {
+map.on('click', function (evt) {
     var feature = map.forEachFeatureAtPixel(evt.pixel,
-        function(feature) {
+        function (feature) {
             return feature;
         });
     if (feature == marker1) {
@@ -447,18 +456,18 @@ function infoPageContent(name, url) {
 }
 
 var idleTime = 0;
-$(document).ready(function() {
+$(document).ready(function () {
     // Increment the idle time counter every minute.
     var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
 
     // Zero the idle timer on mouse movement.
-    $(this).mousemove(function(e) {
+    $(this).mousemove(function (e) {
         idleTime = 0;
     });
-    $(this).keypress(function(e) {
+    $(this).keypress(function (e) {
         idleTime = 0;
     });
-    map.on('moveend', function(evt) {
+    map.on('moveend', function (evt) {
         idleTime = 0;
     });
 });
@@ -473,17 +482,16 @@ function timerIncrement() {
     // }
 }
 var hideMap = document.getElementById("hideMap");
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
     if (hideMap == event.target && hideMap.contains(event.target)) {
         closeInfoPage();
     }
 });
 
-closeInfoPage = function() {
+closeInfoPage = function () {
     if (navigator.onLine) {
         window.location.reload(true);
     }
-    //document.getElementById("infoPage").style.display = "none";
 }
 
 toastr.options = {
@@ -502,20 +510,19 @@ toastr.options = {
     "hideEasing": "linear",
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
+}
+var offlineInterval;
+window.addEventListener('offline', () => {
+    toastr.error('You are offline!');
+    if (!offlineInterval) {
+        offlineInterval = setInterval(() => {
+            toastr.error('You are offline!');
+        }, 5000);
     }
-    var offlineInterval;
-    window.addEventListener('offline', () => {
-        toastr.error('You are offline!');
-        if (!offlineInterval) {
-            offlineInterval = setInterval(() => {
-                toastr.error('You are offline!');
-            }, 5000);
-        }
-    });
+});
 
-    window.addEventListener('online', () => {
-
-            clearInterval(offlineInterval);
-            offlineInterval = null;
-        toastr.success('You are back online!');
-    });
+window.addEventListener('online', () => {
+    clearInterval(offlineInterval);
+    offlineInterval = null;
+    toastr.success('You are back online!');
+});
