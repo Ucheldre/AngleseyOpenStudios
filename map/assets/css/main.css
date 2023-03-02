@@ -46,6 +46,8 @@ body,
     display: none;
     position: absolute;
     background: rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
+    backdrop-filter: blur(6px);
 }
 
 .closeInfoPage {
