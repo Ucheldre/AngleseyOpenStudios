@@ -22,7 +22,7 @@ var map = new ol.Map({
     ],
     view: new ol.View({
         center: ol.proj.fromLonLat([-4.3808, 53.2845]),
-        zoom: 11,
+        zoom: 10,
         maxZoom: 18
     })
 
@@ -32,7 +32,7 @@ map.setView(
     new ol.View({
         center: ol.proj.fromLonLat([-4.3808, 53.2845]),
         extent: myExtent,
-        zoom: 11,
+        zoom: 10,
         maxZoom: 18
     })
 );
