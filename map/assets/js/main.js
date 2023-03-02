@@ -41,7 +41,7 @@ var markers = new ol.layer.Vector({
     style: new ol.style.Style({
         image: new ol.style.Icon({
             anchor: [0.5, 1],
-            src: 'marker.png?time=' + Date.now()
+            src: 'marker.webp?time=' + Date.now()
         })
 
     })
