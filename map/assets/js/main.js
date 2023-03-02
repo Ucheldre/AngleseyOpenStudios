@@ -490,7 +490,7 @@ document.addEventListener("click", function(event) {
 
 closeInfoPage = function() {
     if (navigator.onLine) {
-        window.location.reload(true);
+        window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
     }
 }
 
