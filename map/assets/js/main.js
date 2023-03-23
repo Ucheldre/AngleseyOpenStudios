@@ -43,7 +43,6 @@ var markers = new ol.layer.Vector({
             anchor: [0.5, 1],
             src: 'marker.webp?time=' + Date.now()
         })
-
     })
 });
 map.addLayer(markers);
