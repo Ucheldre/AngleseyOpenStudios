@@ -102,45 +102,39 @@ var marker9 = new ol.Feature({
 markers.getSource().addFeature(marker9);
 
 // Mary Jane Flower
-//53.26378193894662, -4.0930427173143835
 var marker10 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09333, 53.26388]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.093042, 53.2637819]))
 });
 markers.getSource().addFeature(marker10);
 
-// Ian Walton
+// Sally Fairclough
 var marker11 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09155, 53.26338]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.093965, 53.263105]))
 });
 markers.getSource().addFeature(marker11);
 
-// Hartworks (Anne Smith)
+// Ian Walton
 var marker12 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09158, 53.26305]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09155, 53.26338]))
 });
 markers.getSource().addFeature(marker12);
 
-// Plas Bodfa Projects and Siw Thomas
-var marker13and23 = new ol.Feature({
+// The Bulkeley Gallery
+// H’artworks (Anne Snaith)
+var marker13and14 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09795, 53.29374]))
 });
-markers.getSource().addFeature(marker13and23);
+markers.getSource().addFeature(marker13and14);
 
-// Val Gem Hughes
-var marker14 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.08065, 53.29593]))
-});
-markers.getSource().addFeature(marker14);
-
-// Marion Rose
+// Janet Bell
 var marker15 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.08113, 53.30641]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.092880, 53.264136]))
 });
 markers.getSource().addFeature(marker15);
 
-// Janet Bell
+// Peter Read
 var marker16 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.07051, 53.29915]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.094942, 53.305352]))
 });
 markers.getSource().addFeature(marker16);
 
@@ -376,15 +370,13 @@ map.on('click', function(evt) {
     } else if (feature == marker10) {
         infoPageContent("Mary Jane Flower", "./pages/10.html");
     } else if (feature == marker11) {
-        infoPageContent("Ian Walton", "./pages/11.html");
+        infoPageContent("Sally Fairclough", "./pages/11.html");
     } else if (feature == marker12) {
-        infoPageContent("Hartworks (Anne Smith)", "./pages/12.html");
-    } else if (feature == marker13and23) {
-        infoPageContent("Plas Bodfa", "./pages/13and23.html");
-    } else if (feature == marker14) {
-        infoPageContent("Val Gem Hughes", "./pages/14.html");
+        infoPageContent("Ian Walton", "./pages/12.html");
+    } else if (feature == marker13and14) {
+        infoPageContent("The Bulkeley Gallery & Hartworks (Anne Smith)", "./pages/13and14.html");
     } else if (feature == marker15) {
-        infoPageContent("Marion Rose", "./pages/15.html");
+        infoPageContent("Janet Bell", "./pages/15.html");
     } else if (feature == marker16) {
         infoPageContent("Janet Bell", "./pages/16.html");
     } else if (feature == marker17) {
