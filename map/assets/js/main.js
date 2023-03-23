@@ -15,7 +15,7 @@ var map = new ol.Map({
         new ol.layer.Tile({
             source: new ol.source.OSM({
                 attributions: [
-                    'Maps © OpenStreetMap | Project © Damian Hall-Beal',
+                    'Maps © OpenStreetMap | Project © Damian Hall-Beal for Canolfan Ucheldre Centre',
                 ],
             })
         })
@@ -47,9 +47,9 @@ var markers = new ol.layer.Vector({
 });
 map.addLayer(markers);
 
-// Glyn Davies
+// Siw Thomas
 var marker1 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.16287, 53.22553]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.162571, 53.2266292]))
 });
 markers.getSource().addFeature(marker1);
 
@@ -59,37 +59,50 @@ var marker2 = new ol.Feature({
 });
 markers.getSource().addFeature(marker2);
 
-// Georgina Rambton
+// Retallick + Aston
 var marker3 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09524, 53.26431]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.168563, 53.231059]))
 });
 markers.getSource().addFeature(marker3);
 
-// Beaumaris Jewellery
+// Gwenllian Vaughan
 var marker4 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09166, 53.26354]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.140323, 53.249487]))
 });
 markers.getSource().addFeature(marker4);
 
-// David Jones
+// Gorgina Rambton
 var marker5 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09316, 53.2645]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.095228, 53.264392]))
 });
 markers.getSource().addFeature(marker5);
 
-// Canolfan David Hughes
+// Beaumaris Jewellery
 var marker6 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.0914, 53.26429]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.091698, 53.263416]))
 });
 markers.getSource().addFeature(marker6);
 
-// The Extange
-var marker7To9 = new ol.Feature({
+// David Jones
+var marker7 = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.093181, 53.264629]))
+});
+markers.getSource().addFeature(marker7);
+
+// Canolfan David Hughes
+var marker8 = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.091464, 53.264482]))
+});
+markers.getSource().addFeature(marker8);
+
+// Jon Fairbairn
+var marker9 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09254, 53.26335]))
 });
-markers.getSource().addFeature(marker7To9);
+markers.getSource().addFeature(marker9);
 
-// Art Quarter Gallery
+// Mary Jane Flower
+//53.26378193894662, -4.0930427173143835
 var marker10 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09333, 53.26388]))
 });
@@ -166,8 +179,6 @@ var marker22 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.14827, 53.30032]))
 });
 markers.getSource().addFeature(marker22);
-
-// 23 is also 13
 
 // Helen Dolling
 var marker24 = new ol.Feature({
@@ -345,21 +356,25 @@ map.on('click', function(evt) {
             return feature;
         });
     if (feature == marker1) {
-        infoPageContent("Oriel Glyn Davies", "./pages/1.html");
+        infoPageContent("Siw Thomas", "./pages/1.html");
     } else if (feature == marker2) {
         infoPageContent("Jane Evans", "./pages/2.html");
     } else if (feature == marker3) {
-        infoPageContent("Georgina Rambton", "./pages/3.html");
+        infoPageContent("etallick + Aston", "./pages/3.html");
     } else if (feature == marker4) {
-        infoPageContent("Beaumaris Jewellery", "./pages/4.html");
+        infoPageContent("Gwenllian Vaughan", "./pages/4.html");
     } else if (feature == marker5) {
-        infoPageContent("David Jones", "./pages/5.html");
+        infoPageContent("Gorgina Rambton", "./pages/5.html");
     } else if (feature == marker6) {
-        infoPageContent("Canolfan David Hughes", "./pages/6.html");
-    } else if (feature == marker7To9) {
-        infoPageContent("Jon Fairbairn", "./pages/7To9.html");
+        infoPageContent("Beaumaris Jewellery", "./pages/6.html");
+    } else if (feature == marker7) {
+        infoPageContent("David Jones", "./pages/7.html");
+    } else if (feature == marker8) {
+        infoPageContent("Canolfan David Hughes", "./pages/8.html");
+    } else if (feature == marker9) {
+        infoPageContent("Jon Fairbairn", "./pages/9.html");
     } else if (feature == marker10) {
-        infoPageContent("Art Quarter Gallery", "./pages/10.html");
+        infoPageContent("Mary Jane Flower", "./pages/10.html");
     } else if (feature == marker11) {
         infoPageContent("Ian Walton", "./pages/11.html");
     } else if (feature == marker12) {
