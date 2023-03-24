@@ -506,7 +506,7 @@ document.addEventListener("click", function(event) {
 
 closeInfoPage = function() {
     if (navigator.onLine) {
-        // window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
+        window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
     }
 }
 
