@@ -5,6 +5,7 @@
     <title>Anglesey Open Studios | 2023</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
@@ -59,7 +60,12 @@
     <div class="d-flex flex-column min-vh-100 min-vw-100">
         <div class="d-flex flex-grow-1 justify-content-center align-items-center">
             <div class="text-center">
+                <br><br>
+                <br><br>
                 <img src="./assets/infoMap1.jpg" onclick="window.location='map\/index.html';">
+                <br><br>
+                <h4>Click for the interactive map!</h4>
+                <h4>Cliciwch i ddefnyddio'r map rhyngweithiol!</h4>
             </div>
         </div>
         <!-- Full width bootstrap footer -->
@@ -83,6 +89,37 @@
         ],
         delay: [10000, 10000, 10000, 10000, 10000]
     });
+
+
+    var idleTime = 0;
+    $(document).ready(function() {
+        // Increment the idle time counter every minute.
+        var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+
+        // Zero the idle timer on mouse movement.
+        $(this).mousemove(function(e) {
+            idleTime = 0;
+        });
+        $(this).keypress(function(e) {
+            idleTime = 0;
+        });
+    });
+
+    function timerIncrement() {
+        idleTime = idleTime + 1;
+        // if (document.getElementById("infoPage").style.display == "block") {
+        if (idleTime > 0) { // if idle for more than one minute, then close the info page
+            closeInfoPage();
+            idleTime = 0;
+        }
+        // }
+    }
+
+    closeInfoPage = function() {
+        if (navigator.onLine) {
+            window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
+        }
+    }
 </script>
 
 </html>
