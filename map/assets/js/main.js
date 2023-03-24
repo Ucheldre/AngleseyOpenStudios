@@ -239,114 +239,117 @@ var marker33 = new ol.Feature({
 });
 markers.getSource().addFeature(marker33);
 
-// Helen Grobe White
+// Wendy Vidler
 var marker34 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.44742, 53.3925]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.50562, 53.40279]))
 });
 markers.getSource().addFeature(marker34);
 
-// Wendy Vidler
+// Bay Tree Gallery
 var marker35 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.50562, 53.40279]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.56224, 53.28164]))
 });
 markers.getSource().addFeature(marker35);
 
-// Stwdio Refail
+// Bryn Humphreys
 var marker36 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.50346, 53.29183]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.64391, 53.31576]))
 });
 markers.getSource().addFeature(marker36);
 
-// Bay Tree Gallery
+// Whispy Willow Creations
 var marker37 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.56224, 53.28164]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.65885, 53.31043]))
 });
 markers.getSource().addFeature(marker37);
 
-// Bryn Humphreys
-var marker38 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.64391, 53.31576]))
-});
-markers.getSource().addFeature(marker38);
-
-// Whispy Willow Creations
-var marker39 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.65885, 53.31043]))
-});
-markers.getSource().addFeature(marker39);
-
 // Ucheldre Centre
-var marker40To44 = new ol.Feature({
+// Peter Alexander Lane
+var marker38and39 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.63856, 53.30944]))
 });
-markers.getSource().addFeature(marker40To44);
+markers.getSource().addFeature(marker38and39);
 
 // Janey Masters
-var marker45 = new ol.Feature({
+var marker40 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.63549, 53.30447]))
+});
+markers.getSource().addFeature(marker40);
+
+// Trearddur Bay Art
+var marker41 = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.623130, 53.285876]))
+});
+markers.getSource().addFeature(marker41);
+
+// Anwen Roberts
+var marker42 = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.59922, 53.27128]))
+});
+markers.getSource().addFeature(marker42);
+
+// Huw Gareth Jones
+var marker43 = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.58591, 53.24295]))
+});
+markers.getSource().addFeature(marker43);
+
+// Jayne Huskisson
+var marker44 = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.441701, 53.242515]))
+});
+markers.getSource().addFeature(marker44);
+
+// Judith Donaghy
+var marker45 = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.49433, 53.22884]))
 });
 markers.getSource().addFeature(marker45);
 
-// Anwen Roberts
+// Jane Samuel
+// (approx location)
 var marker46 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.59922, 53.27128]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.52227, 53.22654]))
 });
 markers.getSource().addFeature(marker46);
 
-// Huw Gareth Jones
+// Liz Toole
 var marker47 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.58591, 53.24295]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.404962, 53.195954]))
 });
 markers.getSource().addFeature(marker47);
 
-// Judith Donaghy
+// Tal Y Sarn Farm
 var marker48 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.49433, 53.22884]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.334261, 53.165656]))
 });
 markers.getSource().addFeature(marker48);
 
-// Jane Samuel
-// (approx location)
+// Craig Taylor
 var marker49 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.52227, 53.22654]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.329565, 53.190609]))
 });
 markers.getSource().addFeature(marker49);
 
-// ArtismUK
+// Wanda & David Garner
+// (approx location)
 var marker50 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.46573, 53.19044]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.28032, 53.17999]))
 });
 markers.getSource().addFeature(marker50);
 
-// Mark Kostiak
+// Carole Randall
+// (approx location)
 var marker51 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.29661, 53.1616]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.202341, 53.216938]))
 });
 markers.getSource().addFeature(marker51);
 
-// Wanda & David Garner
-// (approx location)
-var marker52 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.28032, 53.17999]))
-});
-
-// Carole Randall
-var marker53 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.20283, 53.21512]))
-});
-markers.getSource().addFeature(marker53);
-
-// Andrew Southall
-var marker54 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.26500, 53.21892]))
-});
-markers.getSource().addFeature(marker54);
-
 // Oriel Mon
-var marker55 = new ol.Feature({
+var marker52 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.31203, 53.26343]))
 });
-markers.getSource().addFeature(marker55);
+markers.getSource().addFeature(marker52);
 
 
 map.on('click', function(evt) {
@@ -413,47 +416,47 @@ map.on('click', function(evt) {
     } else if (feature == marker30) {
         infoPageContent("Oriel Amlwch", "./pages/30.html");
     } else if (feature == marker31) {
-        infoPageContent("David Weaver", "./pages/31.html");
+        infoPageContent("Artisan Studio", "./pages/31.html");
     } else if (feature == marker32) {
-        infoPageContent("Caffi Siop Mechell", "./pages/32.html");
+        infoPageContent("David Weaver", "./pages/32.html");
     } else if (feature == marker33) {
-        infoPageContent("Helen Grobe White", "./pages/33.html");
+        infoPageContent("Caffi Siop Mechell", "./pages/33.html");
     } else if (feature == marker34) {
-        infoPageContent("Helen White", "./pages/34.html");
+        infoPageContent("Wendy Vidler", "./pages/34.html");
     } else if (feature == marker35) {
-        infoPageContent("Wendy Vidler", "./pages/35.html");
+        infoPageContent("Bay Tree Gallery", "./pages/35.html");
     } else if (feature == marker36) {
-        infoPageContent("Stiwdio Refail", "./pages/36.html");
+        infoPageContent("Bryn Humphreys", "./pages/36.html");
     } else if (feature == marker37) {
-        infoPageContent("Bay Tree Gallery", "./pages/37.html");
-    } else if (feature == marker38) {
-        infoPageContent("Bryn Humphreys", "./pages/38.html");
-    } else if (feature == marker39) {
-        infoPageContent("Wispy Willow Creations", "./pages/39.html");
-    } else if (feature == marker40To44) {
-        infoPageContent("Canolfan Ucheldre", "./pages/40To44.html");
+        infoPageContent("Wispy Willow Creations", "./pages/37.html");
+    } else if (feature == marker38and39) {
+        infoPageContent("Canolfan Ucheldre", "./pages/38and39.html");
+    } else if (feature == marker40) {
+        infoPageContent("Janey Masters", "./pages/40.html");
+    } else if (feature == marker41) {
+        infoPageContent("Trearddur Bay Art", "./pages/41.html");
+    } else if (feature == marker42) {
+        infoPageContent("Anwen Roberts", "./pages/42.html");
+    } else if (feature == marker43) {
+        infoPageContent("Huw Gareth Jones", "./pages/43.html");
+    } else if (feature == marker44) {
+        infoPageContent("Jayne Huskisson", "./pages/44.html");
     } else if (feature == marker45) {
-        infoPageContent("Janey Masters", "./pages/45.html");
+        infoPageContent("Judith Donaghy", "./pages/45.html");
     } else if (feature == marker46) {
-        infoPageContent("Anwen Roberts", "./pages/46.html");
+        infoPageContent("Jane Samuel", "./pages/46.html");
     } else if (feature == marker47) {
-        infoPageContent("Huw Gareth Jones", "./pages/47.html");
+        infoPageContent("Liz Toole", "./pages/47.html");
     } else if (feature == marker48) {
-        infoPageContent("Judith Donaghy", "./pages/48.html");
+        infoPageContent("Tal Y Sarn Farm", "./pages/48.html");
     } else if (feature == marker49) {
-        infoPageContent("Jane Samuel", "./pages/49.html");
+        infoPageContent("Craig Taylor", "./pages/49.html");
     } else if (feature == marker50) {
-        infoPageContent("Artism UK", "./pages/50.html");
+        infoPageContent("Wanda & David Garner", "./pages/50.html");
     } else if (feature == marker51) {
-        infoPageContent("Mark Kotiak", "./pages/51.html");
+        infoPageContent("Carole Randall", "./pages/51.html");
     } else if (feature == marker52) {
-        infoPageContent("Wanda & David Garner", "./pages/52.html");
-    } else if (feature == marker53) {
-        infoPageContent("Carole Randall", "./pages/53.html");
-    } else if (feature == marker54) {
-        infoPageContent("Andrew Southall", "./pages/54.html");
-    } else if (feature == marker55) {
-        infoPageContent("Oriel Mon", "./pages/55.html");
+        infoPageContent("Oriel Mon", "./pages/52.html");
     }
 });
 
@@ -503,7 +506,7 @@ document.addEventListener("click", function(event) {
 
 closeInfoPage = function() {
     if (navigator.onLine) {
-        window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
+        // window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
     }
 }
 
