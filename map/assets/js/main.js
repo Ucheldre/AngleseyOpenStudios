@@ -1,4 +1,5 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
+
 var interactions = new ol.interaction.defaults({
     altShiftDragRotate: false,
     pinchRotate: false
@@ -23,7 +24,7 @@ var map = new ol.Map({
     ],
     view: new ol.View({
         center: ol.proj.fromLonLat([-4.3808, 53.2845]),
-        zoom: 12,
+        zoom: 11.25,
         maxZoom: 17
     })
 
@@ -33,7 +34,7 @@ map.setView(
     new ol.View({
         center: ol.proj.fromLonLat([-4.3808, 53.2845]),
         extent: myExtent,
-        zoom: 12,
+        zoom: 11.25,
         maxZoom: 17
     })
 );
@@ -470,6 +471,10 @@ function infoPageContent(name, url) {
     document.getElementById("hideMap").style.display = "block";
     document.getElementById("infoPageContent").data = url;
     document.getElementById("infoPageContent").src = url;
+    document.querySelector('#infoPageContent *').addEventListener("contextmenu", function(event) {
+        event.preventDefault();
+    });
+
 }
 
 var idleTime = 0;
