@@ -74,6 +74,16 @@ body,
     padding: 10px;
 }
 
+div[class="ol-overlay-container ol-selectable"] div {
+    font-size: large;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    cursor: default;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

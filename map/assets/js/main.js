@@ -1,4 +1,12 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
+// Get all the elements on the page
+const allElements = document.querySelectorAll('*');
+
+// Loop through all the elements and add the contextmenu event listener
+allElements.forEach(element => {
+  element.addEventListener('contextmenu', event => {
+    event.preventDefault();
+  });
+});
 
 var interactions = new ol.interaction.defaults({
     altShiftDragRotate: false,
