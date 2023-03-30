@@ -579,7 +579,7 @@ var marker38and39 = new ol.Feature({
 });
 markers.getSource().addFeature(marker38and39);
 var label38and39 = new ol.Overlay({
-    position: ol.proj.fromLonLat([4.63856, 53.30944]),
+    position: ol.proj.fromLonLat([-4.63856, 53.30944]),
     element: document.createElement('div'),
     offset: [-8, 5],
     positioning: 'center-left'
