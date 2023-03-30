@@ -482,11 +482,7 @@ map.on('click', function(evt) {
     }
 });
 
-
 function infoPageContent(name, url) {
-
-    // document.getElementById("infoPageHeading").innerHTML = name;
-
     document.getElementById("infoPage").style.display = "block";
     document.getElementById("hideMap").style.display = "block";
     document.getElementById("infoPageContent").data = url;
@@ -494,35 +490,32 @@ function infoPageContent(name, url) {
     document.querySelector('#infoPageContent *').addEventListener("contextmenu", function(event) {
         event.preventDefault();
     });
-
 }
 
-var idleTime = 0;
-$(document).ready(function() {
-    // Increment the idle time counter every minute.
-    var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+let idleTimer; // global variable to store the idle timer
+// add event listeners for mouse and keyboard events
+document.addEventListener("mousemove", resetIdleTimer);
+document.addEventListener("keypress", resetIdleTimer);
+document.addEventListener("touchstart", resetIdleTimer);
+document.addEventListener("touchmove", resetIdleTimer);
+document.addEventListener("touchend", resetIdleTimer);
+document.addEventListener("touchcancel", resetIdleTimer);
+document.addEventListener("wheel", resetIdleTimer);
+document.addEventListener("scroll", resetIdleTimer);
+document.addEventListener("mousedown", resetIdleTimer);
+document.addEventListener("click", resetIdleTimer);
 
-    // Zero the idle timer on mouse movement.
-    $(this).mousemove(function(e) {
-        idleTime = 0;
-    });
-    $(this).keypress(function(e) {
-        idleTime = 0;
-    });
-    map.on('moveend', function(evt) {
-        idleTime = 0;
-    });
-});
+// start the idle timer when the page loads
+resetIdleTimer();
 
-function timerIncrement() {
-    idleTime = idleTime + 1;
-    // if (document.getElementById("infoPage").style.display == "block") {
-    if (idleTime > 0) { // if idle for more than one minute, then close the info page
-        closeInfoPage();
-        idleTime = 0;
-    }
-    // }
+function resetIdleTimer() {
+    // reset the idle timer
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(function() {
+        window.location.href = "../index.html?time=" + Date.now(); // redirect to google.com
+    }, 300000); // 5 minutes in milliseconds
 }
+
 var hideMap = document.getElementById("hideMap");
 document.addEventListener("click", function(event) {
     if (hideMap == event.target && hideMap.contains(event.target)) {
@@ -531,9 +524,11 @@ document.addEventListener("click", function(event) {
 });
 
 closeInfoPage = function() {
-    if (navigator.onLine) {
-        window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
-    }
+    document.getElementById("infoPage").style.display = "none";
+    document.getElementById("hideMap").style.display = "none";
+    // if (navigator.onLine) {
+    //     window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
+    // }
 }
 
 toastr.options = {
