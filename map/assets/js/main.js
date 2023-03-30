@@ -38,6 +38,24 @@ map.setView(
         maxZoom: 17
     })
 );
+
+var mapinfoButton = new ol.layer.Vector({
+    source: new ol.source.Vector(),
+    style: new ol.style.Style({
+        image: new ol.style.Icon({
+            // anchor: [0.5, 1],
+            src: 'help.png?time=' + Date.now()
+        })
+    })
+});
+map.addLayer(mapinfoButton);
+
+var mapinfo = new ol.Feature({
+    // 53.37316124330884, -4.186517540192782
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.1865175, 53.3731612]))
+});
+mapinfoButton.getSource().addFeature(mapinfo);
+
 var markers = new ol.layer.Vector({
     source: new ol.source.Vector(),
     style: new ol.style.Style({
@@ -359,7 +377,9 @@ map.on('click', function(evt) {
         function(feature) {
             return feature;
         });
-    if (feature == marker1) {
+    if (feature == mapinfo) {
+        infoPageContent("Map Info", "./pages/help.html");
+    } else if (feature == marker1) {
         infoPageContent("Siw Thomas", "./pages/1.html");
     } else if (feature == marker2) {
         infoPageContent("Jane Evans", "./pages/2.html");
