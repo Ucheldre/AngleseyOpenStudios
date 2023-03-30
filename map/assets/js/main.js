@@ -1,3 +1,4 @@
+document.addEventListener('contextmenu', event => event.preventDefault());
 var interactions = new ol.interaction.defaults({
     altShiftDragRotate: false,
     pinchRotate: false
@@ -22,7 +23,7 @@ var map = new ol.Map({
     ],
     view: new ol.View({
         center: ol.proj.fromLonLat([-4.3808, 53.2845]),
-        zoom: 11,
+        zoom: 11.5,
         maxZoom: 17
     })
 
@@ -32,7 +33,7 @@ map.setView(
     new ol.View({
         center: ol.proj.fromLonLat([-4.3808, 53.2845]),
         extent: myExtent,
-        zoom: 11,
+        zoom: 11.5,
         maxZoom: 17
     })
 );
@@ -199,7 +200,7 @@ markers.getSource().addFeature(marker26);
 
 // Jenny Armour
 var marker27 = new ol.Feature({
-    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.246493,  53.324557]))
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.246493, 53.324557]))
 });
 markers.getSource().addFeature(marker27);
 
@@ -257,7 +258,7 @@ var marker36 = new ol.Feature({
 });
 markers.getSource().addFeature(marker36);
 
-// Whispy Willow Creations
+// Wispy Willow Creations
 var marker37 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.65885, 53.31043]))
 });
