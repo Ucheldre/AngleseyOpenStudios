@@ -51,7 +51,6 @@ var mapinfoButton = new ol.layer.Vector({
 map.addLayer(mapinfoButton);
 
 var mapinfo = new ol.Feature({
-    // 53.37316124330884, -4.186517540192782
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.1865175, 53.3731612]))
 });
 mapinfoButton.getSource().addFeature(mapinfo);
@@ -72,72 +71,168 @@ var marker1 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.162571, 53.2266292]))
 });
 markers.getSource().addFeature(marker1);
+var label1 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.162571, 53.2266292]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label1.getElement().innerHTML = '1';
+map.addOverlay(label1);
 
 // Jane Evans
 var marker2 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.16402, 53.23034]))
 });
 markers.getSource().addFeature(marker2);
+var label2 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.16402, 53.23034]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label2.getElement().innerHTML = '2';
+map.addOverlay(label2);
 
 // Retallick + Aston
 var marker3 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.168563, 53.231059]))
 });
 markers.getSource().addFeature(marker3);
+var label3 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.168563, 53.231059]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label3.getElement().innerHTML = '3';
+map.addOverlay(label3);
 
 // Gwenllian Vaughan
 var marker4 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.140323, 53.249487]))
 });
 markers.getSource().addFeature(marker4);
+var label4 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.140323, 53.249487]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label4.getElement().innerHTML = '4';
+map.addOverlay(label4);
 
 // Gorgina Rambton
 var marker5 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.095228, 53.264392]))
 });
 markers.getSource().addFeature(marker5);
+var label5 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.095228, 53.264392]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label5.getElement().innerHTML = '5';
+map.addOverlay(label5);
 
 // Beaumaris Jewellery
 var marker6 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.091698, 53.263416]))
 });
 markers.getSource().addFeature(marker6);
+var label6 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.091698, 53.263416]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label6.getElement().innerHTML = '6';
+map.addOverlay(label6);
 
 // David Jones
 var marker7 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.093181, 53.264629]))
 });
 markers.getSource().addFeature(marker7);
+var label7 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.093181, 53.264629]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label7.getElement().innerHTML = '7';
+map.addOverlay(label7);
 
 // Canolfan David Hughes
 var marker8 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.091464, 53.264482]))
 });
 markers.getSource().addFeature(marker8);
+var label8 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.091464, 53.264482]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label8.getElement().innerHTML = '8';
+map.addOverlay(label8);
 
 // Jon Fairbairn
 var marker9 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09254, 53.26335]))
 });
 markers.getSource().addFeature(marker9);
+var label9 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.09254, 53.26335]),
+    element: document.createElement('div'),
+    offset: [-6, 5],
+    positioning: 'center-left'
+});
+label9.getElement().innerHTML = '9';
+map.addOverlay(label9);
 
 // Mary Jane Flower
 var marker10 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.093042, 53.2637819]))
 });
 markers.getSource().addFeature(marker10);
+var label10 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.093042, 53.2637819]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label10.getElement().innerHTML = '10';
+map.addOverlay(label10);
 
 // Sally Fairclough
 var marker11 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.093965, 53.263105]))
 });
 markers.getSource().addFeature(marker11);
+var label11 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.093965, 53.263105]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label11.getElement().innerHTML = '11';
+map.addOverlay(label11);
 
 // Ian Walton
 var marker12 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09155, 53.26338]))
 });
 markers.getSource().addFeature(marker12);
+var label12 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.09155, 53.26338]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label12.getElement().innerHTML = '12';
+map.addOverlay(label12);
 
 // The Bulkeley Gallery
 // H’artworks (Anne Snaith)
@@ -145,143 +240,337 @@ var marker13and14 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.09795, 53.29374]))
 });
 markers.getSource().addFeature(marker13and14);
+var label13and14 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.09795, 53.29374]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label13and14.getElement().innerHTML = '13 & 14';
+map.addOverlay(label13and14);
 
 // Janet Bell
 var marker15 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.092880, 53.264136]))
 });
 markers.getSource().addFeature(marker15);
+var label15 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.092880, 53.264136]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label15.getElement().innerHTML = '15';
+map.addOverlay(label15);
 
 // Peter Read
 var marker16 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.094942, 53.305352]))
 });
 markers.getSource().addFeature(marker16);
+var label16 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.094942, 53.305352]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label16.getElement().innerHTML = '16';
+map.addOverlay(label16);
 
 // Aberlleiniog Sculpture
 var marker17 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.086370, 53.295598]))
 });
 markers.getSource().addFeature(marker17);
+var label17 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.086370, 53.295598]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label17.getElement().innerHTML = '17';
+map.addOverlay(label17);
 
 // Plas Bodfa Projects
 var marker18 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.06670, 53.30234]))
 });
 markers.getSource().addFeature(marker18);
+var label18 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.06670, 53.30234]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label18.getElement().innerHTML = '18';
+map.addOverlay(label18);
 
 // Vel Gem Hughes
 var marker19 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.080688, 53.295872]))
 });
 markers.getSource().addFeature(marker19);
+var label19 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.080688, 53.295872]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label19.getElement().innerHTML = '19';
+map.addOverlay(label19);
 
 // Jane Bunce
 var marker20 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.07033, 53.30595]))
 });
 markers.getSource().addFeature(marker20);
+var label20 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.07033, 53.30595]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label20.getElement().innerHTML = '20';
+map.addOverlay(label20);
 
 // Callahan Creative
 var marker21 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.070312, 53.305774]))
 });
 markers.getSource().addFeature(marker21);
+var label21 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.070312, 53.305774]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label21.getElement().innerHTML = '21';
+map.addOverlay(label21);
 
 // Red Studio
 var marker22 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.175577, 53.228296]))
 });
 markers.getSource().addFeature(marker22);
+var label22 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.175577, 53.228296]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label22.getElement().innerHTML = '22';
+map.addOverlay(label22);
+
 
 // Rhiannon + Paul Gash
 var marker23 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.149926, 53.301122]))
 });
+markers.getSource().addFeature(marker23);
+var label23 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.149926, 53.301122]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label23.getElement().innerHTML = '23';
+map.addOverlay(label23);
 
 // Jenet Peers
 var marker24 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.24034, 53.29958]))
 });
 markers.getSource().addFeature(marker24);
+var label24 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.24034, 53.29958]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label24.getElement().innerHTML = '24';
+map.addOverlay(label24);
 
 // Judith + William Moss
 var marker25 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.239689, 53.3035958]))
 });
 markers.getSource().addFeature(marker25);
+var label25 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.239689, 53.3035958]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label25.getElement().innerHTML = '25';
+map.addOverlay(label25);
 
 // Kathy Wedge
 var marker26 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.2162385, 53.302642]))
 });
 markers.getSource().addFeature(marker26);
+var label26 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.2162385, 53.302642]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label26.getElement().innerHTML = '26';
+map.addOverlay(label26);
 
 // Jenny Armour
 var marker27 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.246493, 53.324557]))
 });
 markers.getSource().addFeature(marker27);
+var label27 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.246493, 53.324557]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label27.getElement().innerHTML = '27';
+map.addOverlay(label27);
 
 // Faye Trevelyan
 var marker28 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.434276, 53.307543]))
 });
 markers.getSource().addFeature(marker28);
+var label28 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.434276, 53.307543]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label28.getElement().innerHTML = '28';
+map.addOverlay(label28);
 
 // Beth Owen Williams
 var marker29 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.317657, 53.386667]))
 });
 markers.getSource().addFeature(marker29);
+var label29 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.317657, 53.386667]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label29.getElement().innerHTML = '29';
+map.addOverlay(label29);
 
 // Oriel Amlwch
 var marker30 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.344416, 53.409602]))
 });
 markers.getSource().addFeature(marker30);
+var label30 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.344416, 53.409602]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label30.getElement().innerHTML = '30';
+map.addOverlay(label30);
 
 // Artisan Studio
 var marker31 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.3458, 53.4103]))
 });
 markers.getSource().addFeature(marker31);
+var label31 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.3458, 53.4103]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label31.getElement().innerHTML = '31';
+map.addOverlay(label31);
 
 // David Weaver
 var marker32 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.47081, 53.40776]))
 });
 markers.getSource().addFeature(marker32);
+var label32 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.47081, 53.40776]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label32.getElement().innerHTML = '32';
+map.addOverlay(label32);
 
 // Caffi Siop Mechell
 var marker33 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.45384, 53.39248]))
 });
 markers.getSource().addFeature(marker33);
+var label33 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.45384, 53.39248]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label33.getElement().innerHTML = '33';
+map.addOverlay(label33);
 
 // Wendy Vidler
 var marker34 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.50562, 53.40279]))
 });
 markers.getSource().addFeature(marker34);
+var label34 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.50562, 53.40279]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label34.getElement().innerHTML = '34';
+map.addOverlay(label34);
 
 // Bay Tree Gallery
 var marker35 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.56224, 53.28164]))
 });
 markers.getSource().addFeature(marker35);
+var label35 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.56224, 53.28164]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label35.getElement().innerHTML = '35';
+map.addOverlay(label35);
 
 // Bryn Humphreys
 var marker36 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.64391, 53.31576]))
 });
 markers.getSource().addFeature(marker36);
+var label36 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.64391, 53.31576]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label36.getElement().innerHTML = '36';
+map.addOverlay(label36);
 
 // Wispy Willow Creations
 var marker37 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.65885, 53.31043]))
 });
 markers.getSource().addFeature(marker37);
+var label37 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.65885, 53.31043]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label37.getElement().innerHTML = '37';
+map.addOverlay(label37);
 
 // Ucheldre Centre
 // Peter Alexander Lane
@@ -289,42 +578,98 @@ var marker38and39 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.63856, 53.30944]))
 });
 markers.getSource().addFeature(marker38and39);
+var label38and39 = new ol.Overlay({
+    position: ol.proj.fromLonLat([4.63856, 53.30944]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label38and39.getElement().innerHTML = '38 & 39';
+map.addOverlay(label38and39);
 
 // Janey Masters
 var marker40 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.63549, 53.30447]))
 });
 markers.getSource().addFeature(marker40);
+var label40 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.63549, 53.30447]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label40.getElement().innerHTML = '40';
+map.addOverlay(label40);
 
 // Trearddur Bay Art
 var marker41 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.623130, 53.285876]))
 });
 markers.getSource().addFeature(marker41);
+var label41 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.623130, 53.285876]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label41.getElement().innerHTML = '41';
+map.addOverlay(label41);
 
 // Anwen Roberts
 var marker42 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.59922, 53.27128]))
 });
 markers.getSource().addFeature(marker42);
+var label42 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.59922, 53.27128]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label42.getElement().innerHTML = '42';
+map.addOverlay(label42);
 
 // Huw Gareth Jones
 var marker43 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.58591, 53.24295]))
 });
 markers.getSource().addFeature(marker43);
+var label43 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.58591, 53.24295]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label43.getElement().innerHTML = '43';
+map.addOverlay(label43);
 
 // Jayne Huskisson
 var marker44 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.441701, 53.242515]))
 });
 markers.getSource().addFeature(marker44);
+var label44 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.441701, 53.242515]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label44.getElement().innerHTML = '44';
+map.addOverlay(label44);
 
 // Judith Donaghy
 var marker45 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.49433, 53.22884]))
 });
 markers.getSource().addFeature(marker45);
+var label45 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.49433, 53.22884]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label45.getElement().innerHTML = '45';
+map.addOverlay(label45);
 
 // Jane Samuel
 // (approx location)
@@ -332,24 +677,56 @@ var marker46 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.52227, 53.22654]))
 });
 markers.getSource().addFeature(marker46);
+var label46 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.52227, 53.22654]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label46.getElement().innerHTML = '46';
+map.addOverlay(label46);
 
 // Liz Toole
 var marker47 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.404962, 53.195954]))
 });
 markers.getSource().addFeature(marker47);
+var label47 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.404962, 53.195954]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label47.getElement().innerHTML = '47';
+map.addOverlay(label47);
 
 // Tal Y Sarn Farm
 var marker48 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.334261, 53.165656]))
 });
 markers.getSource().addFeature(marker48);
+var label48 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.334261, 53.165656]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label48.getElement().innerHTML = '48';
+map.addOverlay(label48);
 
 // Craig Taylor
 var marker49 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.329565, 53.190609]))
 });
 markers.getSource().addFeature(marker49);
+var label49 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.329565, 53.190609]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label49.getElement().innerHTML = '49';
+map.addOverlay(label49);
 
 // Wanda & David Garner
 // (approx location)
@@ -357,6 +734,14 @@ var marker50 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.28032, 53.17999]))
 });
 markers.getSource().addFeature(marker50);
+var label50 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.28032, 53.17999]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label50.getElement().innerHTML = '50';
+map.addOverlay(label50);
 
 // Carole Randall
 // (approx location)
@@ -364,13 +749,28 @@ var marker51 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.202341, 53.216938]))
 });
 markers.getSource().addFeature(marker51);
+var label51 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.202341, 53.216938]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label51.getElement().innerHTML = '51';
+map.addOverlay(label51);
 
 // Oriel Mon
 var marker52 = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.31203, 53.26343]))
 });
 markers.getSource().addFeature(marker52);
-
+var label52 = new ol.Overlay({
+    position: ol.proj.fromLonLat([-4.31203, 53.26343]),
+    element: document.createElement('div'),
+    offset: [-8, 5],
+    positioning: 'center-left'
+});
+label52.getElement().innerHTML = '52';
+map.addOverlay(label52);
 
 map.on('click', function(evt) {
     var feature = map.forEachFeatureAtPixel(evt.pixel,
