@@ -764,7 +764,7 @@ var label49to51 = new ol.Overlay({
     offset: [-8, 5],
     positioning: 'center-left'
 });
-label49to51.getElement().innerHTML = '49';
+label49to51.getElement().innerHTML = '49 to 51';
 map.addOverlay(label49to51);
 
 
