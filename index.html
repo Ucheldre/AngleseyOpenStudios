@@ -46,18 +46,22 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+			z-index: 0;
         }
         
         div.bg {
             box-shadow: inset 1.5em 1.5em 2em var(--primary), inset -1.5em -1.5em 2em var(--secondary);
 			/* box-shadow: inset 1.5em 1.5em 2em #f1623a, inset -1.5em -1.5em 2em #263b7e; */
-            backdrop-filter: blur(6px);
+			backdrop-filter: blur(calc(0.4vmax + 0.4vmin));
             background-color: rgba(0, 0, 0, 0.7);
             position: absolute;
             height: 100vh;
             width: 100vw;
-            z-index: -1000;
+            /* z-index: 1; */
         }
+		h1, h2, h3, h4, h5, h6 {
+			z-index: 2000;
+		}
     </style>
 </head>
 
@@ -65,7 +69,7 @@
     <div class="bg"></div>
     <div class="d-flex flex-column min-vh-100 min-vw-100">
         <div class="d-flex flex-grow-1 justify-content-center align-items-center">
-            <div class="text-center">
+            <div class="text-center animate__animated animate__fadeIn">
                 <h3>Anglesey Open Studios | Stiwdios Agored Môn</h3>
                 <h4>2025</h4>
                 <br>
@@ -77,7 +81,7 @@
         </div>
         <!-- Full width bootstrap footer -->
         <div class="d-flex flex-shrink-0 justify-content-center align-items-center">
-            <div class="text-center">
+            <div class="text-center animate__animated animate__fadeIn">
                 <h6>&copy; Canolfan Ucheldre Centre 2025</h6>
             </div>
         </div>
@@ -96,7 +100,9 @@
             "https://angleseyartsforum.org/wp-content/uploads/2022/04/Blod-3.jpg",
             "https://angleseyartsforum.org/wp-content/uploads/2022/04/8.-Sally-Fairclough-B-copy.jpg"
         ],
-        delay: [10000, 10000, 10000, 10000, 10000]
+        delay: [10000, 10000, 10000, 10000, 10000],
+		transition: 'fade', // Add smooth fade transition
+		transitionDuration: 2000 // Duration of the fade effect in milliseconds
     });
 </script>
 
