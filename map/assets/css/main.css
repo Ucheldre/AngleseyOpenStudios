@@ -3,6 +3,19 @@
 	--primary: #692879;
 	--secondary: #e6bd57;
 }
+* {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
 
 html,
 body,
@@ -61,9 +74,24 @@ body,
     padding: 10px;
     color: var(--secondary);
 	background-color: var(--primary);
-    font-size: 20px;
-    font-weight: bold;
+	border: 4px ridge var(--secondary);
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	line-height: 0px;
+    font-size: 32px;
+    font-weight: 800;
     cursor: pointer;
+	text-align: center;
+}
+/* click */
+.closeInfoPage:active {
+	border: 4px ridge var(--primary);
+}
+
+.closeInfoPage:hover {
+	background-color: var(--secondary);
+	color: var(--primary);
 }
 
 #infoPageHeading {
