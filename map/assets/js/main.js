@@ -9,23 +9,30 @@ allElements.forEach(element => {
 });
 
 var interactions = new ol.interaction.defaults({
-    altShiftDragRotate: false,
-    pinchRotate: false
+    altShiftDragRotate: true,
+    pinchRotate: true,
 });
+
 var map = new ol.Map({
     target: 'map',
     controls: ol.control.defaults({
         attributionOptions: ({ collapsible: false })
     }).extend([
         new ol.control.ZoomSlider(),
-        new ol.control.ScaleLine()
+		new ol.control.Zoom(),
+		new ol.control.Rotate({
+			autoHide: true,
+			tipLabel: 'Reset rotation',
+		}),
+		new ol.control.ScaleLine()
+
     ]),
     interactions: interactions,
     layers: [
         new ol.layer.Tile({
             source: new ol.source.OSM({
                 attributions: [
-                    'Maps © OpenStreetMap | Project © Damian Hall-Beal for Canolfan Ucheldre Centre',
+                    'Maps © OpenStreetMap | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
                 ],
             })
         })
@@ -1050,8 +1057,8 @@ function resetIdleTimer() {
     // reset the idle timer
     clearTimeout(idleTimer);
     idleTimer = setTimeout(function() {
-        window.location.href = "../index.html?time=" + Date.now(); // redirect to google.com
-    }, 300000); // 5 minutes in milliseconds
+        window.location.href = "../index.html?time=" + Date.now();
+    }, 180000); // 3 minutes in milliseconds
 }
 
 var hideMap = document.getElementById("hideMap");
