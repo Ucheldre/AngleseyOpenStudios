@@ -1,0 +1,45 @@
+@import url('./theme.css');
+
+* {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+}
+
+img {
+	height: 25vmax !important;
+	filter: drop-shadow(0 0 1.4rem var(--secondary));
+	transition: 0.25s;
+	cursor: pointer;
+	animation: pulse 2s infinite;
+}
+
+img:hover {
+	filter: drop-shadow(0 0 1.8rem var(--primary));
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	color: white;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 0;
+}
+
+div.bg {
+	box-shadow: inset 1.5em 1.5em 2em var(--primary), inset -1.5em -1.5em 2em var(--secondary);
+	/* box-shadow: inset 1.5em 1.5em 2em #f1623a, inset -1.5em -1.5em 2em #263b7e; */
+	backdrop-filter: blur(calc(0.4vmax + 0.4vmin));
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	/* z-index: 1; */
+}
+h1, h2, h3, h4, h5, h6 {
+	z-index: 2000;
+}

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-:root {
-	--primary: #692879;
-	--secondary: #e6bd57;
-}
+@import url('../../../assets/css/theme.css');
 * {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -72,9 +69,9 @@ body,
     top: 0;
     right: 0;
     padding: 10px;
-    color: var(--secondary);
-	background-color: var(--primary);
-	border: 4px ridge var(--secondary);
+    color: var(--primary);
+	background-color: var(--secondary);
+	border: 4px ridge var(--primary);
 	border-radius: 50%;
 	height: 50px;
 	width: 50px;
@@ -86,12 +83,12 @@ body,
 }
 /* click */
 .closeInfoPage:active {
-	border: 4px ridge var(--primary);
+	border: 4px ridge var(--secondary);
 }
 
 .closeInfoPage:hover {
-	background-color: var(--secondary);
-	color: var(--primary);
+	background-color: var(--primary);
+	color: var(--secondary);
 }
 
 #infoPageHeading {

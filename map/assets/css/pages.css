@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap');
-
-:root {
-	--primary: #692879;
-	--secondary: #e6bd57;
-}
+@import url('../../../assets/css/theme.css');
 
 * {
 	-webkit-user-select: none;
@@ -21,21 +17,21 @@
 /* Scrollbar */
 ::-webkit-scrollbar {
 	width: 20px;
-	background-color: #2d1433;
+	background-color: var(--secondary-dark);
 	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	background-color: var(--primary);
+	background-color: var(--secondary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: var(--secondary) !important;
+	background-color: var(--primary) !important;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #2d1433;
+	background-color: var(--secondary-dark);
 	border-radius: 5px;
 }
 
@@ -55,7 +51,7 @@ hr {
 	border: 0;
 	height: 8px;
 	border-radius: 8px;
-	background: linear-gradient(to left, var(--secondary), var(--primary));
+	background: linear-gradient(to left, var(--primary), var(--secondary));
 	/* Horizontal gradient from secondary to primary */
 	margin: 20px auto;
 	width: 80%;
@@ -64,7 +60,7 @@ hr {
 h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 36px;
-	color: var(--primary);
+	color: var(--secondary);
 	/* Primary color for titles */
 	margin-top: 20px;
 }
@@ -75,7 +71,7 @@ img {
 	height: auto;
 	margin-top: 20px;
 	border-radius: 8px;
-	border: 4px solid var(--secondary);
+	border: 4px solid var(--primary);
 	/* Secondary color for image border */
 }
 
@@ -98,8 +94,7 @@ p {
 
 b {
 	font-weight: bold;
-	color: var(--secondary);
-	/* Secondary color for bold text */
+	color: var(--primary);
 }
 
 h3,
@@ -112,7 +107,7 @@ h5 {
 
 h3 {
 	font-size: 22px;
-	color: var(--primary);
+	color: var(--secondary);
 	/* Primary color for contact info */
 }
 
