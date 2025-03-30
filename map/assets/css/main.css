@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+	--primary: #692879;
+	--secondary: #e6bd57;
+}
 
 html,
 body,
@@ -30,7 +34,7 @@ body,
     width: 85%;
     height: 85%;
     z-index: 100;
-    background-color: white;
+    background-color: #111;
 }
 
 #hideMap{
@@ -55,7 +59,8 @@ body,
     top: 0;
     right: 0;
     padding: 10px;
-    color: black;
+    color: var(--secondary);
+	background-color: var(--primary);
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;

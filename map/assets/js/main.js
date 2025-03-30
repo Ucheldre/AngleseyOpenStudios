@@ -987,7 +987,7 @@ map.on('click', function(evt) {
 	} else if (feature == marker36) {
 		infoPageContent("Wispy Willow Creations", "./pages/36.html");
 	} else if (feature == marker37and38) {
-		infoPageContent("Ucheldre Centre & Peter Alexander Lane", "./pages/37-38.html");
+		infoPageContent("Ucheldre Centre & Peter Alexander Lane", "./pages/37and38.html");
 	} else if (feature == marker39) {
 		infoPageContent("Christine Williams", "./pages/39.html");
 	} else if (feature == marker40) {
@@ -1007,11 +1007,11 @@ map.on('click', function(evt) {
 	} else if (feature == marker47) {
 		infoPageContent("Hue Gareth Jones", "./pages/47.html");
 	} else if (feature == marker48to50) {
-		infoPageContent("Seapig - Cara White, Celina Nancarrow, Paula Cutler", "./pages/48-50.html");
+		infoPageContent("Seapig - Cara White, Celina Nancarrow, Paula Cutler", "./pages/48to50.html");
 	} else if (feature == marker51) {
 		infoPageContent("Judith Donaghy", "./pages/51.html");
 	} else if (feature == marker52and53) {
-		infoPageContent("Jane Samuel and Caroline Brogden", "./pages/52-53.html");
+		infoPageContent("Jane Samuel and Caroline Brogden", "./pages/52and53.html");
 	} else if (feature == marker54) {
 		infoPageContent("Liz Toole", "./pages/54.html");
 	} else if (feature == marker55) {

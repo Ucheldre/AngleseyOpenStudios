@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap');
+        
+:root {
+	--primary: #692879;
+	--secondary: #e6bd57;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--primary); /* Primary color for scrollbar thumb */
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #2d1433;
+}
+
+
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+	background-color: #111; /* Dark background */
+	color: #e6e6e6; /* Light text color for contrast */
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	text-align: center;
+}
+
+hr {
+	border: 0;
+	height: 8px;
+	border-radius: 8px;
+	background: linear-gradient(to left, var(--secondary), var(--primary)); /* Horizontal gradient from secondary to primary */
+	margin: 20px auto;
+	width: 80%;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	color: var(--primary); /* Primary color for titles */
+	margin-top: 20px;
+}
+
+img {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	margin-top: 20px;
+	border-radius: 8px;
+	border: 4px solid var(--secondary); /* Secondary color for image border */
+}
+
+img#helpMap {
+	width: 99%;
+	max-width: 100%;
+	margin: 0;
+	border-width: 10px;
+	
+}
+
+p {
+	font-size: 20px;
+	margin: 20px auto;
+	max-width: 800px;
+	line-height: 1.8;
+	padding: 0 20px;
+	color: #e6e6e6;
+}
+
+b {
+	font-weight: bold;
+	color: var(--secondary); /* Secondary color for bold text */
+}
+
+h3, h4, h5 {
+	font-family: 'Roboto', sans-serif;
+	margin: 10px 0;
+	color: #ddd;
+}
+
+h3 {
+	font-size: 22px;
+	color: var(--primary); /* Primary color for contact info */
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: normal;
+	color: #bbb; /* Lighter text for the address */
+}
+
+h5 {
+	font-size: 16px;
+	color: #aaa;
+	max-width: 900px;
+	margin: 0 auto;
+	line-height: 1.7;
+	padding: 0 20px;
+}
+
+h5 br {
+	margin: 10px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 28px;
+	}
+
+	p, h3, h4, h5 {
+		font-size: 16px;
+	}
+
+	img {
+		max-width: 100%;
+		margin-top: 15px;
+	}
+}
+
+/* Styling the div container */
+div {
+	background-color: #090909; /* Dark background for container */
+	max-width: 1000px;
+	margin: 40px auto;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+}
+
+div#help {
+	max-width: 90%;
+	padding: 0;
+}
