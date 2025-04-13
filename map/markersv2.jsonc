@@ -1,0 +1,978 @@
+[
+  {
+    "id": "1",
+    "latitude": 53.22604323080291,
+    "longitude": -4.170111853944106,
+    "artist": [
+      {
+        "id": "1",
+        "name": "Andy Ball",
+        "welshDescription": "Andy - Cerfluniau metel a deunydd cymysg o ffurfiau a lleoedd naturiol. Croesewir comisiynau.\nDenise - Dyfrlliwiau ac acrylig o blanhigion a lleoedd.",
+        "englishDescription": "Andy - Metal and mixed material sculptures of natural forms and places. Commissions welcome.\nDenise - Watercolours and acrylics of plants and places",
+        "contactInfo": "Andy: 07903672123 / Denise: 07943991972",
+        "venueLocation": "9 RHYD MENAI, MENAI BRIDGE, LL59 5RG",
+        "welshLocationInstructions": "Mae Rhyd Menai oddi ar yr A5, ger Garej Shell.\nMae parcio ar gael ar yr A5, nid yn Rhyd Menai. Yn anffodus, mae mynediad i’r stiwdio i lawr grisiau uchel ac nid yw’n addas ar gyfer rhai sydd â phroblemau symudedd",
+        "englishLocationInstructions": "Rhyd Menai is off the A5, near the Shell Garage.\nParking is available on the A5, not in Rhyd Menai. Unfortunately, access is down high rise steps and is not suitable for those with impaired mobility"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "latitude": 53.228316656617054,
+    "longitude": -4.164384692381407,
+    "artist": [
+      {
+        "id": "2",
+        "name": "Her Ceramics",
+        "welshDescription": "Mae Harriet Ridley yn defnyddio technegau adeiladu olwyn a llaw i greu crochenwaith cartref ymarferol, darnau addurniadol unigryw a chasgliadau bach o emwaith ceramig.",
+        "englishDescription": "Harriet Ridley uses both wheel and hand building techniques to create functional domestic ware, one-of-a-kind decorative pieces and small collections of ceramic jewellery.",
+        "contactInfo": "07852 926305<br>herceramics@outlook.com<br>www.herceramics.com",
+        "venueLocation": "ERYRI, MOUNT STREET, MENAI BRIDGE, LL59 5BW",
+        "welshLocationInstructions": "Ar Lôn Las tua 70m heibio’r troad am Fford Penclip. Mae byngalo gwyn a stiwdio gyfagos wedi’u gosod i lawr o’r ffordd ar yr ochr dde, i lawr llwybr gardd.",
+        "englishLocationInstructions": "On Mount Street approximately 70m past the turning for Druid Road. White bungalow and adjacent studio are set down from the road on the right-hand side, down a garden path."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "latitude": 53.230137648336374,
+    "longitude": -4.163859539764031,
+    "artist": [
+      {
+        "id": "3",
+        "name": "Jane Evans",
+        "welshDescription": "Yn 2025 mae Jane yn bwriadu dangos detholiad amrywiol o waith. Yn ogystal â’i Gyotaku (techneg Siapaneaidd o argraffu ffurf pysgod) mae hi hefyd yn arlunydd dyfrlliw medrus ac yn beintiwr olew. Dewch draw i weld artist wrth ei gwaith.",
+        "englishDescription": "For 2025 Jane is planning on showing a varied selection of work. In addition to her Gyotaku (a Japanese technique of printing from fish) she is also an accomplished water colour and oil painter. Come along and see an artist at work.",
+        "contactInfo": "07970 940833<br>jane@gyotakugifts.co.uk<br>www.gyotakugifts.co.uk",
+        "venueLocation": "PEN Y CLIP, DRUID ROAD, MENAI BRIDGE, LL59 5BY",
+        "welshLocationInstructions": "Ewch o Lôn Pentraeth, trowch i mewn i Stryd Hill, cymwch yr ail droiad i mewn i Stryd Mount, wedyn chwith i Lôn Druid. Mae ein tŷ ni 250 medr ar y dde. Mae’r stiwdio yn yr ardd. Ewch drwy’r giât ac i lawr llwybr serth.",
+        "englishLocationInstructions": "From Pentraeth Road, into Hill Street, second left to Mount Street, left into Druid Road. We are 250m on the right. The Studio is located through the garden gate on the left and down a steep path."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "latitude": 53.26430008908315,
+    "longitude": -4.095106888112449,
+    "artist": [
+      {
+        "id": "4",
+        "name": "Georgina Rambton",
+        "welshDescription": "Mae Georgina Rambton yn paentio portreadau cyfoes ar raddfa fawr mewn dyfrliw/gouache ac acrylig. Mae ei gyrfa’n rhychwantu 40 mlynedd, fel darlithydd a dylunydd. Arddangosir ei gwaith yn rhyngwladol yn ogystal ag yn lleol.",
+        "englishDescription": "Georgina Rambton paints large scale contemporary plant portraits in watercolour/gouache and acrylic. Her career spans 40 years, as a lecturer and a designer. Her work is exhibited internationally as well as locally.",
+        "contactInfo": "01248 811587 / 07807 977603<br>Georginarambton@gmail.com<br>www.georginarambton.com",
+        "venueLocation": "28A STEEPLE LANE, BEAUMARIS, LL58 8AE",
+        "welshLocationInstructions": "Tref Biwmares. Trowch i’r chwith wrth The Red Boat i Stryd yr Eglwys. Trowch i’r chwith wrth yr arwydd am yr Ysgol. Parhewch heibio’r ysgol, byddwch yn gallu parcio gyferbyn â’r garejys glas heb rwystro mynediad i unrhyw un. Mae fy nghartref gyferbyn â’r garejys.",
+        "englishLocationInstructions": "Beaumaris Town. Turn left at The Red Boat Ice Cream Parlour onto Church St. Turn left at the sign for the School. Continue past the school, you’ll be able to park opposite the blue garages on road not blocking entry to any. My home is set back opposite the garages."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "latitude": 53.2635238228386,
+    "longitude": -4.091714520542633,
+    "artist": [
+      {
+        "id": "5",
+        "name": "Beaumaris Jewellery",
+        "welshDescription": "Dw i’n cynhyrchu amrywiaeth o emwaith aur ac arian yn fy stiwdio a galeri.<br> Byddaf hefyd yn gwerthu gwaith dros 30 o gynllunwyr gemwaith annibynnol.<br>Cyfle i weld pa stiwdios yr hoffech ymweld â nhw a chael gwybodaeth a chyngor pellach.",
+        "englishDescription": "I make a range of silver and gold jewellery in my workshop and gallery.<br>I also sell the work of over 30 other independent designer jewellers.",
+        "contactInfo": "01248 812146 / 07770 249560<br>janefairbairn@hotmail.co.uk<br>beaumarisjewellery.com",
+        "venueLocation": "20 CASTLE STREET, BEAUMARIS, LL58 8AP",
+        "welshLocationInstructions": "Mae fy stiwdio yn y Stryd Fawr drws nesa i Westy’r Bull ym Miwmares.",
+        "englishLocationInstructions": "My studio and gallery is on the High Street next to The Bull Hotel in Beaumaris."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "latitude": 53.26430879186422,
+    "longitude": -4.091392733411655,
+    "artist": [
+      {
+        "id": "6",
+        "name": "Canolfan David Hughes",
+        "welshDescription": "Yn ystod yr Wythnosau Stiwdios Agored mae’r Fforwm Celf yn arddangos o leiaf un darn o waith gan bob un o’r artistiaid sy’n cymryd rhan.<br>Cyfle i weld pa stiwdios yr hoffech ymweld â nhw a chael gwybodaeth a chyngor pellach.",
+        "englishDescription": "During the Open Studios Weeks the Arts Forum exhibits at least one piece of work from each of the participating artists.<br>An opportunity to see which studios you might like to visit and pick up further information and advice.",
+        "contactInfo": "01407 763361 <br>box-office@ucheldre.org",
+        "venueLocation": "1 CADNANT COURT, BEAUMARIS, LL58 8AL",
+        "welshLocationInstructions": "O Borthaethwy anelwch tua’r dwyrain ar A545 tuag at Biwmaris, trowch i’r chwith ar Rating Row, ac ar y gyffordd trowch i’r dde ac wedyn i’r dde eto. Rydym ni ar y chwith rhwng y Llyfrgell a’r Castell.",
+        "englishLocationInstructions": "From Menai Bridge head East, Telford Rd/A545 towards Love Lane, take left onto Rating Row, then right, and right again. Destination is on the left situated between the Castle and the Library."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "latitude": 53.26335437356752,
+    "longitude": -4.092527017312358,
+    "artist": [
+      {
+        "id": "7",
+        "name": "Jon Fairbarn",
+        "welshDescription": "Dw i wedi bod yn gwneud potiau ers rhai blynyddoedd ac wedi arddangos a gwerthu ledled y wlad.<br>Byddaf yn defnyddio amrywiaeth o dechnegau i wneud darnau domestig, addurniadol a cherfluniol.<br>Byddaf hefyd yn peintio gydag olew ac acrylig.",
+        "englishDescription": "I have been making pots for many years, exhibiting and selling nationally.<br>I use a variety of techniques to make domestic, decorative and sculptural pieces.<br>I also paint in oils and acrylic.",
+        "contactInfo": "01248 853 616 / 07720103264<br>jonathanfairbairn@btinternet.com",
+        "venueLocation": "THE EXCHANGE, 6 CHURCH ST, BEAUMARIS, LL58 8AA",
+        "welshLocationInstructions": "Ewch o Stryd Fawr, Biwmares, trowch i lawr Stryd yr Eglwys sydd ar gornel Y Red Boat Iceceam Parlour. Mae’r Exchange ar y dde, wedi ei leoli yn y cefn drws nesa i Dafarn y Bold.",
+        "englishLocationInstructions": "From the High Street in Beaumaris, turn up Church Street on the corner of the Red Boat Icecream Parlour, The Exchange is set back on the right hand side of the road next to the Bold Public House."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "latitude": 53.26366473310897,
+    "longitude": -4.093044403473038,
+    "artist": [
+      {
+        "id": "8",
+        "name": "Mary Jane Flower",
+        "welshDescription": "Morlyniau haniaethol ydy testyn fy ngwaith, wedi eu creu drwy arddull printiomono.\nByddaf yn ceisio dal awyrgylch y foment dan ni’n ei brofi ar Ynys Môn, o’r môr tymhestlog o’n cwmpas hyd at y mynyddoedd dan ni’n eu gweld.\nMae gen i ofod arddangos yn Yr Exchange..",
+        "englishDescription": "My paintings are abstract seascapes created by monoprinting.<br>I want to capture in my paintings the different moods and moments you experience from being on Anglesey, from the swirling seas that surround us to the mountains we look out on.<br>I have a gallery space in The Exchange.",
+        "contactInfo": "07775 525700<br>mary@maryjaneflower.co.uk<br>www.maryjaneflower.co.uk",
+        "venueLocation": "COLE & CO, THE OLD POST OFFICE, 10 CHURCH STREET, BEAUMARIS, LL58 8AB",
+        "welshLocationInstructions": "Trowch i fyny Stryd yr Eglwys ac rydym ar y dde ar gornel Stryd yr Eglwys a’r lôn fach gyda blwch post mawr coch y tu allan.",
+        "englishLocationInstructions": "Turn up Church street and we are on the right on the corner of church street and little lane with a big red post box outside."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "latitude": 53.26296234883538,
+    "longitude": -4.093939726356511,
+    "artist": [
+      {
+        "id": "9",
+        "name": "Stiwdio Biwmares",
+        "welshDescription": "Mae’r artist Sally Fairclough wedi sefydlu gofodau Oriel a Gweithdai ym Miwmares.<br>Mae’r Oriel yn arddangos gwaith Sally ei hun ochr yn ochr â gweithiau gan artistiaid eraill.<br>Mae’r gofod gweithdy yn darparu calendr o weithdai celf a chrefft",
+        "englishDescription": "Artist Sally Fairclough has established Gallery and Workshop spaces in Beaumaris.<br>The Gallery exhibits Sally’s own creations alongside works by other artists.<br>The Workshop space provides a calendar of art and making workshops.",
+        "contactInfo": "03300 531897<br>sallyfaircloughartist@pfpm.org.uk<br>Instagram: @stiwdiobiwmares",
+        "venueLocation": "17 MARGARET STREET, BEAUMARIS, LL58 8YW",
+        "welshLocationInstructions": "Rydym oddi ar y brif stryd ym Miwmares ar ben arall Stryd Margaret i siop Janet Bell, yn wynebu becws Central.",
+        "englishLocationInstructions": "We are off the main street in Beaumaris at the opposite end of Margaret Street to the Janet Bell shop, facing Central bakery."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "latitude": 53.26295781087535,
+    "longitude": -4.093709288382675,
+    "artist": [
+      {
+        "id": "10",
+        "name": "Rob Thompson",
+        "welshDescription": "Rwy’n artist lleol sydd sy’n cael fy ysbrydoli gan dirweddau a chymunedau.<br>Rwy’n ceisio dal enaid a harddwch adeiladau gwerinol a’u hamgylchedd ac yn anelu i adlewyrchu ysbryd a threftadaeth y llefydd hyn",
+        "englishDescription": "I’m a local artist inspired by landscapes and communities.<br>I try to capture the soul and beauty of vernacular buildings and their environment, aiming to reflect the spirit and heritage of each place.",
+        "contactInfo": "robthompsonillustration@outlook.com<br>www.robthompson.squarespace.com",
+        "venueLocation": "STWIDIO BIWMARES WORKSHOPS, 17 MARGRET STREET, BEAUMARIS, YNYS MON, LL58 8DN",
+        "welshLocationInstructions": "Gyferbyn â Central Bakery ym Miwmares.",
+        "englishLocationInstructions": "Opposite Central Bakery in Beaumaris."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "latitude": 53.26399921023315,
+    "longitude": -4.093239138999325,
+    "artist": [
+      {
+        "id": "11",
+        "name": "Ian Walton Gallery",
+        "welshDescription": "O oed cynnar iawn rwyf wedi cael fy ysbrydoli gan y môr, yr awyr a’r mynyddoedd.<br>Fel dringwr, peilot a morwr rwyf wedi cael y cyfle i astudio yr amgylcheddau hyn yn agos i’w dal nhw ar gynfas ac wedi bod yn ddigon ffodus i ennill bywoliaeth o hyn am y rhan fwyaf o fy mywyd.",
+        "englishDescription": "From a very early age I’ve been inspired by the sea, sky and mountains, and I’ve been lucky enough to earn a living from those environments for most of my life.<br>As a climber, pilot and sailor I’ve had the opportunity to study up close to capture those worlds on canvas.",
+        "contactInfo": "07896 269958<br>theianwaltongallery@gmail.com",
+        "venueLocation": "S20A CHURCH STREET, BEAUMARIS, LL58 8AB",
+        "welshLocationInstructions": "Mae’r Galeri yn Stryd yr Eglwys gyferbyn ag Eglwys y Santes Fair a Sant Nicholas.",
+        "englishLocationInstructions": "The Gallery is located on Church Street directly opposite Saint Mary’s & Saint Nicholas’ Church."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "latitude": 53.26362354727174,
+    "longitude": -4.0932205132362975,
+    "artist": [
+      {
+        "id": "12",
+        "name": "Janet Bell",
+        "welshDescription": " Mae Janet yn canolbwyntio ar newidiadau tymhorol ei chynefin ar Ynys Môn.<br>Mae’n peintio’n reddfol gan newid cyfansoddiad a lliw wrth weithio ar sawl darn ar y tro.<br>Mae hi’n cael ei hysbrydoli gan y man a’r lle mae hi’n byw ac yn ei garu.",
+        "englishDescription": "Janet has become finely attuned to her surroundings of the changing seasons on Anglesey.<br>She paints intuitively, adjusting composition and colour while working on several pieces at a time.<br>Her inspiration comes from living in the place that she loves.",
+        "contactInfo": "01248 810043<br>info@janetbell.co.uk<br>www.janetbell.co.uk",
+        "venueLocation": "JANET BELL ART LTD, 11 CHURCH STREET, BEAUMARIS, LL58 8AB",
+        "welshLocationInstructions": "O ganol tref Biwmares, trowch i’r chwith wrth Hufen Iâ Red Boat, ewch i fyny Stryd yr Eglwys (yn mynd heibio’r tafarndai), mae Janet Bell ar y chwith ar gyffordd Stryd Marged.",
+        "englishLocationInstructions": "From Beaumaris town centre, turn left at Red Boat Ice Cream, go up Church Street (passing the pubs), Janet Bell is on the left on the junction of Margaret Street."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "latitude": 53.295035402006235,
+    "longitude": -4.089675603342258,
+    "artist": [
+      {
+        "id": "13",
+        "name": "Lynne Stuart",
+        "welshDescription": "Mae paentiadau Lynne mewn acrylig wedi’u hysbrydoli gan y ffurfiau a’r patrymau a geir yn y dirwedd leol. Mae’n dechrau gyda’r amgylchoedd naturiol ond yn aml mae elfen haniaethol i’r cyfansoddiad ac mae lliw yn arbennig yn chwarae rhan bwysig.",
+        "englishDescription": "Lynne’s paintings in acrylics are inspired by the forms and patterns found in the local landscape. They start with the natural surroundings but frequently there is an abstract element to the composition and colour in particular plays an important role.",
+        "contactInfo": "01248 490062 / 07928 042507<br>Lynnej.stuart@googlemail.com",
+        "venueLocation": "COEDLAN, LLANGOED, BEAUMARIS, LL58 8NR",
+        "welshLocationInstructions": "Cymerwch y B5109 o Fiwmares. Yn y pentref trowch i’r chwith heibio Ysgol Gynradd Llangoed. Reit wrth y blwch postio yn y wal. Ar ôl 100 llath mae’r tŷ wedi’i osod wrth gefn gyriant graean.",
+        "englishLocationInstructions": "Take B5109 from Beaumaris. In village turn left past Llangoed Primary School. Right at the postbox in the wall. After 100 yds house is set back up gravel drive."
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "latitude": 53.29678102276969,
+    "longitude": -4.0874967400269036,
+    "artist": [
+      {
+        "id": "14",
+        "name": "Aberlleiniog Sculpture",
+        "welshDescription": "Yn cyflwyno cyfres o deithiau cerdded tywys, prosiectau creadigol a pherfformiadau wedi’u hysbrydoli gan gastell Aberlleiniog, ein coetiroedd cymunedol a thraeth Lleiniog",
+        "englishDescription": "Presenting a series of guided walks, creative projects and performances inspired by Aberlleiniog castle, our community woodlands and Lleiniog beach.",
+        "contactInfo": "www.plasbodfa.com/projects/aberlleiniog-sculpture-trail<br>info@plasbodfa.com",
+        "venueLocation": "LLANGOED VILLAGE HALL, LLANGOED, LL58 8NY",
+        "welshLocationInstructions": "Mae maes parcio neuadd bentref Llangoed.",
+        "englishLocationInstructions": "Llangoed village hall car park."
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "latitude": 53.295737734532075,
+    "longitude": -4.080770326880127,
+    "artist": [
+      {
+        "id": "15",
+        "name": "Val Gem Hughes",
+        "welshDescription": "Dw i’n gweithio mewn arddull graffeg gan ddefnyddio ystod eang o ddefnyddiau.",
+        "englishDescription": "As an artist I work in a graphic style, using a diverse range of materials.",
+        "contactInfo": "01248 490212<br>valgemhughes@btinternet.com",
+        "venueLocation": "TAN Y PENTRE MAWR, LLANGOED, BEAUMARIS, LL58 8RY",
+        "welshLocationInstructions": "Ewch drwy Langoed, i fyny’r allt, cymwch y troiad cyntaf ar y dde (ddim yn addas ar gyfer bysiau), heibio cartref henoed yr Heulfre, i lawr yr allt, mae’r tŷ ar y chwith.",
+        "englishLocationInstructions": "Through Llangoed, up the hill, take first right(unsuitable for coaches), past Heulfre nursing home, go down the hill, house on the left."
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "latitude": 53.30654526484508,
+    "longitude": -4.0897573098494675,
+    "artist": [
+      {
+        "id": "16",
+        "name": "Peter Read",
+        "welshDescription": "Mae Peter Read wedi bod yn gwneud printiau giclée lled-haniaethol lliwgar a llon ers deng mlynedd.<br>Bydd detholiad o’i waith diweddar yn cael eu harddangos.<br>Mae Peter wedi’i ysbrydoli gan Paul Klee a John Craxton.",
+        "englishDescription": "Peter Read has been making cheerful colourful semi-abstract giclée prints for ten years.<br>A selection of his recent efforts will be on display.<br>Peter is inspired by Paul Klee and John Craxton",
+        "contactInfo": "01248 490563 / 0787 4915 844<br>pete.lane34@yahoo.com",
+        "venueLocation": "TYN Y GAT, GLANRAFON, LLANGOED, LL58 8SY",
+        "welshLocationInstructions": "O faes parcio Glanrafon ewch i fyny’r allt. Trowch i’r dde ar yr ynys wair. Bydd melin wynt ar y bryn i’r chwith. Tyn y Gat yw’r chweched tŷ ar y dde ar hyd y lôn; bwthyn gwyn unllawr.Ewch i mewn trwy’r porth",
+        "englishLocationInstructions": "From car park at Glanrafon go up hill. Turn right at grassy island. Windmill on hill to left. Tyn y Gat is sixth house on right along lane; a white single-storey cottage. Please enter through porch."
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "latitude": 53.30654118957168,
+    "longitude": -4.080742509742033,
+    "artist": [
+      {
+        "id": "17",
+        "name": "Marion Rose",
+        "welshDescription": "Gan ddefnyddio technegau hen ffasiwn o ysgythru, cyanoteip a linocuts i wneud printiau gwreiddiol rwy’n ceisio dal rhywfaint o harddwch gwyllt y rhan hon o Gymru - planhigion, coed llawn cymeriad, tirweddau a bywyd gwyllt.",
+        "englishDescription": "Using old-fangled techniques of etching, linocut & cyanotype, to make original prints I try to capture something of the wild beauty of this part of Wales - humbler plants, characterful trees, landscapes and wildlife.",
+        "contactInfo": "07904649070<br>Marionanne.rose55@gmail.com",
+        "venueLocation": "MARIAN FARM, LLANGOED, LL58 8ST",
+        "welshLocationInstructions": "O Eglwys St Cawrdaf Llangoed, ewch i fyny’r allt a troi i’r dde ar y top. Cymerwch yr ail droad chwith. Parciwch lle mae’r lôn yn lledu gyferbyn â’r biniau. Dilynwch yr arwyddion i lawr y llwybr. Ffoniwch ymlaen llaw i wirio bod lle parcio yn y tŷ",
+        "englishLocationInstructions": "From St Cawrdaf Church Llangoed, go uphill turning right at the top. Take second turning left. Please park where lane widens opposite the bins. Follow signs down grassy track. Phone ahead to check limited parking at house."
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "latitude": 53.30162188366376,
+    "longitude": -4.066903973998473,
+    "artist": [
+      {
+        "id": "18",
+        "name": "Geraldine Hedderick",
+        "welshDescription": "Mae cymaint o ysbrydoliaeth ar fy ngharreg drws gyda’r holl olygfeydd hardd, er hyn mae llawer o ysbrydoliaeth hefyd yn dod o ddarn o ffabrig.<br>Mae fy ngwaith yn defnyddio tecstilau wedi eu hailgylchu.<br>Mae pob darn yn wreiddiol ac yn hollol unigryw.",
+        "englishDescription": "There is so much inspiration on my doorstep with all the beautiful scenery although many times inspiration comes from a piece of fabric.<br>My work uses textiles many of which are recycled.<br>Each piece is an original, and I don’t make prints making it totally unique.",
+        "contactInfo": "01248 490162 / 07949 032272<br>ghedderick@hotmail.co.uk",
+        "venueLocation": "GWYNDAF, PENMON, LL58 8SN",
+        "welshLocationInstructions": "O bentref Penmon ewch ymlaen i gyfeiriad Caim, a dw i ar y chwith yn union ar ôl y tro 90 gradd.",
+        "englishLocationInstructions": "From Penmon Village continue as though heading to Caim and I am located on the left just past the 90 degree bend."
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "latitude": 53.30162188366376,
+    "longitude": -4.066903973998473,
+    "artist": [
+      {
+        "id": "19",
+        "name": "Jane Bunce",
+        "welshDescription": "Artist sy’n gweithio o’i stiwdio yn Penmon yw Jane.<br>Mae ei phaentiadau dyfrlliw a’r lluniadau yn ddathliad o gariad at natur, wedi ei gyfoethogi trwy fyw ym Môn gyda’i harddwch rhyfeddol ac amrywiaeth o fywyd gwyllt.",
+        "englishDescription": "Jane is an artist working at her studio in Penmon.<br>Her watercolour paintings and drawings are a celebration of a love of nature, enriched by living on Anglesey with its breathtaking beauty and diversity of wildlife.",
+        "contactInfo": "01248 490395 / 07947148031<br>janebunce@mail.com",
+        "venueLocation": "DINMOR, PENMON, BEAUMARIS, LL58 8SN",
+        "welshLocationInstructions": "O Biwmares ewch heibio i’r castell, ar y groesffordd nesaf trowch i’r dde. Ar y gyffordd, trowch i’r chwith i Penmon, i’r dde ar yr ynysfach o laswellt. Ewch trwy bentref Penmon, ac mae Dinmor ar ben yr allt ar y dde.",
+        "englishLocationInstructions": "From Beaumaris go past the Castle, at next crossroads turn right. At junction turn left to Penmon, right at small grassy island. Go through Penmon village, Dinmor is at the top of hill on the right."
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "latitude": 53.30585506836922,
+    "longitude": -4.070348169974567,
+    "artist": [
+      {
+        "id": "20",
+        "name": "Callaghan Creative",
+        "welshDescription": "Mae Susanna a Phil Callaghan yn artistiaid mewn pren:<br>yn troi a cherflunio pren caled o ffynonellau lleol yn siapiau organig wedi’u hysbrydoli gan fywyd gwyllt, cefn gwlad a’r môr.",
+        "englishDescription": "Susanna and Phil Callaghan are artists in wood:<br>turning and sculpting locally-sourced hardwood into organic shapes inspired by wildlife, countryside and sea.",
+        "contactInfo": "01248 491915<br>info@callaghancreative.com<br>callaghancreative.com",
+        "venueLocation": "CAE MERDDYN, CAIM, PENMON, BEAUMARIS, LL58 8SRP",
+        "welshLocationInstructions": "O Biwmares ewch yn syth trwy Llangoed i ben yr allt. Trowch i’r chwith ar y gyffordd-T ac yna cymerwch y troad nesaf i’r dde ac mae ein stiwdio ar y chwith ar y groesffordd yng nghanol Caim.",
+        "englishLocationInstructions": "From Beaumaris go straight through Llangoed to the top of the hill. Turn left at the T junction and then take the next turn right and our studio is on the left at the crossroads in the centre of Caim."
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "latitude": 53.306756135560924,
+    "longitude": -4.067665750652899,
+    "artist": [
+      {
+        "id": "21",
+        "name": "The Crafty Guillemot",
+        "welshDescription": "Mae Lillemor Latham - The Crafty Guillemot, yn creu casgliadau bach o serameg crochenwaith wedi’i daflud ar olwyn crochenydd<br>Mae’r gwaith gwydredd yn tynnu ysbrydoliaeth gan dirweddau arfordirol a mynyddig Gogledd Cymru.",
+        "englishDescription": "Lillemor Latham, working under the name The Crafty Guillemot, creates small batches of wheel-thrown stoneware ceramics.<br>The glaze work draws on the coastal and mountainous landscapes in North Wales.",
+        "contactInfo": "07902109431<br>TheCraftyGuillemot@gmail.com<br>www.thecraftyguillemot.com",
+        "venueLocation": "TYN-Y-CAEAU, CAIM, PENMON, BEAUMARIS, LL58 8SP",
+        "welshLocationInstructions": "O Langoed - ewch dros y bont, yn syth i fyny’r allt. Cymwch y troiad ar y chwith wrth y cyffordd ar y top. Cymwch y troiad cyntaf i lawr yr allt. Dilynwch y ffordd pengaead heibio arwydd Caim. Mae’r stiwdio ar y troad dwbl.",
+        "englishLocationInstructions": "From Llangoed - over the bridge, straight up the hill. Go left at the junction at the top. First right down the hill. Follow dead-end road past the Caim sign, you will find the studio on the S-bend."
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "latitude": 53.30717495977572,
+    "longitude": -4.066672005500644,
+    "artist": [
+      {
+        "id": "22",
+        "name": "Red Studio",
+        "welshDescription": "Artistiaid a Gwneuthurwyr: Jo Alexander (cyfryngau cymysg a gwaith coed gwyrdd), Maggie Evans (basgedi) a Lydia Latham (Lluniau, colrosing a llwyau pren)",
+        "englishDescription": "Artists and Makers: Jo Alexander (mixed media & greenwoodwork), Maggie Evans (basketry) & Lydia Latham (Illustration, kolrosing & wooden spoons).",
+        "contactInfo": "07929 492056<br>jo4lexander@hotmail.co.uk",
+        "venueLocation": "RED STUDIO, TY’N Y CAEAU, CAIM, PENMON LL58 8SP",
+        "welshLocationInstructions": "O Langoed - ewch dros y bont, yn syth i fyny’r allt. Cymwch y troiad ar y chwith wrth y cyffordd ar y top. Cymwch y troiad cyntaf i lawr yr allt. Dilynwch y ffordd pengaead heibio arwydd Caim. Mae’r stiwdio ar y troad dwbl",
+        "englishLocationInstructions": "From Llangoed - over the bridge, straight up the hill. Go left at the junction at the top. First right down the hill. Follow dead-end road past the Caim sign, you will find the studio on the S-bend."
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "latitude": 53.30032916467376,
+    "longitude": -4.148331752712561,
+    "artist": [
+      {
+        "id": "23",
+        "name": "Rhiannon + Paul Gash",
+        "welshDescription": "Sylw arno The Potters Cast podcast #904, clai pridd, gwydredd cartref, amatur a dal i ddysgu.<br>Dewch o hyd i ni ar Instagram @llanddona_beach_pottery. Crochenydd â nam ar ei olwg.",
+        "englishDescription": "Featured on The Potters Cast podcast #904, earthenware clay, homemade glazes, amateur still learning.<br>Find us on Instagram @llanddona_beach_pottery. Visually-impaired potter.",
+        "contactInfo": "07799 460347<br>r.t.edwards@bangor.ac.uk<br>@llanddona_beach_pottery",
+        "venueLocation": "TYDDYN BACH, LLANDDONA, BEAUMARIS, LL58 8UN",
+        "welshLocationInstructions": "Bwimares, troi I’r chwith I fyny Stryd yr Eglwys. Ar dop y bryn troi I’r dde I Llanddona.<br>Wrth dafarn Owain Glyndwr trowch I’r chwith tuag at y traeth. Mewn ¼ milltir trowch i’r chwith.<br>Mae’rstiwdio wwedi ei farcio ar y dde, ¾ ffordd I lawr y traeth",
+        "englishLocationInstructions": "Beaumaris, turn left up Church Street.<br>At top of hill turn right to Llanddona. At Owain Glyndwr pub turn left to beach.<br>In ¼ mile turn left. Studio marked on the right, ¾ way down to the beach."
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "latitude": 53.28335664214091,
+    "longitude": -4.225439848502962,
+    "artist": [
+      {
+        "id": "24",
+        "name": "Helen Campbell",
+        "welshDescription": "Mae Helen yn arlunydd cain ac yn wneuthurwr printiau.<br>Yn byw rhwng Bryniau’r Pennine ac Ynys Môn, gan gymryd ysbrydoliaeth o ardaloedd trawiadol o dirweddau gwahanol iawn.<br>Yn gweithio mewn gwahanol gyfryngau, gan fynegi’r hyn y mae’n ei weld trwy ei chelf.",
+        "englishDescription": "Helen is a fine artist and print maker.<br>Living between the Pennine Hills and Anglesey, taking inspiration from stunning areas of very different landscapes.<br>Works in different mediums, expressing what she sees through her art.",
+        "contactInfo": "07858 463410<br>www.thegalleryinthegarden.com",
+        "venueLocation": "8 TAN Y GRAIG, TALWRN, PENTRAETH, LL75 8UL",
+        "welshLocationInstructions": "O ganol Pentraeth cymerwch ffordd B5109 Talwrn. Ychydig cyn y bryn ar y dde fe welwch fynedfa i fythynnod.<br>Mae lle parcio yn yrardal ganolog a fy mwthyn yw’r un olaf yn yr ail res gyferbyn â’r ffermdy mawr.",
+        "englishLocationInstructions": "From centre of Pentraeth take the B5109 Talwrn road. Just before hill on your right you will see an entrance to some cottages.<br>There is parking in the central area and my cottage is the last one in the second row opposite the big farm house."
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "latitude": 53.32767734898476,
+    "longitude": -4.250954607200908,
+    "artist": [
+      {
+        "id": "25",
+        "name": "Jenny Armour",
+        "welshDescription": "Yn bennaf haniaethol, mae fy ngwaith hefyd yn cynrychioli Ynys Môn a Gogledd Cymru.<br>Rwyf wrth fy modd â’r golau, yr awyr â’r môr a gobeithio y byddaf yn adlewyrchu hyn yn fy mheintiadau, boed yn fawr ar gynfas neu’n fach mewn ffrâm/heb ffrâm. Prisiau fforddiadwy!",
+        "englishDescription": "Primarily abstract my work is also representational of Anglesey and North Wales.<br>I love the light, big sky, big sea and I hope I reflect this in my paintings whether large on canvas or small framed/unframed. Affordable pricing!",
+        "contactInfo": "01248 853772 / 07500 289744<br>jennyarmour.gorslwyd@hotmail.co.uk<br>Facebook: Jenny Armour Anglesey Artist",
+        "venueLocation": "GORSLWYD, SHEPHERD’S HILL, TYN-Y-GONGL, LL74 8NS",
+        "welshLocationInstructions": "O Benllech cymerwch B5025. Ar ôl 1.5 milltir trowch i’r chwith B5110 tuag at Llangefni.<br>Parhewch am ychydig dros filltir, trowch i’r chwith i fyny’r bryn gan ddilyn arwyddion.<br>O Llangefni cymerwch B5110 am 6.2 milltir (Marianglas). Trowch i’r dde.",
+        "englishLocationInstructions": "From Benllech take B5025. After 1.5 miles turn left B5110 for Llangefni.<br>Continue for just over a mile, turn left up hill following signs.<br>At Llangefni take B5110 for 6.2 miles (Marianglas). Turn right."
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "latitude": 53.360795776875555,
+    "longitude": -4.29676723816951,
+    "artist": [
+      {
+        "id": "26",
+        "name": "Irene Taylor Moores",
+        "welshDescription": "Rwyf wedi gweithio fel Dylunydd Patrymau Arwyneb ac Artist am y rhan fwyaf o fy mywyd.<br>Rwy’n paentio gydag Acrylig yn bennaf.",
+        "englishDescription": "I have worked as a Surface Pattern Designer and Artist for most of my life.<br>I paint mainly with Acrylics.",
+        "contactInfo": "01248 410154 / 07880 893635<br>morwenart@icloud.com",
+        "venueLocation": "GAMDDA, CITY DULAS, LL70 9EX",
+        "welshLocationInstructions": "Dan ni ar yr A5025 rhwng Benllech ac Amlwch.<br>Mae’r Fynedfa rhwng Tafarn y Pilot Boat a Garej Dulas Boatyard.",
+        "englishLocationInstructions": "Situated on the A5025 between Benllech and Amlwch.<br>Entrance in lay by between Pilot Boat pub and Dulas Boatyard/Petrol station."
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "latitude": 53.41038457922192,
+    "longitude": -4.345824090238268,
+    "artist": [
+      {
+        "id": "27",
+        "name": "Artisan Studio",
+        "welshDescription": "Mae Stiwdio Artisan yn allfa annibynnol ar arfordir y Gogledd Ynys Môn yn arbenigo mewn celf, crefft a chynnyrch lleol hefyd fel cyflenwadau addas i bob oed neu allu.",
+        "englishDescription": "Artisan Studio is an independent outlet on the North coast of Anglesey specialising in local art, craft and produce as well as supplies suitable for all ages or abilities.",
+        "contactInfo": "07796 487617<br>bloddesigns@btinternet.com<br>facebook.com/artisanamlwch",
+        "venueLocation": "STANLEY HOUSE, 2 MARKET STREET, AMLWCH, LL68 9ET",
+        "welshLocationInstructions": "Ar Stryd y Farchnad wrth ymyl Eglwys St Eleth gyferbyn â Gwesty Dinorben.",
+        "englishLocationInstructions": "On Market Street by St Eleth’s Church opposite the Dinorben Hotel."
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "latitude": 53.41247950898263,
+    "longitude": -4.33094463819342,
+    "artist": [
+      {
+        "id": "28",
+        "name": "Deborah Soma-Wallace",
+        "welshDescription": "Rwyf wrth fy modd yn defnyddio gwahanol gyfryngau, dyfrlliwiau, modelu 3D ac ati.<br>Nawr rwyf yn creu delweddau gan ddefnyddio beiro braslunio syml du ar gefndir gwyn.<br>Mae fy lluniau yn aml yn chwedlonol, gweler creaduriaid y môr, natur ac ati yn y ngwaith.",
+        "englishDescription": "I Love using different media, watercolours, 3D modelling etc.<br>Now my journey has taken me to create images using a simple sketching black pen on white background.<br>My drawings are often mystical, sea creatures, nature etc in my work.",
+        "contactInfo": "07516 018135<br>dsomawallace@gmail.com",
+        "venueLocation": "DOLWAR, LLEWELYN STREET, AMLWCH, LL68 9HN",
+        "welshLocationInstructions": "Trowch oddi ar borth Amlwch wrth ymyl y maes chwarae ac yna i’r dde i mewn i dŷ gwyrdd Llewelyn Street, ar y chwith i fyny’r allt.",
+        "englishLocationInstructions": "Amlwch port turn off well street by play area then right into Llewelyn Street green house on left up hill."
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "latitude": 53.407359926722165,
+    "longitude": -4.359956405692637,
+    "artist": [
+      {
+        "id": "29",
+        "name": "Martin Schwaller",
+        "welshDescription": "Mae Ynys Môn yn Ynys o ddaeareg ysblennydd dros 1800 miliwn o flynyddoedd. Mae’n Geoparc Byd-eang UNESCO.<br>Rwy’n archwilio sut mae’r pŵer yn y creigiau yn siapio ein tirwedd a diwylliant ei phobl a’r hyn y maent yn ei ddweud wrthym am amser - y gorffennol, y presennol a’r dyfodol.",
+        "englishDescription": "Anglesey is an Island of spectacular geology spanning 1800 million years. It is a UNESCO Global Geopark.<br>I am exploring how the power in the rocks sculpts our landscape and the culture of its people and what they tell us about deep time - the past, now and the future",
+        "contactInfo": "07808095004<br>martinschwaller1@gmail.com",
+        "venueLocation": "CARREG Y GAD, AMLWCH, LL68 9RW",
+        "welshLocationInstructions": "Trowch i’r chwith yn Central Garage ar y B5111 Bethesda St. Parhewch nes cyrraedd Burwen Rd, trowch i’r dde, yna rydym ar y chwith drws nesaf i’r fynwent.",
+        "englishLocationInstructions": "Turn left at Central Garage onto the B5111 Bethesda St. Continue until you get to Burwen Rd, turn right, then we are on the left next door to the cemetery."
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "latitude": 53.41175488326616,
+    "longitude": -4.454539767318445,
+    "artist": [
+      {
+        "id": "30",
+        "name": "Leigh Fielding",
+        "welshDescription": "Fel artist a chrëwr gemwaith, rwyf wrth fy modd yn creu darnau unigryw, cynaliadwy a gwreiddiol.<br>Rwy’n gweithio allan o fy stiwdio yn fy ngardd ac yn cael fy ysbrydoli gan harddwch pobl, lleoedd a natur Ynys Môn.",
+        "englishDescription": "As an artist and jewellery creator, I take delight in creating unique, sustainable, original pieces.<br>I work out of my small garden studio and am inspired by the beauty of the people, places and nature of Ynys Môn.",
+        "contactInfo": "07970 148351<br>leighfielding@hotmail.com",
+        "venueLocation": "40 MAES CYNFOR, CEMAES BAY, LL67 0HS",
+        "welshLocationInstructions": "Mae Shepherd’s Hill hanner ffordd, ar y dde, rhwng croesffordd O’r Stryd Fawr, trowch I mewn i Faes Cynfor, parciwch o amgylch y cefn ac ewch i mewn drwy’r giât gefn.",
+        "englishLocationInstructions": "From the High St, turn on to Maes Cynfor, park around the back and enter through the back gate"
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "latitude": 53.39244572084315,
+    "longitude": -4.453838948310495,
+    "artist": [
+      {
+        "id": "31",
+        "name": "Caffi Siop Mechell",
+        "welshDescription": "Mae Caffi Siop Mechell wedi ennill enw da ledled yr ynys am ei arddangosfeydd chwarterol o waith artistiaid lleol ochr yn ochr â bwyd rhagorol, awyrgylch cyfeillgar a siop grefftau.<br>Mae Natasha Daniel ar hyn o bryd yn arddangos ei phaentiadau sioe gradd olaf.",
+        "englishDescription": "Caffi Siop Mechell has gained an island wide reputation for its quarterly exhibitions of local artists alongside excellent food, a friendly atmosphere and a craft shop.<br>Natasha Daniel is currently exhibiting her final degree show paintings",
+        "contactInfo": "07493 784646<br>FB: Caffi-Siop-Mechell-Llanfechell",
+        "venueLocation": "SIOP MECHELL, LLANFECHELL, LL68 0RA",
+        "welshLocationInstructions": "Yng nghanol pentref Llanfechell, gyferbyn â’r eglwys.",
+        "englishLocationInstructions": "In the heart of the village of Llanfechell, opposite the church."
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "latitude": 53.39229524810632,
+    "longitude": -4.4479738317673485,
+    "artist": [
+      {
+        "id": "32",
+        "name": "Helen Grove-White",
+        "welshDescription": "Sgyrsiau am ynni niwclear, newid hinsawdd a’r anthroposen drwy waith arbrofol yn bennaf ar ffurf ffotograffiaeth neu lyfrau.",
+        "englishDescription": "Conversations on nuclear power, climate change and the anthropocene through experimental work mainly in photographic media and book form.",
+        "contactInfo": "01407 710769 / 07941 780479<br>hgrovewhite@gmail.com<br>www.helengrovewhite.co.uk",
+        "venueLocation": "THE LAUNDRY STUDIO, BRYNDDU, LLANFECHELL, LL68 0RT",
+        "welshLocationInstructions": "O Gaffi Mechell cymerwch ffordd Rhosgoch heibio’r garej. Cymerwch y troiad cyntaf ar y chwith ac wedyn yr ail droiad eto ar y chwith i’r rhodfa. Mae’r stiwdio ar y dde.",
+        "englishLocationInstructions": "From the community café in Llanfechell take the Rhosgoch road out past the garage. Take first left and first left again into the drive. Fork right for the studio on your right."
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "latitude": 53.40281060923736,
+    "longitude": -4.505226349457496,
+    "artist": [
+      {
+        "id": "33",
+        "name": "Wendy Vidler",
+        "welshDescription": "Dw i wedi cael fy ysbrydoli gandirwedd byd natura a phobi Ynys Mon<br>Dw i’n mwynhau gweithio a phob mathau o gyfryngau. Ar hyn o  bryd, mae i’n well gen i weithio â dyfrilliw, pastel ac inc.",
+        "englishDescription": "Taking inspiration from the Anglesey Landscape, Wildlife and People around me.<br>I enjoy working with all types of media, currently favouring watercolour, pastel and ink.",
+        "contactInfo": "07747 167711<br>wendy@wendyvidlerart.com<br>www.wendyvidlerart.com",
+        "venueLocation": "NEUADD, CEMLYN, ANGLESEY, LL67 0EA",
+        "welshLocationInstructions": "O Fali gadewch yr A5025 wrth arwydd y ffatri Jam ac ewch ymlaen nes i chi gyrraedd dau dŷ gwyn ar y chwith, ewch ymlaen rhyw faint a throwch i’r chwith i fyny lon fach ar y dde. Dw i ar dop y lon.",
+        "englishLocationInstructions": "From Valley direction leave A5025 at the Jam Factory sign and continue past them until you reach two white houses on the left, go a little further and turn left up a small lane on the right. I am at the top of the lane."
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "latitude": 53.36801278970828,
+    "longitude": -4.553337612344172,
+    "artist": [
+      {
+        "id": "34",
+        "name": "Suzanne Way",
+        "welshDescription": "Yn arddangos am y tro cyntaf - dwi’n caru lliw, golau, symudiad.<br>Rwy’n mwynhau’r ffordd y mae paent yn symud i greu marciau a haenau annisgwyl.<br>Mae fy mheintiadau yn gyfryngau cymysg ac o natur haniaethol.",
+        "englishDescription": "A first time exhibitor - I love colour, light, movement.<br>I enjoy the way paint moves to create unexpected marks and layers.<br>My paintings are mixed media and of an abstract nature.",
+        "contactInfo": "07398 766391<br>suz@vsl.co.uk",
+        "venueLocation": "TYDDYN YR HIDYLL, CHURCH BAY, RHYDWYN, HOLYHEAD, LL65 4HA",
+        "welshLocationInstructions": "O bentref Llanfaethlu anelwch tuag at fae’r eglwys – mae fy mwthyn glas ar y chwith ar dro (tu ôl i’r wal isel) cyn i chi gyrraedd y lôn sy’n arwain i lawr at Church Bay a chaffi Wavecrest.",
+        "englishLocationInstructions": "From Llanfaethlu village head towards church bay - my blue painted cottage is on the left on bend (behind low wall) before you reach the lane leading down to Church Bay and Wavecrest café."
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "latitude": 53.31578811769047,
+    "longitude": -4.643819800438241,
+    "artist": [
+      {
+        "id": "35",
+        "name": "Bryn Humphreys",
+        "welshDescription": "Mae fy stiwdio wedi’i lleoli yn yr ardd a dyna lle rydw i’n gweithio ac yn arddangos fy nghelf.<br>Rwy’n paentio tirluniau o Ynys Môn a Gwynedd mewn acrylig, olew a dyfrlliw a minnau hefyd yn ymgymryd â chomisiynau",
+        "englishDescription": "My studio is situated in the garden and it’s where I work and display my art.<br>I primarily paint landscapes ofAnglesey and Gwynedd in acrylic, oil and watercolour and I also undertake commissions.",
+        "contactInfo": "07445 379831<br>brynhumphreys@hotmail.com<br>www.artfinder.com/artist/brynhumphreys",
+        "venueLocation": "SARYM, PORTH Y FELIN, HOLYHEAD, LL65 1BG",
+        "welshLocationInstructions": "A55 i Gaergybi ar hyd Land’s End Road, dilyn yr arwyddion twristaidd gwyn ar frown am y Marina, ar hyd y promenâd, i’r chwith ger y Boathouse Hotel yn y pen draw, o dan y bont, ac mae’r stiwdio ar y dde 150 llath.",
+        "englishLocationInstructions": "A55 Holyhead, along Land’s End Road, follow Tourist white on brown signs for Marina, along promenade, at end left by Boathouse Hotel, under bridge, studio on right 150 yds."
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "latitude": 53.31042175683375,
+    "longitude": -4.658858903446696,
+    "artist": [
+      {
+        "id": "36",
+        "name": "Wispy Willow Creations",
+        "welshDescription": "Cerflunydd, Crëwr Basgedi a hyfforddwr pob peth helyg!<br>Rwy’n creu cerfluniau helyg a weiren ar gyfer yr ardd a’r cartref.<br>Mae fy ngwaith yn seiliedig ar gomisiwn, gellir gweld fy ngherfluniau yn breifat ac mewn mannau cyhoeddus, ac yn fy stiwdio gartref.",
+        "englishDescription": "Sculptor, Basket Maker & instructor of all things willow!<br>I create bespoke willow & wire sculptures for the garden & home.<br>My work is commission based, my sculptures can be seen in private & public spaces, tourist attractions & stately homes & at my home studio.",
+        "contactInfo": "01407 761677 / 07704 310729<br>wispywillowcre8tions@gmail.com<br>www.wispywillowcre8tio.wixsite.com/website",
+        "venueLocation": "31 OLD SCHOOL ROAD, LLAINGOCH, HOLYHEAD, LL65 1DH",
+        "welshLocationInstructions": "Gyrrwch heibio Neuadd Bentref Llaingoch ac ewch i gyfeiriad Ynys Lawd, trowch ar y chwith i Old School Road, byngalo gwyn ar y cornel ar y dde. Mae cerflun ceffyl enfawr yn yr ardd.",
+        "englishLocationInstructions": "Drive past Llaingoch Village Hall going towards South Stack, turn left on to Old School Road, white bungalow on the corner on right hand side. Giant horse sculpture in garden."
+      }
+    ]
+  },
+  {
+    "id": "37 & 38",
+    "name": "Ucheldre Centre & Peter Alexander Lane",
+    "latitude": 53.30942320672874,
+    "longitude": -4.638320087296695,
+    "artist": [
+      {
+        "id": "37",
+        "name": "Canolfan Ucheldre",
+        "welshDescription": "Mae Ucheldre yn rhaglennu digwyddiadau, cyngherddau, ffilmiau, darllediadau lloeren, arddangosfeydd, cymdeithasau a gweithdai drwy gydol y flwyddyn.<br>Yn ystod Wythnosau Celf Ynys Môn mae’n arddangos gwaith gan artistiaid sy’n cymryd rhan, ynghyd â chynnal gweithdai.",
+        "englishDescription": "Ucheldre programmes events, concerts, films, satellite broadcasts, exhibitions, societies and workshops throughout the year.<br>During AAW it exhibits work by participating artists, along with workshops and an opportunity to meet makers and artists.",
+        "contactInfo": "01407 763361<br>box-office@ucheldre.org<br>www.ucheldre.org",
+        "venueLocation": "MILLBANK, CAERGYBI/HOLYHEAD, LL65 1TE",
+        "welshLocationInstructions": "Dilynwch yr A55 i Gaergybi, yna arwyddion Canol y Dref nes y gwelwch arwyddion gwyn ar frown twristaidd.",
+        "englishLocationInstructions": "Follow A55 into Holyhead, then Town Centre signs until brown on white tourist signs."
+      },
+      {
+        "id": "38",
+        "name": "Peter Alexander Lane",
+        "welshDescription": "Fel Aelod Cyswllt o’r ‘Guild of Aviation Artists’ mae fy mhrif ffocws ar beintio ar y thema o Hanes Hedfan Cymru.",
+        "englishDescription": "As an Associate Member of the Guild of Aviation Artists my main focus is with painting Welsh Aviation History subjects.",
+        "contactInfo": "01407 742519<br>pete.lane34@yahoo.com<br>FB: PeterAlexanderLane",
+        "venueLocation": "MILLBANK, CAERGYBI/HOLYHEAD, LL65 1TE",
+        "welshLocationInstructions": "Dilynwch yr A55 i Gaergybi, yna arwyddion Canol y Dref nes y gwelwch arwyddion gwyn ar frown twristaidd.",
+        "englishLocationInstructions": "Follow A55 into Holyhead, then Town Centre signs until brown on white tourist signs."
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "latitude": 53.305354273868694,
+    "longitude": -4.638520867105832,
+    "artist": [
+      {
+        "id": "39",
+        "name": "Christine Williams",
+        "welshDescription": "Rwy’n artist cyfrwng cymysg sy’n gweithio gyda gwydr môr, broc môr, ffeltio nodwydd, gwaith gwifren a papur ond yn ddiweddar rwyf hefyd wedi dod o hyd i gariad at waith gwydr.<br>Rwy’n gweld gwydr mewn golau hollol wahanol nawr.",
+        "englishDescription": "I am a mixed media artist working with sea glass, driftwood, needle felting, wirework, paper, but I’ve recently also found a love for glass work, so i break and crush glass and carefully cut it all with nippers.<br>I see glass in a whole different light now.",
+        "contactInfo": "07875 389694<br>gwilchris9pg@gmail.com",
+        "venueLocation": "9 PENGERDDI, HOLYHEAD, LL65 2AD",
+        "welshLocationInstructions": "A55 i’r gylchfan, cymerwch yr 2il i’r chwith cariwch ymlaen i ben Heol Holborn. Trowch i’r dde ac yna 1af i’r chwith. Ewch yn syth ymlaen i Ffordd Plas. Pengerddi yw’r 1af i’r chwith, hanner ffordd i lawr trowch i’r dde",
+        "englishLocationInstructions": "A55 to roundabout... take 2nd left carry on to top of Holborn Rd... turn right then 1st left... go straight ahead onto Plas Rd. Pengerddi is 1st left... half way down turn right."
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "latitude": 53.30448592137738,
+    "longitude": -4.63556922688959,
+    "artist": [
+      {
+        "id": "40",
+        "name": "Janey Masters",
+        "welshDescription": "Mae fy nghelf yn cael ei ddylanwadu gan hanes / tirlun Cymru ac wedi ysbrydoli’r cymeriadau ffermio, Gwyn a Gwawr.<br>Dw i’n credu’n gryf mewn pŵer comedi i godi’r ysbryd ac yn aml yn cynnwys hynny yn fy ngwaith.",
+        "englishDescription": "Welsh history/landscape influence my art, and inspired my popular farming characters, Gwyn & Gwawr.<br>A firm belief in the power of comedy to lift the spirit, is reflected in many artworks, often incorporating a subtle humour.",
+        "contactInfo": "07854 626830<br>gwynandgwawr@gmail.com",
+        "venueLocation": "GWENDRA HOUSE, 63 MAESHYFRYD ROAD, HOLYHEAD, LL65 2AP",
+        "welshLocationInstructions": "Oddiar gylchfan Caergybi o’r A55. Cymrwch yr ail fynedfa. Ewch i fyny Holborn Road a trowch i’r chwith i mewn i Maeshyfryd Road. Dilynwch y lôn yr holl ffordd gan fynd heibio Kings Road. Mae Gwendra ar y chwith gyferbyn â Mynwent Caergybi.",
+        "englishLocationInstructions": "A55 to Holyhead roundabout.Take 2nd exit. Turn left up Holborn Rd. At top turn left into Maeshyfryd Rd. Follow road, crossing top of Kings Rd. Gwendra is on the left, opposite Holyhead Cemetary."
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "latitude": 53.30587514360081,
+    "longitude": -4.618343435868697,
+    "artist": [
+      {
+        "id": "41",
+        "name": "Daniela Milicova",
+        "welshDescription": "Mae fy ngwaith celf yn gymysgedd o ddeunyddiau newydd ac rhai wedi’u ailgylchu, yn cyfuno ffotograffiaeth, paentio haniaethol, a dylunio wedi’i ysbrydoli gan bensaernïaeth a chefn gwlad Cymru, gan greu siapiau hylifol, modern.",
+        "englishDescription": "My artwork is a mixture of new and upcycled materials, blending photography, abstract painting, and design inspired by Welsh architecture and countryside, creating fluid, modern shapes for our living spaces.",
+        "contactInfo": "07860 845018<br>dmilicova@gmail.com",
+        "venueLocation": "36 CAE BRAENAR, HOLYHEAD, LL65 2PN",
+        "welshLocationInstructions": "O’r A55, ewch i’r A5153/A55. Wrth y gylchfan, ewch i’r A5 tuag at Gaergybi a chymerwch y tro cyntaf ar y dde. Cymerwch y tro cyntaf ar y chwith i ffordd Llanfawr wedyn i Gae Braenar. Parciwch a cherddwch i’r stad, tŷ gyda drws gwydr.",
+        "englishLocationInstructions": "From A55 exit to A5153/A55. Roundabout by Tesco petrol exit to A5 Holyhead, take first right. First left onto Llanfawr road and first right onto Cae Braenar. By sharp left bend park the car and walk onto the estate. House is on your left with milky glass door."
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "latitude": 53.302244229369435,
+    "longitude": -4.6180956899363395,
+    "artist": [
+      {
+        "id": "42",
+        "name": "Phoenix Studios",
+        "welshDescription": "Mae Phoenix yn stiwdio annibynnol yng Nghaergybi, ac mae’n cefnogi nifer o artistiaid ar draws ystod eang o gyfryngau gan gynnwys paentio, ffotograffiaeth, gwaith gwydr, crefftau a gwaith clywedol/gweledol",
+        "englishDescription": "Phoenix is an independent artists’ studio located in Holyhead, supporting a number of artists across a wide range of media including painting, photography, glass work, crafts and audio/visual.",
+        "contactInfo": "01407 459139 / 07946 041930<br>firebird@phoenixstudiosmon.co.uk",
+        "venueLocation": "3 SWISS COTTAGE, LONDON ROAD, HOLYHEAD, LL65 2TJ",
+        "welshLocationInstructions": "O’r gylchfan ar gyffordd yr A5 â’r A5153 cymerwch yr A5 tuag at Gaergybi, ar y chwith ger y teras o bedwar bwthyn gellir cyrraedd y fynedfa i Swiss Cottage trwy’r giât, ar ochr dde’r pedwar bwthyn. O’r giât, dilynwch yr arwyddion.",
+        "englishLocationInstructions": "From the roundabout at the junction of the A5 with the A5153 (adjacent to Tesco) take the A5 towards Holyhead, stopping almost immediately, on left, adjacent to the terrace of four cottages. Swiss Cottage is accessed through the gate, at the right hand side of the four cottages. From the gate, follow the signs."
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "latitude": 53.278515340260256,
+    "longitude": -4.61335960877091,
+    "artist": [
+      {
+        "id": "43",
+        "name": "Trearddur Bay Art",
+        "welshDescription": "Yn cynrychioli grŵp celf pentref Trearddur Bay.<br>Arddangosfa o waith ein grŵp celf lleol mewn amrywiaeth eang o gyfryngau.",
+        "englishDescription": "Representing Trearddur Bay village art group.<br>Exhibition of work from our local art group in a wide variety of media",
+        "contactInfo": "07733 150187<br>rbrooksban@icloud.com",
+        "venueLocation": "TREADDUR BAY VILLAGE HALL, 7 MARINERS COURT, LL65 2YJ",
+        "welshLocationInstructions": "Lle hawdd ei weld yng Bae Treaddur.",
+        "englishLocationInstructions": "Easily seen in central Treaddur Bay."
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "latitude": 53.271245304266685,
+    "longitude": -4.599152884806176,
+    "artist": [
+      {
+        "id": "44",
+        "name": "Anwen Roberts",
+        "welshDescription": "Mae fy ngwaith yn seiliedig ar fy ymwneud a diddordeb yn y sector amaethyddol a gwledig.<br>Wedi’i ysbrydoli gan waith, bywyd, pobl, lleoedd ac anifeiliaid perthynol i’r ffordd hon o fyw.<br>Rwy’n gweithio ym maes olew yn bennaf.",
+        "englishDescription": "The work I produce is based around my involvement and interest in the agricultural and rural sector.<br>Inspired by the work, life, people, places and animals related to this way of life.<br>I work mainly in oils.",
+        "contactInfo": "01407 860117<br>anwenrobertsart@gmail.com<br>www.anwenrobertsart.co.uk",
+        "venueLocation": "BUMWERTH, TREARDDUR BAY, HOLYHEAD.  LL65 2LZ",
+        "welshLocationInstructions": "Cyffordd 3 o’r A55 I’r Fali, I’r chwith wrth y goleuadau traffig I Bont Rhyd y Bont, heibio I Stad Fferm Refail a’r safle bws ar y chwith. 100 llath ymlaen, mae Bumwerth ar y chwith, gyferbyn a chilfan.",
+        "englishLocationInstructions": "J3 off A55 to Valley, left at traffic lights to Four Mile Bridge, past Refail Farm Estate and bus stop on left, 100 yards on, Bumwerth is on left, opposite layby."
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "latitude": 53.273441789021,
+    "longitude": -4.5822790565215925,
+    "artist": [
+      {
+        "id": "45",
+        "name": "Anglesey Leather",
+        "welshDescription": "Mae creu nwyddau lledr wedi’u gwneud â llaw yn llawenydd llwyr i mi ac yn caniatáu i mi uno traddodiad â dylunio cyfoes.<br>Mae pob darn yn adlewyrchu ymrwymiad i ansawdd ac unigoliaeth, gan ddathlu harddwch lledr.",
+        "englishDescription": "Creating handmade leather goods is an absolute joy and allows me to merge tradition with contemporary design.<br>Each piece reflects a commitment to quality and individuality, celebrating the beauty of leather",
+        "contactInfo": "07930 863650<br>angleseyleather@gmail.com<br>www.angleseyleather.co.uk",
+        "venueLocation": "SIOP FARM, FOUR MILE BRIDGE, HOLYHEAD, LL65 2PJ.",
+        "welshLocationInstructions": "Teithio o’r Fali ar y B4545 i Fae Trearddur dros Bontrhydybont. Siop Fferm yw’r tŷ gwyn olaf ar y dde i chi cyn y lloches bws.",
+        "englishLocationInstructions": "Travelling from Valley on the B4545 to Trearddur Bay over Four Mile Bridge. Siop Farm is the last white house on your right before the bus shelter"
+      }
+    ]
+  },
+  {
+    "id": "46",
+    "latitude": 53.27415253177238,
+    "longitude": -4.583029279755465,
+    "artist": [
+      {
+        "id": "46",
+        "name": "Pat Kaye",
+        "welshDescription": "Profiad drwy oes gydd chlai, gwydriad a Thân I greu Gwaith cerflunol sylweddol, ac eitemau pob dydd sydd yn addurnol a defnyddiol.<br>Hefyd, cyboeddais lyfr-Anglesey and My Paint Box.",
+        "englishDescription": "A life-times experience with clay & fire, making thrown domestic ware & large sculptural pieces.<br>Also publishing book-Anglesey and My Paint Box",
+        "contactInfo": "0755501565<br>pat@dorwyn4.plus.com",
+        "venueLocation": "DORWYN, FOURMILE BRIDGE, LL65 2PJ",
+        "welshLocationInstructions": "Cymerwch y lôn anorffenedig rhwng hen Capel Sardis a’r arhosfa bws ym mhont Ryd y Bont trowch I’r dde, ac una o’ch blaen ar y chwith, mae Dorwyn.",
+        "englishLocationInstructions": "Take the unmade road between the glassed over bus stop and the converted Chapel at Fourmile bridge around the right hand corner to destination."
+      }
+    ]
+  },
+  {
+    "id": "47",
+    "latitude": 53.24690461703372,
+    "longitude": -4.569868931986229,
+    "artist": [
+      {
+        "id": "47",
+        "name": "Huw Gareth Jones",
+        "welshDescription": "Mae fy paentiadau wedi eu gwreiddio yn cymeriad tirlun ac adeiladau yr ardal.<br>Mae nhw wedi selio ar brasluniau a wnaed yn y man a’r lle mewn pensal, siarcol, dyfrliw, acrylig a cyfryngau cymusg.",
+        "englishDescription": "I create paintings that are rooted in the character of the landscape and buildings of the area.<br>The paintings are developed from drawings done on the spot in pencil, charcoal, watercolour acrylic and mixed media.",
+        "contactInfo": "01407 860244 / 07747 697842<br>huwjonesart@icloud.com<br>www.huwjonesart.co.uk",
+        "venueLocation": "CILBWCH, RHOSCOLYN, LL65 2NQ",
+        "welshLocationInstructions": "O Bont Rhyd y Bont troi am Rhoscolyn. Ar ol milltir troi i’r chwith am Silver Bay. Ar ol hanner milltir fforchio i’r dde wrth postyn gwyn . Dilyn ffordd fach i lawr, Cilbwch ydi’r ty olaf wrth y mor. Gallwch gerdded ar draws y traeth o’r Maes Parcio.",
+        "englishLocationInstructions": "From Four Mile Bridge turn for Rhoscolyn. After one mile turn left for Silver Bay. After half mile fork right by a white post and speed bump. Follow the track down, Cilbwch is the last house by the sea. You can walk across the beach from the Car Park."
+      }
+    ]
+  },
+  {
+    "id": "48 to 50",
+    "latitude": 53.24786346279857,
+    "longitude": -4.464093711083357,
+    "artist": [
+      {
+        "id": "48",
+        "name": "Seapig (Cara White)",
+        "welshDescription": "Yn arbenigo mewn gemwaith morwydr naturiol. Arddangosiadau drilio ar gael ar gais.<br>Ethos Seapig ydy Uwchgylchu, Ailgylchu, Moesegol, Cynaliadwy; ac mae gennym ni eco-siop sy’n arddangos gwneuthurwyr eraill sy’n rhannu’r un ethos ecogyfeillgar â ni.",
+        "englishDescription": "Specialising in bespoke seaglass jewellery using naturally tumbled seaglass. Drilling demonstrations available on request.<br>The Seapig ethos is Upcycled, Recycled, Ethical, Sustainable; and we have an eco-store showcasing other planet-friendly makers.",
+        "contactInfo": "07736 964106<br>info@seapig-anglesey.com",
+        "venueLocation": "SEAPIG, GROESLON, CEIRCHIOG, NR. RHOSNEIGR, LL63 5UH",
+        "welshLocationInstructions": "Yn hawdd ei gyrraedd ar y brif ffordd sy’n cysylltu’r A55 a Rhosneigr. Rydym ar yr ochr chwith wrth i chi yrru i gyfeiriad Rhosneigr. Digon o le parcio (gall cerbydau mwy barcio yn y maes parcio gorlif, er mwyn symud yn haws)",
+        "englishLocationInstructions": "Easily accessible on the main road connecting the A55 and Rhosneigr. We are on the lefthand side as you drive towards Rhosneigr. Plenty of parking (larger vehicles can park in our overflow field, for easier maneuvering)."
+      },
+      {
+        "id": "49",
+        "name": "Celia Nancarrow",
+        "welshDescription": "Dechreuodd fy nghariad at Ynys Môn 50 mlynedd yn ôl - mae ei awyrgylch unigryw yn ysbrydoli fy argraffiadau, paentiadau a brasluniau gwreiddiol, Mae’n wlad o hanes cryf, gyda thirweddau gwych, lliwgar, cefndiroedd mynydd, awyr a machlud.",
+        "englishDescription": "My love of Anglesey started 50 yrs ago - its unique atmosphere inspires my original prints, paintings and sketches.It’s a land of strong history, with wonderful, colourful landscapes, mountain backdrops, skies and sunsets.",
+        "contactInfo": "07718 761427<br>celianancarrow@gmail.com",
+        "venueLocation": "SEAPIG, GROESLON, CEIRCHIOG, NR. RHOSNEIGR, LL63 5UH",
+        "welshLocationInstructions": "Yn hawdd ei gyrraedd ar y brif ffordd sy’n cysylltu’r A55 a Rhosneigr. Rydym ar yr ochr chwith wrth i chi yrru i gyfeiriad Rhosneigr. Digon o le parcio (gall cerbydau mwy barcio yn y maes parcio gorlif, er mwyn symud yn haws)",
+        "englishLocationInstructions": "Easily accessible on the main road connecting the A55 and Rhosneigr. We are on the lefthand side as you drive towards Rhosneigr. Plenty of parking (larger vehicles can park in our overflow field, for easier maneuvering)."
+      },
+      {
+        "id": "50",
+        "name": "Paula Cutler",
+        "welshDescription": "Mae Paula yn mwynhau tynnu lluniau o’r golygfeydd o amgylch llwybrau arfordirol a thraethau Gogledd Cymru.<br>Mae’n cymryd agwedd syml a manteisgar at ei gwaith ac yn defnyddio papur ‘giclee’ yn ei phrintio sy’n dod â’r lliwiau a’r awyrgylch yn fyw.",
+        "englishDescription": "Paula enjoys taking photographs of the scenery around the coastal paths and beaches of North Wales.<br>She takes a simple and opportunistic approach to her work and uses ‘giclee’ paper in her printing which brings to life the colours and atmosphere she experiences",
+        "contactInfo": "07769 745888<br>paulacutlerphoto@gmail.com",
+        "venueLocation": "SEAPIG, GROESLON, CEIRCHIOG, NR. RHOSNEIGR, LL63 5UH",
+        "welshLocationInstructions": "Yn hawdd ei gyrraedd ar y brif ffordd sy’n cysylltu’r A55 a Rhosneigr. Rydym ar yr ochr chwith wrth i chi yrru i gyfeiriad Rhosneigr. Digon o le parcio (gall cerbydau mwy barcio yn y maes parcio gorlif, er mwyn symud yn haws)",
+        "englishLocationInstructions": "Easily accessible on the main road connecting the A55 and Rhosneigr. We are on the lefthand side as you drive towards Rhosneigr. Plenty of parking (larger vehicles can park in our overflow field, for easier maneuvering)."
+      }
+    ]
+  },
+  {
+    "id": "51",
+    "latitude": 53.22881016720018,
+    "longitude": -4.494936828468671,
+    "artist": [
+      {
+        "id": "51",
+        "name": "Judith Donaghy",
+        "welshDescription": "Tirluniau, Morluniau a gwaith lled-haniaethol o brydferthwch Ynys Môn sy’n cael eu peintio mewn olew cyfoethog synhwyrus gyda chyllill a brwshys ar gynfas.<br>Gellir cael hyd i’r rhain ynghyd â fy mheintiadau bach o flodau mewn galeriau yng Nghymru a Lloegr.",
+        "englishDescription": "Landscapes, Seascapes and semi – abstracts of the beautiful Isle of Anglesey are painted in rich luscious oil paint using palette knives and brushes on canvas.<br>These together with my little flower paintings can be found in galleries in Wales and England.",
+        "contactInfo": "01407 810963 / 07877 258732<br>judithdonaghy2@gmail.com<br>www.judithdonaghy.com",
+        "venueLocation": "MAESLLAN FAWR, STATION RD., LLANFAELOG, TYCROES, RHOSNEIGR. LL63 5TN",
+        "welshLocationInstructions": "Cymerwch yr A4080 am Rosnegir oddi ar cyffordd 5 ar yr A55. Ar ôl 3 milltir trowch ar y dde i Lôn yr Orsaf o flaen rhes o dai (Eglwys Maelog ar y chwith). Maesllan Fawr ydy’r 2il fwthyn, tua 100 llath ar y dde.",
+        "englishLocationInstructions": "Junction 5 off A55 for Rhosneigr A4080 After 3 miles turn right onto Station Rd. In front of terraced cottages (Maelog church on left), Maesllan Fawr is the 2nd cottage, 100 yards on the right."
+      }
+    ]
+  },
+  {
+    "id": "52 & 53",
+    "latitude": 53.22722112010076,
+    "longitude": -4.5215393597008955,
+    "artist": [
+      {
+        "id": "52",
+        "name": "Jane Samuel",
+        "welshDescription": "Wrth gael fy ysbrydoli’n weledol gan arfordir Môn a chregyn wedi torri, dw i’n creu cerfluniau cerameg sy’n adlewyrchu’n taith trwy fywyd, gan atseinio’r nerth a’r breuder sydd ynom ni.",
+        "englishDescription": "Visually inspired by the Anglesey coastline and broken shells, I create ceramic sculptures that reflect our journey through life, resonating the strength and fragility that is within us.",
+        "contactInfo": "07881 461626<br>jane@js-ceramics.co.uk<br>www.js-ceramics.co.uk",
+        "venueLocation": "TŶ PLANT, THE BOATPOOL, RHOSNEIGR, LL64 5YJ",
+        "welshLocationInstructions": "Cyffordd 5 o’r A55, dilynwch A4080 i Rhosneigr. Wrth dŵr y cloc, trowch i’r chwith i lawr y stryd fawr, ar ôl y siop ewch ymlaen ymhellach am tua 200 llath, mae giât las ar y dde gydag arwydd am JS Ceramics.",
+        "englishLocationInstructions": "J5 off the A55, follow A4080 to Rhosneigr. At the clock tower turn left down the high street, after the shops continue approx a further 200yds, blue gate on right with sign for JS Ceramics."
+      },
+      {
+        "id": "53",
+        "name": "Caroline Brogden",
+        "welshDescription": "Gemwaith wedi’i ysbrydoli gan yr arfordir, wedi’i gerfio â llaw o Surfite, sef sgil-gynnyrch o weithgynhyrchu byrddau syrffio.<br>Yn aml, caiff ei gyfuno â metelau gwerthfawr wedi’u hailgylchu, megis arian, i ychwanegu strwythur a ffurf.",
+        "englishDescription": "Coastal inspired jewellery which has been hand carved from Surfite, a by-product of surfboard manufacturing.<br>Often combined with recycled precious metals like silver to add structure and form.",
+        "contactInfo": "07786 656003<br>info@carolinebrogden.co.uk",
+        "venueLocation": "TŶ PLANT, THE BOATPOOL, RHOSNEIGR, LL64 5YJ",
+        "englishLocationInstructions": "Cyffordd 5 o’r A55, dilynwch A4080 i Rhosneigr. Wrth dŵr y cloc, trowch i’r chwith i lawr y stryd fawr, ar ôl y siop ewch ymlaen ymhellach am tua 200 llath, mae giât las ar y dde gydag arwydd am JS Ceramics.",
+        "welshLocationInstructions": "J5 off the A55, follow A4080 to Rhosneigr. At the clock tower turn left down the high street, after the shops continue approx a further 200yds, blue gate on right with sign for JS Ceramics."
+      }
+    ]
+  },
+  {
+    "id": "54",
+    "latitude": 53.19534325931114,
+    "longitude": -4.405894475626167,
+    "artist": [
+      {
+        "id": "54",
+        "name": "Liz Toole",
+        "welshDescription": "Argraffiadau cyfyngedig o sgrinluniau a linocuts wedi eu gwneud â llaw a wedi’u hysbrydoli gan adar.<br>Paentiadau ar bren wedi eu ysbrydoli gan arfordir Ynys Môn.<br>Gwyliwch sut i wneud printiadau am 1pm a 3pm ar ddiwrnodau agored.",
+        "englishDescription": "Limited edition hand printed bird inspired linocuts and screenprints.<br>Paintings on wood inspired by the Anglesey coast.<br>Watch printmaking demonstrations at 1pm and 3pm on open days.",
+        "contactInfo": "07702 614256<br>liztooleart@gmail.com<br>www.liztoole.co.uk",
+        "venueLocation": "TYDDYAN OLIVER, HERMON, BODORGAN, LL62 5AD",
+        "welshLocationInstructions": "Parciwch yn y gilfan o flaen y tŷ a cherdded i lawr y trac ar ochr dde’r tŷ. Os yw’r gilfan yn llawn gyrrwch i lawr y trac a pharcio ger y giât fawr werdd.",
+        "englishLocationInstructions": "Please park in the layby at the front of the house and walk down the track on the right hand side of the house. If the layby is full please drive down the track and park by the large green gate."
+      }
+    ]
+  },
+  {
+    "id": "55",
+    "latitude": 53.15637252056552,
+    "longitude": -4.349249928556872,
+    "artist": [
+      {
+        "id": "55",
+        "name": "Crafty as Hel - Ynys Môn",
+        "welshDescription": "Fy enw i yw Helen McLean, o fy stiwdio gartref ar gyrion Twyni Niwbwrch rwy’n creu eitemau defnyddiol a hardd gan ddefnyddio Gwlad yr Haf a fy helyg cartref.<br>Rwyf hefyd yn cynnal amrywiaeth o weithdai crefft helyg.",
+        "englishDescription": "My name is Helen McLean, from my home studio on the edge of Newborough Warren, I create useful and beautiful items using Somerset and my homegrown willow.<br>I also run a range of willow craft workshops.",
+        "contactInfo": "07886 609740<br>craftyashelynysmon@gmail.com",
+        "venueLocation": "PEN PARC, PEN-LON. NIWBWRCH, LL61 6RS",
+        "welshLocationInstructions": "O gylchfan Pen-lon, cymerwch y lôn chwith tuag at Faes Parcio Braint, mae Pen Parc hanner ffordd i lawr ar y dde.",
+        "englishLocationInstructions": "From the Pen-lon roundabout, take the left-hand lane towards the Braint Car Park, Pen Parc is half way down on the right."
+      }
+    ]
+  },
+  {
+    "id": "56",
+    "latitude": 53.19060846685907,
+    "longitude": -4.3296016419439765,
+    "artist": [
+      {
+        "id": "56",
+        "name": "Craig Taylor",
+        "welshDescription": "Mae Craig Taylor yn paentio pynciau bywyd gwyllt (yn enwedig adar) mewn arddull realistig.<br>Mae’n defnyddio Acrylig, Olew, Dyfrlliw a Gouache.<br>Mae’n wyliwr adar gydol oes.",
+        "englishDescription": "Craig Taylor paints wildlife subjects (particularly birds) in a realistic style.<br>He uses Acrylic, Oil, Watercolour and Gouache.<br>He is a lifelong birdwatcher.",
+        "contactInfo": "Telephone 07342 346955<br>craigtaylorartist@outlook.com<br>www.craigtaylorartist.co.uk",
+        "venueLocation": "29, STAD TREASERTH, LLANGAFFO. LL60 6NP",
+        "welshLocationInstructions": "O Bentre Berw i Langaffo ar y B4419, wrth i chi ddod i mewn i’r pentref cymerwch y troad cyntaf i’r dde i Stad Treaserth,y byngalo yw’r ail ar y dde wrth i chi droi i mewn. Mae’r stiwdio drwy’r garej.",
+        "englishLocationInstructions": "From Pentre Berw to Llangaffo on the B4419, as you enter the village take the first right into Stad Treaserth, the bungalow is the second on the right as you turn in. Studio is through the garage."
+      }
+    ]
+  },
+  {
+    "id": "57",
+    "latitude": 53.1677918962019,
+    "longitude": -4.322484505041031,
+    "artist": [
+      {
+        "id": "57",
+        "name": "Bryn Teg Ceramics",
+        "welshDescription": "Mae gwaith stiwdio Bryn Teg Ceramic wedi’u hysbrydoli gan fythau a hud, llên gwerin a’r byd naturiol. Cartref Gwarcheidwaid Llanddwyn.<br>Mae fy ngherfluniau yn gwahodd rhyfeddod a chreadigrwydd, cwestiynau a naratifau",
+        "englishDescription": "Bryn Teg Ceramic’s studio creations are inspired by Myth & Magic, Folklore & The Natural World. Home of the Llanddwyn Guardians.<br>My sculptures invite wonder and creativity, questions & narratives.",
+        "contactInfo": "07952 756429<br>www.brynteg-ceramics.co.uk",
+        "venueLocation": "BRYN TEG CERAMICS, LÔN CAPEL, DWYRAN, LL61 6AU",
+        "welshLocationInstructions": "Wedi’i leoli yn Dwyran, De Ddwyrain Ynys Môn. Anelwch ar hyd prif lôn Lôn Capel. Mae’r stiwdio gartref a’r ardd ar ochr chwith y bwthyn Bryn Teg gyferbyn â’r Hen Fecws (Neuadd Eglwys Sant Ceinwen) LL61 6AU",
+        "englishLocationInstructions": "Located in Dwyran, South East Anglesey. Head along the main lane of Lon Capel. The home studio space & garden is left-side of cottage Bryn Teg opposite Yr Hen Fecws (St Ceinwen’s Church Hall) LL61 6AU"
+      }
+    ]
+  },
+  {
+    "id": "58",
+    "latitude": 53.214835678065036,
+    "longitude": -4.202636727594483,
+    "artist": [
+      {
+        "id": "58",
+        "name": "Carole Randall",
+        "welshDescription": "Dewch i ymweld â fy stiwdio ysgythru i weld sut mae’r delweddau yn cael eu printio oddi ar blatiau copr a sinc.",
+        "englishDescription": "Come and visit my etching studio to see how the images are created and printed from copper and zinc plates.",
+        "contactInfo": "01248 712137 / 07786 874018<br>carloe@dsl.pipex.com",
+        "venueLocation": "MOR A MYNYDD, PWLLFANOGL, FFORDD BRYNSIENCYN, LLANFAIRPWLL, LL61 6PD",
+        "welshLocationInstructions": "A4080 o Llanfairpwll. Ar ôl yr arwydd 40mya trowch i’r chwith. Lôn arw. Arwydd coedwig gwiwerod coch. O Frynsiencyn - ar ôl Plas Newydd a’r ail arwydd 40mya, trowch i’r dde. Arwydd ARAF wedi’i baentio ar y ffordd.",
+        "englishLocationInstructions": "A4080 From Llanfairpwll After 40mph turn L Unsurfaced lane. Red Squirrel Woodland sign. From Brynsiencyn after Plas Newydd & 2nd 40mph sign turn R. SLOW painted on road."
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "latitude": 53.263460879604935,
+    "longitude": -4.312066971276088,
+    "artist": [
+      {
+        "id": "59",
+        "name": "Oriel Môn",
+        "welshDescription": "Oriel Môn yw prif amgueddfa ac Oriel arddangos Ynys Môn.<br>I’w chynulleidfa artistig, mae’r Oriel yn cynnig rhaglen ddeinamig o arddangosfeydd creadigol o bob math o ffurfiau celf, gan arddangos gwaith arlunwyr profiadol a thalentau ifanc fel ei gilydd.",
+        "englishDescription": "Oriel Môn is Anglesey’s premier purpose built museum  and art gallery.<br>For its artistic audience, the Oriel offers a dynamic programme of creative exhibitions from all art forms, displaying the works of established artists and  young talents alike.",
+        "contactInfo": "01248 724444<br>oriel@ynysmon.gov.uk<br>www.orielmon.org",
+        "venueLocation": "ORIEL MÔN, RHOSMEIRCH, LLANGEFNI, LL77 7TQ",
+        "welshLocationInstructions": "Cymerwch ffordd y B5111 o Langefni tuag at Llanerchymedd, ac  rydym ar yr ochr dde gerllaw’r Cwrs Golf.",
+        "englishLocationInstructions": "Follow A55 into Holyhead, then Town Centre signs until brown on white tourist signs."
+      }
+    ]
+  }
+]

@@ -1,7 +1,5 @@
 [
   {
-    // Test comment to check if the JSONC format is working correctly
-    /* This is a multi-line comment to test JSONC */
     "id": "1",
     "name": "Andy Ball",
     "latitude": 53.22604323080291,
