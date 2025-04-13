@@ -85,7 +85,7 @@ map.addLayer(markers);
 var markerFeatures = {};
 
 // Fetch and process markers from JSON
-fetch('./markers.jsonc')  // Changed extension to .jsonc
+fetch('./markersv2.jsonc')  // Changed extension to .jsonc
 	.then(response => {
 		if (!response.ok) {
 			throw new Error(`HTTP error! Status: ${response.status}`);
@@ -113,7 +113,10 @@ fetch('./markers.jsonc')  // Changed extension to .jsonc
 			
 			// Create and add label overlay
 			const labelElement = document.createElement('div');
-			labelElement.innerHTML = markerData.id;
+
+			// labelElement.innerHTML = markerData.id;
+            labelElement.innerHTML = markerData.id.replace(/&/g, ' & ').replace(/to/g, ' to ');
+            
 			
 			const labelOverlay = new ol.Overlay({
 				position: ol.proj.fromLonLat([markerData.longitude, markerData.latitude]),
@@ -123,12 +126,13 @@ fetch('./markers.jsonc')  // Changed extension to .jsonc
 			});
 			
 			map.addOverlay(labelOverlay);
-			
+			// urlencode the ID for the URL
+            const encodedId = encodeURIComponent(markerData.id);
 			// Store the feature with its metadata for click handling
 			markerFeatures[feature.ol_uid] = {
 				feature: feature,
 				name: markerData.name,
-				page: markerData.page
+				page: "./pages.html?id=" + encodedId,
 			};
 		});
 	})
