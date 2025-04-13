@@ -8,6 +8,70 @@ allElements.forEach(element => {
   });
 });
 
+// Prevent zooming on the body but allow it on the map
+document.addEventListener('wheel', function(event) {
+  // Only prevent zoom if it's not on the map element
+  if (!event.target.closest('#map')) {
+    if (event.ctrlKey) {
+      event.preventDefault();
+    }
+  }
+}, { passive: false });
+
+// Prevent pinch-to-zoom on touch devices outside the map
+let initialTouchDistance = 0;
+document.addEventListener('touchstart', function(event) {
+  // Only run for multi-touch events (potential pinch)
+  if (event.touches.length >= 2 && !event.target.closest('#map')) {
+    initialTouchDistance = getTouchDistance(event);
+  }
+}, { passive: false });
+
+document.addEventListener('touchmove', function(event) {
+  // Only prevent pinch zoom outside the map
+  if (event.touches.length >= 2 && !event.target.closest('#map')) {
+    const currentDistance = getTouchDistance(event);
+    // If the distance between touches is changing (zooming)
+    if (Math.abs(currentDistance - initialTouchDistance) > 10) {
+      event.preventDefault();
+    }
+  }
+}, { passive: false });
+
+// Helper function to calculate distance between two touch points
+function getTouchDistance(event) {
+  const touch1 = event.touches[0];
+  const touch2 = event.touches[1];
+  return Math.hypot(
+    touch2.clientX - touch1.clientX,
+    touch2.clientY - touch1.clientY
+  );
+}
+
+// Reset zoom level if body gets zoomed accidentally
+function checkAndResetZoom() {
+  // Check if body is zoomed
+  if (Math.abs(window.innerWidth / document.documentElement.clientWidth - 1) > 0.01) {
+    // Reset zoom
+    document.body.style.zoom = 1;
+    // For Firefox
+    document.body.style.transform = 'scale(1)';
+  }
+}
+
+// Check zoom periodically
+setInterval(checkAndResetZoom, 1000);
+
+// Also listen for keydown events to catch ctrl+ and ctrl- zoom attempts
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && (event.key === '+' || event.key === '-' || event.key === '=')) {
+    // Allow only if focus is within the map
+    if (!document.activeElement.closest('#map')) {
+      event.preventDefault();
+    }
+  }
+});
+
 var interactions = new ol.interaction.defaults({
     altShiftDragRotate: true,
     pinchRotate: true,
@@ -58,7 +122,7 @@ var mapinfoButton = new ol.layer.Vector({
     source: new ol.source.Vector(),
     style: new ol.style.Style({
         image: new ol.style.Icon({
-            src: 'help.png?time=' + Date.now()
+            src: './assets/img/help.png?time=' + Date.now(),
         })
     })
 });
@@ -68,14 +132,13 @@ var mapinfo = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat([-4.1865175, 53.3731612]))
 });
 mapinfoButton.getSource().addFeature(mapinfo);
-
 // Create vector layer for markers
 var markers = new ol.layer.Vector({
     source: new ol.source.Vector(),
     style: new ol.style.Style({
         image: new ol.style.Icon({
-            anchor: [0.5, 1],
-            src: 'marker.webp?time=' + Date.now()
+            anchor: [0.5, 0.9],
+            src: './assets/img/markers/marker.png?time=' + Date.now(),
         })
     })
 });
@@ -85,61 +148,61 @@ map.addLayer(markers);
 var markerFeatures = {};
 
 // Fetch and process markers from JSON
-fetch('./markersv2.jsonc')  // Changed extension to .jsonc
-	.then(response => {
-		if (!response.ok) {
-			throw new Error(`HTTP error! Status: ${response.status}`);
-		}
-		return response.text();  // Get as text instead of json
-	})
-	.then(text => {
-		// Strip JSONC comments before parsing
-		const jsonString = text
-			.replace(/\/\/.*$/gm, '')         // Remove single-line comments
-			.replace(/\/\*[\s\S]*?\*\//g, '')  // Remove multi-line comments
-			.trim();
-		
-		return JSON.parse(jsonString);
-	})
-	.then(markersData => {
-		markersData.forEach(markerData => {
-			// Create feature
-			const feature = new ol.Feature({
-				geometry: new ol.geom.Point(ol.proj.fromLonLat([markerData.longitude, markerData.latitude]))
-			});
-			
-			// Add feature to source
-			markers.getSource().addFeature(feature);
-			
-			// Create and add label overlay
-			const labelElement = document.createElement('div');
-
-			// labelElement.innerHTML = markerData.id;
+fetch('./markers.jsonc')  // Changed extension to .jsonc
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();  // Get as text instead of json
+    })
+    .then(text => {
+        // Strip JSONC comments before parsing
+        const jsonString = text
+            .replace(/\/\/.*$/gm, '')         // Remove single-line comments
+            .replace(/\/\*[\s\S]*?\*\//g, '')  // Remove multi-line comments
+            .trim();
+        
+        return JSON.parse(jsonString);
+    })
+    .then(markersData => {
+        markersData.forEach(markerData => {
+            // Create feature
+            const feature = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([markerData.longitude, markerData.latitude]))
+            });
+            
+            // Add feature to source
+            markers.getSource().addFeature(feature);
+            
+            // Create and add label overlay
+            const labelElement = document.createElement('div');
+            labelElement.style.position = 'absolute';
+            labelElement.style.transform = 'translate(-50%, 0)'; // Center horizontally
+            labelElement.style.whiteSpace = 'nowrap'; // Prevent wrapping
             labelElement.innerHTML = markerData.id.replace(/&/g, ' & ').replace(/to/g, ' to ');
             
-			
-			const labelOverlay = new ol.Overlay({
-				position: ol.proj.fromLonLat([markerData.longitude, markerData.latitude]),
-				element: labelElement,
-				offset: [-14, 5],
-				positioning: 'center-left'
-			});
-			
-			map.addOverlay(labelOverlay);
-			// urlencode the ID for the URL
+            const labelOverlay = new ol.Overlay({
+                position: ol.proj.fromLonLat([markerData.longitude, markerData.latitude]),
+                element: labelElement,
+                offset: [0, 5], // Adjust vertical offset if needed
+                positioning: 'bottom-center'
+            });
+            
+            map.addOverlay(labelOverlay);
+            // urlencode the ID for the URL
             const encodedId = encodeURIComponent(markerData.id);
-			// Store the feature with its metadata for click handling
-			markerFeatures[feature.ol_uid] = {
-				feature: feature,
-				name: markerData.name,
-				page: "./pages.html?id=" + encodedId,
-			};
-		});
-	})
-	.catch(error => {
-		console.error('Error loading markers data:', error);
-		toastr.error('Failed to load markers data: ' + error.message);
-	});
+            // Store the feature with its metadata for click handling
+            markerFeatures[feature.ol_uid] = {
+                feature: feature,
+                name: markerData.name,
+                page: "./pages.html?id=" + encodedId,
+            };
+        });
+    })
+    .catch(error => {
+        console.error('Error loading markers data:', error);
+        toastr.error('Failed to load markers data: ' + error.message);
+    });
 
 // Handle clicks on the map
 map.on('click', function(evt) {
@@ -149,7 +212,7 @@ map.on('click', function(evt) {
         });
     
     if (feature === mapinfo) {
-        infoPageContent("Map Info", "./pages/help.html");
+        infoPageContent("Map Info", "./help.html");
     } else if (feature && markerFeatures[feature.ol_uid]) {
         const markerInfo = markerFeatures[feature.ol_uid];
         infoPageContent(markerInfo.name, markerInfo.page);
