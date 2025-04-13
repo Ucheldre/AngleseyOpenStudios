@@ -148,7 +148,7 @@ map.addLayer(markers);
 var markerFeatures = {};
 
 // Fetch and process markers from JSON
-fetch('./markers.jsonc')  // Changed extension to .jsonc
+fetch('./markers.min.jsonc')  // Changed extension to .jsonc
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);

@@ -58,10 +58,26 @@ hr {
 	width: 80%;
 }
 
+br {
+	margin: 0 0 !important;
+	/* Remove margin for line breaks */
+	line-height: 0.8;
+	/* Adjust line height for line breaks */
+}
+
+br::after {
+	content: '';
+	display: block;
+	margin: 0;
+	/* Remove margin for line breaks */
+	line-height: 0.8;
+	/* Adjust line height for line breaks */
+}
+
 h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 36px;
-	color: var(--secondary);
+	color: var(--secondary-light);
 	/* Primary color for titles */
 	margin-top: 20px;
 }
@@ -90,7 +106,7 @@ p {
 	max-width: 800px;
 	line-height: 1.8;
 	padding: 0 20px;
-	color: #e6e6e6;
+	color: #fff;
 }
 
 b {
@@ -103,25 +119,25 @@ h4,
 h5 {
 	font-family: 'Roboto', sans-serif;
 	margin: 10px 0;
-	color: #ddd;
+	color: #fff;
 }
 
 h3 {
 	font-size: 22px;
-	color: var(--secondary);
+	color: var(--secondary-light);
 	/* Primary color for contact info */
 }
 
 h4 {
 	font-size: 20px;
 	font-weight: normal;
-	color: #bbb;
+	color: #fff;
 	/* Lighter text for the address */
 }
 
 h5 {
 	font-size: 16px;
-	color: #aaa;
+	color: #fff;
 	max-width: 900px;
 	margin: 0 auto;
 	line-height: 1.7;
