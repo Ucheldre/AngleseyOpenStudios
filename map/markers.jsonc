@@ -1,0 +1,389 @@
+[
+  {
+    // Test comment to check if the JSONC format is working correctly
+    /* This is a multi-line comment to test JSONC */
+    "id": "1",
+    "name": "Andy Ball",
+    "latitude": 53.22604323080291,
+    "longitude": -4.170111853944106,
+    "page": "./pages/1.html"
+  },
+  {
+    "id": "2",
+    "name": "Her Ceramics",
+    "latitude": 53.228316656617054,
+    "longitude": -4.164384692381407,
+    "page": "./pages/2.html"
+  },
+  {
+    "id": "3",
+    "name": "Jane Evans",
+    "latitude": 53.230137648336374,
+    "longitude": -4.163859539764031,
+    "page": "./pages/3.html"
+  },
+  {
+    "id": "4",
+    "name": "Georgina Rambton",
+    "latitude": 53.26430008908315,
+    "longitude": -4.095106888112449,
+    "page": "./pages/4.html"
+  },
+  {
+    "id": "5",
+    "name": "Beaumaris Jewellery",
+    "latitude": 53.2635238228386,
+    "longitude": -4.091714520542633,
+    "page": "./pages/5.html"
+  },
+  {
+    "id": "6",
+    "name": "Canolfan David Hughes",
+    "latitude": 53.26430879186422,
+    "longitude": -4.091392733411655,
+    "page": "./pages/6.html"
+  },
+  {
+    "id": "7",
+    "name": "Jon Fairbarn",
+    "latitude": 53.26335437356752,
+    "longitude": -4.092527017312358,
+    "page": "./pages/7.html"
+  },
+  {
+    "id": "8",
+    "name": "Mary Jane Flower",
+    "latitude": 53.26366473310897,
+    "longitude": -4.093044403473038,
+    "page": "./pages/8.html"
+  },
+  {
+    "id": "9",
+    "name": "Stiwdio Biewmares",
+    "latitude": 53.26296234883538,
+    "longitude": -4.093939726356511,
+    "page": "./pages/9.html"
+  },
+  {
+    "id": "10",
+    "name": "Rob Thompson",
+    "latitude": 53.26295781087535,
+    "longitude": -4.093709288382675,
+    "page": "./pages/10.html"
+  },
+  {
+    "id": "11",
+    "name": "Ian Walton Gallery",
+    "latitude": 53.26399921023315,
+    "longitude": -4.093239138999325,
+    "page": "./pages/11.html"
+  },
+  {
+    "id": "12",
+    "name": "Janet Bell",
+    "latitude": 53.26362354727174,
+    "longitude": -4.0932205132362975,
+    "page": "./pages/12.html"
+  },
+  {
+    "id": "13",
+    "name": "Lynne Stuart",
+    "latitude": 53.295035402006235,
+    "longitude": -4.089675603342258,
+    "page": "./pages/13.html"
+  },
+  {
+    "id": "14",
+    "name": "Aberlleiniog Sculpture",
+    "latitude": 53.29678102276969,
+    "longitude": -4.0874967400269036,
+    "page": "./pages/14.html"
+  },
+  {
+    "id": "15",
+    "name": "Val Gem Hughes",
+    "latitude": 53.295737734532075,
+    "longitude": -4.080770326880127,
+    "page": "./pages/15.html"
+  },
+  {
+    "id": "16",
+    "name": "Peter Read",
+    "latitude": 53.30654526484508,
+    "longitude": -4.0897573098494675,
+    "page": "./pages/16.html"
+  },
+  {
+    "id": "17",
+    "name": "Marion Rose",
+    "latitude": 53.30654118957168,
+    "longitude": -4.080742509742033,
+    "page": "./pages/17.html"
+  },
+  {
+    "id": "18",
+    "name": "Geraldine Hedderick",
+    "latitude": 53.30162188366376,
+    "longitude": -4.066903973998473,
+    "page": "./pages/18.html"
+  },
+  {
+    "id": "19",
+    "name": "Jane Bunce",
+    "latitude": 53.303028630129326,
+    "longitude": -4.066397256456176,
+    "page": "./pages/19.html"
+  },
+  {
+    "id": "20",
+    "name": "Callaghan Creative",
+    "latitude": 53.30585506836922,
+    "longitude": -4.070348169974567,
+    "page": "./pages/20.html"
+  },
+  {
+    "id": "21",
+    "name": "The Crafty Guillemot",
+    "latitude": 53.306756135560924,
+    "longitude": -4.067665750652899,
+    "page": "./pages/21.html"
+  },
+  {
+    "id": "22",
+    "name": "Red Studio",
+    "latitude": 53.30717495977572,
+    "longitude": -4.066672005500644,
+    "page": "./pages/22.html"
+  },
+  {
+    "id": "23",
+    "name": "Rhiannon & Paul Gash",
+    "latitude": 53.30032916467376,
+    "longitude": -4.148331752712561,
+    "page": "./pages/23.html"
+  },
+  {
+    "id": "24",
+    "name": "Helen Campbell",
+    "latitude": 53.28335664214091,
+    "longitude": -4.225439848502962,
+    "page": "./pages/24.html"
+  },
+  {
+    "id": "25",
+    "name": "Jenny Armour",
+    "latitude": 53.32767734898476,
+    "longitude": -4.250954607200908,
+    "page": "./pages/25.html"
+  },
+  {
+    "id": "26",
+    "name": "Irene Taylor Moores",
+    "latitude": 53.360795776875555,
+    "longitude": -4.29676723816951,
+    "page": "./pages/26.html"
+  },
+  {
+    "id": "27",
+    "name": "Artisan Studio",
+    "latitude": 53.41038457922192,
+    "longitude": -4.345824090238268,
+    "page": "./pages/27.html"
+  },
+  {
+    "id": "28",
+    "name": "Deborah Soma-Wallace",
+    "latitude": 53.41247950898263,
+    "longitude": -4.33094463819342,
+    "page": "./pages/28.html"
+  },
+  {
+    "id": "29",
+    "name": "Martin Schwaller",
+    "latitude": 53.407359926722165,
+    "longitude": -4.359956405692637,
+    "page": "./pages/29.html"
+  },
+  {
+    "id": "30",
+    "name": "Leigh Fielding",
+    "latitude": 53.41175488326616,
+    "longitude": -4.454539767318445,
+    "page": "./pages/30.html"
+  },
+  {
+    "id": "31",
+    "name": "Caffi Siop Mechell",
+    "latitude": 53.39244572084315,
+    "longitude": -4.453838948310495,
+    "page": "./pages/31.html"
+  },
+  {
+    "id": "32",
+    "name": "Helen Grove-White",
+    "latitude": 53.39229524810632,
+    "longitude": -4.4479738317673485,
+    "page": "./pages/32.html"
+  },
+  {
+    "id": "33",
+    "name": "Wendy Vidler",
+    "latitude": 53.40281060923736,
+    "longitude": -4.505226349457496,
+    "page": "./pages/33.html"
+  },
+  {
+    "id": "34",
+    "name": "Lynda Howard",
+    "latitude": 53.36801278970828,
+    "longitude": -4.553337612344172,
+    "page": "./pages/34.html"
+  },
+  {
+    "id": "35",
+    "name": "Bryn Humphreys",
+    "latitude": 53.31578811769047,
+    "longitude": -4.643819800438241,
+    "page": "./pages/35.html"
+  },
+  {
+    "id": "36",
+    "name": "Wispy Willow Creations",
+    "latitude": 53.31042175683375,
+    "longitude": -4.658858903446696,
+    "page": "./pages/36.html"
+  },
+  {
+    "id": "37 & 38",
+    "name": "Ucheldre Centre & Peter Alexander Lane",
+    "latitude": 53.30942320672874,
+    "longitude": -4.638320087296695,
+    "page": "./pages/37and38.html"
+  },
+  {
+    "id": "39",
+    "name": "Christine Williams",
+    "latitude": 53.305354273868694,
+    "longitude": -4.638520867105832,
+    "page": "./pages/39.html"
+  },
+  {
+    "id": "40",
+    "name": "Janey Masters",
+    "latitude": 53.30448592137738,
+    "longitude": -4.63556922688959,
+    "page": "./pages/40.html"
+  },
+  {
+    "id": "41",
+    "name": "Daniela Milicova",
+    "latitude": 53.30587514360081,
+    "longitude": -4.618343435868697,
+    "page": "./pages/41.html"
+  },
+  {
+    "id": "42",
+    "name": "Phoenix Studios",
+    "latitude": 53.302244229369435,
+    "longitude": -4.6180956899363395,
+    "page": "./pages/42.html"
+  },
+  {
+    "id": "43",
+    "name": "Trearddur Bay Art",
+    "latitude": 53.278515340260256,
+    "longitude": -4.61335960877091,
+    "page": "./pages/43.html"
+  },
+  {
+    "id": "44",
+    "name": "Anwen Roberts",
+    "latitude": 53.271245304266685,
+    "longitude": -4.599152884806176,
+    "page": "./pages/44.html"
+  },
+  {
+    "id": "45",
+    "name": "Anglesey Leather",
+    "latitude": 53.273441789021,
+    "longitude": -4.5822790565215925,
+    "page": "./pages/45.html"
+  },
+  {
+    "id": "46",
+    "name": "Pat Kaye",
+    "latitude": 53.27415253177238,
+    "longitude": -4.583029279755465,
+    "page": "./pages/46.html"
+  },
+  {
+    "id": "47",
+    "name": "Hue Gareth Jones",
+    "latitude": 53.24690461703372,
+    "longitude": -4.569868931986229,
+    "page": "./pages/47.html"
+  },
+  {
+    "id": "48 to 50",
+    "name": "Seapig - Cara White, Celina Nancarrow, Paula Cutler",
+    "latitude": 53.24786346279857,
+    "longitude": -4.464093711083357,
+    "page": "./pages/48to50.html"
+  },
+  {
+    "id": "51",
+    "name": "Judith Donaghy",
+    "latitude": 53.22881016720018,
+    "longitude": -4.494936828468671,
+    "page": "./pages/51.html"
+  },
+  {
+    "id": "52 & 53",
+    "name": "Jane Samuel and Caroline Brogden",
+    "latitude": 53.22722112010076,
+    "longitude": -4.5215393597008955,
+    "page": "./pages/52and53.html"
+  },
+  {
+    "id": "54",
+    "name": "Liz Toole",
+    "latitude": 53.19534325931114,
+    "longitude": -4.405894475626167,
+    "page": "./pages/54.html"
+  },
+  {
+    "id": "55",
+    "name": "Crafty as Hel - Ynys Mon",
+    "latitude": 53.15637252056552,
+    "longitude": -4.349249928556872,
+    "page": "./pages/55.html"
+  },
+  {
+    "id": "56",
+    "name": "Craig Taylor",
+    "latitude": 53.19060846685907,
+    "longitude": -4.3296016419439765,
+    "page": "./pages/56.html"
+  },
+  {
+    "id": "57",
+    "name": "Bryn Teg Ceramics",
+    "latitude": 53.1677918962019,
+    "longitude": -4.322484505041031,
+    "page": "./pages/57.html"
+  },
+  {
+    "id": "58",
+    "name": "Carole Randall",
+    "latitude": 53.214835678065036,
+    "longitude": -4.202636727594483,
+    "page": "./pages/58.html"
+  },
+  {
+    "id": "59",
+    "name": "Oriel Mon",
+    "latitude": 53.263460879604935,
+    "longitude": -4.312066971276088,
+    "page": "./pages/59.html"
+  }
+]
