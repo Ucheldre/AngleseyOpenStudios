@@ -1,3 +1,11 @@
+function onResizeProc() {
+    // Go to same page but not cached
+    window.location.href = window.location.href.split('?')[0] + "?time=" + Date.now();
+    window.history.pushState(null, null, window.location.href.split('?')[0]);
+    window.location.reload(true);
+
+}
+
 // Get all the elements on the page
 const allElements = document.querySelectorAll('*');
 
@@ -8,59 +16,42 @@ allElements.forEach(element => {
   });
 });
 
-// Prevent zooming on the body but allow it on the map
+// Disable all pointer events other than click/touch/drag. 
+// This prevents accidental zooming on mobile devices.
 document.addEventListener('wheel', function(event) {
-  // Only prevent zoom if it's not on the map element
-  if (!event.target.closest('#map')) {
-    if (event.ctrlKey) {
-      event.preventDefault();
-    }
+  if (event.ctrlKey || event.metaKey) {
+    event.preventDefault();
   }
 }, { passive: false });
 
-// Prevent pinch-to-zoom on touch devices outside the map
-let initialTouchDistance = 0;
 document.addEventListener('touchstart', function(event) {
-  // Only run for multi-touch events (potential pinch)
-  if (event.touches.length >= 2 && !event.target.closest('#map')) {
-    initialTouchDistance = getTouchDistance(event);
-  }
-}, { passive: false });
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+    }
+, { passive: false });
 
 document.addEventListener('touchmove', function(event) {
-  // Only prevent pinch zoom outside the map
-  if (event.touches.length >= 2 && !event.target.closest('#map')) {
-    const currentDistance = getTouchDistance(event);
-    // If the distance between touches is changing (zooming)
-    if (Math.abs(currentDistance - initialTouchDistance) > 10) {
-      event.preventDefault();
+    if (event.touches.length > 1) {
+        event.preventDefault();
     }
-  }
-}, { passive: false });
+    }
+, { passive: false });
 
-// Helper function to calculate distance between two touch points
-function getTouchDistance(event) {
-  const touch1 = event.touches[0];
-  const touch2 = event.touches[1];
-  return Math.hypot(
-    touch2.clientX - touch1.clientX,
-    touch2.clientY - touch1.clientY
-  );
-}
+document.addEventListener('touchend', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+    }
+, { passive: false });
 
-// Reset zoom level if body gets zoomed accidentally
-function checkAndResetZoom() {
-  // Check if body is zoomed
-  if (Math.abs(window.innerWidth / document.documentElement.clientWidth - 1) > 0.01) {
-    // Reset zoom
-    document.body.style.zoom = 1;
-    // For Firefox
-    document.body.style.transform = 'scale(1)';
-  }
-}
+document.addEventListener('touchcancel', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+    }
+, { passive: false });
 
-// Check zoom periodically
-setInterval(checkAndResetZoom, 1000);
 
 // Also listen for keydown events to catch ctrl+ and ctrl- zoom attempts
 document.addEventListener('keydown', function(event) {

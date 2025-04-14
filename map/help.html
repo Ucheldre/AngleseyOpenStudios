@@ -9,6 +9,45 @@
     <div id="help">
         <img id="helpMap" src="./assets/img/infoMap1.png" width="100%">
     </div>
+    <script>
+        
+// Disable all pointer events other than click/touch/drag. 
+// This prevents accidental zooming on mobile devices.
+document.addEventListener('wheel', function(event) {
+  if (event.ctrlKey || event.metaKey) {
+    event.preventDefault();
+  }
+}, { passive: false });
+
+document.addEventListener('touchstart', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+    }
+, { passive: false });
+
+document.addEventListener('touchmove', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+    }
+, { passive: false });
+
+document.addEventListener('touchend', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+    }
+, { passive: false });
+
+document.addEventListener('touchcancel', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+    }
+, { passive: false });
+
+    </script>
 </body>
 
 </html>
