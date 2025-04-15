@@ -1,4 +1,3 @@
-
 // Disable right-click context menu
 document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
@@ -81,11 +80,19 @@ document.addEventListener('wheel', function (event) {
         event.preventDefault();
     }
 }, { passive: false });
+
+document.addEventListener('touchstart', function (event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
 document.addEventListener('touchmove', function (event) {
     if (event.touches.length > 1) {
         event.preventDefault();
     }
 }, { passive: false });
+
 document.addEventListener('gesturestart', function (event) {
     event.preventDefault();
 }, { passive: false });
@@ -121,41 +128,3 @@ function smoothScroll(targetSelector, speed) {
         requestAnimationFrame(animation);
     }
 }
-
-
-// Disable all pointer events other than click/touch/drag. 
-// This prevents accidental zooming on mobile devices.
-document.addEventListener('wheel', function(event) {
-    if (event.ctrlKey || event.metaKey) {
-      event.preventDefault();
-    }
-  }, { passive: false });
-  
-  document.addEventListener('touchstart', function(event) {
-      if (event.touches.length > 1) {
-          event.preventDefault();
-      }
-      }
-  , { passive: false });
-  
-  document.addEventListener('touchmove', function(event) {
-      if (event.touches.length > 1) {
-          event.preventDefault();
-      }
-      }
-  , { passive: false });
-  
-  document.addEventListener('touchend', function(event) {
-      if (event.touches.length > 1) {
-          event.preventDefault();
-      }
-      }
-  , { passive: false });
-  
-  document.addEventListener('touchcancel', function(event) {
-      if (event.touches.length > 1) {
-          event.preventDefault();
-      }
-      }
-  , { passive: false });
-  

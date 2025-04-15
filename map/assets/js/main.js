@@ -139,61 +139,57 @@ map.addLayer(markers);
 var markerFeatures = {};
 
 // Fetch and process markers from JSON
-fetch('./markers.min.jsonc')  // Changed extension to .jsonc
-    .then(response => {
+async function fetchMarkers() {
+    try {
+        const response = await fetch('./markers.min.jsonc');
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        return response.text();  // Get as text instead of json
-    })
-    .then(text => {
-        // Strip JSONC comments before parsing
-        const jsonString = text
-            .replace(/\/\/.*$/gm, '')         // Remove single-line comments
-            .replace(/\/\*[\s\S]*?\*\//g, '')  // Remove multi-line comments
-            .trim();
-        
+        const text = await response.text();
+        const jsonString = text.replace(/\/\/.*$/gm, '').replace(/\/\*[\s\S]*?\*\//g, '').trim();
         return JSON.parse(jsonString);
-    })
-    .then(markersData => {
-        markersData.forEach(markerData => {
-            // Create feature
-            const feature = new ol.Feature({
-                geometry: new ol.geom.Point(ol.proj.fromLonLat([markerData.longitude, markerData.latitude]))
-            });
-            
-            // Add feature to source
-            markers.getSource().addFeature(feature);
-            
-            // Create and add label overlay
-            const labelElement = document.createElement('div');
-            labelElement.style.position = 'absolute';
-            labelElement.style.transform = 'translate(-50%, 0)'; // Center horizontally
-            labelElement.style.whiteSpace = 'nowrap'; // Prevent wrapping
-            labelElement.innerHTML = markerData.id.replace(/&/g, ' & ').replace(/to/g, ' to ');
-            
-            const labelOverlay = new ol.Overlay({
-                position: ol.proj.fromLonLat([markerData.longitude, markerData.latitude]),
-                element: labelElement,
-                offset: [0, 5], // Adjust vertical offset if needed
-                positioning: 'bottom-center'
-            });
-            
-            map.addOverlay(labelOverlay);
-            // urlencode the ID for the URL
-            const encodedId = encodeURIComponent(markerData.id);
-            // Store the feature with its metadata for click handling
-            markerFeatures[feature.ol_uid] = {
-                feature: feature,
-                name: markerData.name,
-                page: "./pages.html?id=" + encodedId,
-            };
-        });
-    })
-    .catch(error => {
+    } catch (error) {
         console.error('Error loading markers data:', error);
         toastr.error('Failed to load markers data: ' + error.message);
+        return [];
+    }
+}
+
+fetchMarkers().then(markersData => {
+    markersData.forEach(markerData => {
+        // Create feature
+        const feature = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.fromLonLat([markerData.longitude, markerData.latitude]))
+        });
+        
+        // Add feature to source
+        markers.getSource().addFeature(feature);
+        
+        // Create and add label overlay
+        const labelElement = document.createElement('div');
+        labelElement.style.position = 'absolute';
+        labelElement.style.transform = 'translate(-50%, 0)'; // Center horizontally
+        labelElement.style.whiteSpace = 'nowrap'; // Prevent wrapping
+        labelElement.innerHTML = markerData.id.replace(/&/g, ' & ').replace(/to/g, ' to ');
+        
+        const labelOverlay = new ol.Overlay({
+            position: ol.proj.fromLonLat([markerData.longitude, markerData.latitude]),
+            element: labelElement,
+            offset: [0, 5], // Adjust vertical offset if needed
+            positioning: 'bottom-center'
+        });
+        
+        map.addOverlay(labelOverlay);
+        // urlencode the ID for the URL
+        const encodedId = encodeURIComponent(markerData.id);
+        // Store the feature with its metadata for click handling
+        markerFeatures[feature.ol_uid] = {
+            feature: feature,
+            name: markerData.name,
+            page: "./pages.html?id=" + encodedId,
+        };
     });
+});
 
 // Handle clicks on the map
 map.on('click', function(evt) {

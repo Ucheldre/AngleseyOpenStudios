@@ -30,10 +30,6 @@ body,
 }
 #infoPage {
     animation: fadeIn 0.5s ease-in-out;
-    -webkit-animation: fadeIn 0.5s ease-in-out;
-    -moz-animation: fadeIn 0.5s ease-in-out;
-    -o-animation: fadeIn 0.5s ease-in-out;
-    -ms-animation: fadeIn 0.5s ease-in-out;
     display: none;
     position: absolute;
     top: 50%;
@@ -80,10 +76,6 @@ body,
 
 #hideMap{
     animation: fadeIn 0.5s;
-    -webkit-animation: fadeIn 0.5s;
-    -moz-animation: fadeIn 0.5s;
-    -o-animation: fadeIn 0.5s;
-    -ms-animation: fadeIn 0.5s;
     z-index: 50;
     height: 100%;
     width: 100%;
