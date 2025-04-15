@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglesey Open Studios - JSON Builder</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Anglesey Open Studios - JSON Builder</h1>
+        <div class="actions">
+            <button id="saveJson">Save JSON</button>
+            <button id="loadJson">Load JSON</button>
+            <input type="file" id="jsonFileInput" accept=".json,.jsonc" style="display: none;">
+            <button id="newMarker">Add New Marker</button>
+            <button id="clearAll" class="danger">Clear All</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <div class="search-box">
+                    <input type="text" id="searchMarkers" placeholder="Search markers...">
+                </div>
+                <div class="markers-list" id="markersList">
+                    <!-- Markers will be listed here -->
+                </div>
+            </div>
+            <div class="content">
+                <div id="map"></div>
+                <div id="editor">
+                    <h2>Marker Editor</h2>
+                    <div id="markerForm" class="hidden">
+                        <div class="form-group">
+                            <label for="markerId">Marker ID:</label>
+                            <input type="text" id="markerId">
+                        </div>
+                        <div class="form-group">
+                            <label for="markerLat">Latitude:</label>
+                            <input type="number" id="markerLat" step="0.000000001">
+                        </div>
+                        <div class="form-group">
+                            <label for="markerLng">Longitude:</label>
+                            <input type="number" id="markerLng" step="0.000000001">
+                        </div>
+                        
+                        <div class="artists-section">
+                            <h3>Artists at this location</h3>
+                            <div id="artistsList">
+                                <!-- Artists will be listed here -->
+                            </div>
+                            <button id="addArtist">Add Artist</button>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button id="saveMarker">Save Marker</button>
+                            <button id="deleteMarker" class="danger">Delete Marker</button>
+                        </div>
+                    </div>
+                    <div id="artistForm" class="hidden">
+                        <h3>Artist Details</h3>
+                        <div class="form-group">
+                            <label for="artistId">Artist ID:</label>
+                            <input type="text" id="artistId">
+                        </div>
+                        <div class="form-group">
+                            <label for="artistName">Name:</label>
+                            <input type="text" id="artistName">
+                        </div>
+                        <div class="form-group">
+                            <label for="welshDescription">Welsh Description:</label>
+                            <textarea id="welshDescription" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="englishDescription">English Description:</label>
+                            <textarea id="englishDescription" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactInfo">Contact Info:</label>
+                            <textarea id="contactInfo" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="venueLocation">Venue Location:</label>
+                            <input type="text" id="venueLocation">
+                        </div>
+                        <div class="form-group">
+                            <label for="welshLocationInstructions">Welsh Location Instructions:</label>
+                            <textarea id="welshLocationInstructions" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="englishLocationInstructions">English Location Instructions:</label>
+                            <textarea id="englishLocationInstructions" rows="4"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button id="saveArtist">Save Artist</button>
+                            <button id="cancelArtistEdit">Cancel</button>
+                            <button id="deleteArtist" class="danger">Delete Artist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="saveNotification" class="save-notification">Data saved successfully</div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="dataManager.js"></script>
+    <script src="mapManager.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
