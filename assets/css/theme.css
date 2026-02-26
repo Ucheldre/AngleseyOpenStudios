@@ -1,10 +1,22 @@
-:root {
+/* :root {
 	--primary: #e6bd57;
 	--primary-light: #ffeb8f;
 	--primary-dark: #b38f2d;
 	--secondary: #692879;
 	--secondary-light: #a44f9b;
 	--secondary-dark: #3b1f4d;
+
+}
+ */
+
+
+ :root {
+	--primary: #10948A;
+	--primary-light: #67C7C0;
+	--primary-dark: #005E5F;
+	--secondary: #D0B486;
+	--secondary-light: #F5E8C9;
+	--secondary-dark: #b38f2d;
 
 }
 
