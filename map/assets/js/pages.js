@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     try {
         // Fetch the markers data
-        const response = await fetch('./markers.min.jsonc');
+        const response = await fetch('./markers.jsonc');
         const text = await response.text();
         // Remove comments from the JSONC file
         const jsonText = text.replace(/\/\/.*$/gm, '');
@@ -121,8 +121,6 @@ function smoothScroll(targetSelector, speed) {
 
             if (progress < 1) {
                 requestAnimationFrame(animation);
-            } else {
-                window.location.hash = targetSelector;
             }
         }
         requestAnimationFrame(animation);

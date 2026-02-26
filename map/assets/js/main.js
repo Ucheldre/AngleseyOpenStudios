@@ -141,7 +141,7 @@ var markerFeatures = {};
 // Fetch and process markers from JSON
 async function fetchMarkers() {
     try {
-        const response = await fetch('./markers.min.jsonc');
+        const response = await fetch('./markers.jsonc');
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
