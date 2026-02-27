@@ -212,3 +212,32 @@ input, textarea {
 .save-notification.error {
     background-color: rgba(192, 57, 43, 0.9);
 }
+
+/* Notice section in artist form */
+.notice-section {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border: 1px solid #ff9800;
+    border-radius: 6px;
+    background-color: rgba(255, 152, 0, 0.05);
+}
+
+.notice-section h4 {
+    color: #ff9800;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.notice-toggle label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: normal;
+    color: #e0e0e0;
+}
+
+.notice-toggle input[type="checkbox"] {
+    width: auto;
+    accent-color: #ff9800;
+}

@@ -213,8 +213,46 @@ h5 br {
 	}
 }
 
+/* Notice banner */
+.notice-banner {
+	background-color: #2a1a00 !important;
+	border: 2px solid #ff9800;
+	border-radius: 12px !important;
+	padding: 15px 20px !important;
+	margin: 10px auto 20px auto !important;
+	max-width: 800px !important;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-align: left;
+}
+
+.notice-banner .notice-icon {
+	font-size: 28px;
+	color: #ff9800;
+	flex-shrink: 0;
+}
+
+.notice-banner .notice-messages {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.notice-banner p {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #ff9800;
+	line-height: 1.5;
+}
+
+.notice-banner p.welsh-notice {
+	font-weight: bold;
+}
+
 /* Styling the div container */
-div {
+div#artist-data {
 	background-color: #090909;
 	/* Dark background for container */
 	max-width: 1000px;
@@ -223,6 +261,15 @@ div {
 	border-radius: 20px;
 	/* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
 	/* Darker shadow for contrast */
+}
+
+.notice-banner,
+.notice-messages {
+	background-color: transparent;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
 }
 
 div#help {

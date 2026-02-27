@@ -42,9 +42,23 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         // Loop through all artists in this marker
         marker.artist.forEach((artist, index) => {
+            // Build notice banner if enabled for this artist
+            let noticeHtml = '';
+            if (artist.notice && artist.notice.enabled && (artist.notice.welshMessage || artist.notice.englishMessage)) {
+                noticeHtml = `
+                        <div class="notice-banner">
+                            <span class="notice-icon">&#9888;</span>
+                            <div class="notice-messages">
+                                ${artist.notice.welshMessage ? `<p class="welsh-notice">${artist.notice.welshMessage}</p>` : ''}
+                                ${artist.notice.englishMessage ? `<p class="english-notice">${artist.notice.englishMessage}</p>` : ''}
+                            </div>
+                        </div>`;
+            }
+
             artistsHtml += `
                     <div class="artist-container">
                         <h1 id="artistName">${artist.name}</h1>
+                        ${noticeHtml}
                         <img src="./assets/img/artists/${artist.id}.webp" class="artist-image" alt="${artist.name}">
                         <p class="welsh-description">${artist.welshDescription}</p>
                         <p>${artist.englishDescription}</p>

@@ -38,7 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const venueLocationInput = document.getElementById('venueLocation');
     const welshLocationInstructionsInput = document.getElementById('welshLocationInstructions');
     const englishLocationInstructionsInput = document.getElementById('englishLocationInstructions');
+    const noticeEnabledInput = document.getElementById('noticeEnabled');
+    const noticeWelshMessageInput = document.getElementById('noticeWelshMessage');
+    const noticeEnglishMessageInput = document.getElementById('noticeEnglishMessage');
+    const noticeFields = document.getElementById('noticeFields');
     
+    // Toggle notice fields visibility
+    noticeEnabledInput.addEventListener('change', () => {
+        noticeFields.classList.toggle('hidden', !noticeEnabledInput.checked);
+    });
+
     // Auto-save timer
     let autoSaveTimer = null;
     const AUTO_SAVE_INTERVAL = 30000; // 30 seconds
@@ -181,6 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const artistData = {
             id: artistIdInput.value,
             name: artistNameInput.value,
+            notice: {
+                enabled: noticeEnabledInput.checked,
+                welshMessage: noticeWelshMessageInput.value,
+                englishMessage: noticeEnglishMessageInput.value
+            },
             welshDescription: newlinesToHtmlBr(welshDescriptionInput.value),
             englishDescription: newlinesToHtmlBr(englishDescriptionInput.value),
             contactInfo: newlinesToHtmlBr(contactInfoInput.value),
@@ -390,6 +404,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dataManager.currentArtist) {
             artistIdInput.value = dataManager.currentArtist.id;
             artistNameInput.value = dataManager.currentArtist.name;
+
+            // Load notice data
+            const notice = dataManager.currentArtist.notice || {};
+            noticeEnabledInput.checked = !!notice.enabled;
+            noticeWelshMessageInput.value = notice.welshMessage || '';
+            noticeEnglishMessageInput.value = notice.englishMessage || '';
+            noticeFields.classList.toggle('hidden', !notice.enabled);
+
             welshDescriptionInput.value = htmlBrToNewlines(dataManager.currentArtist.welshDescription);
             englishDescriptionInput.value = htmlBrToNewlines(dataManager.currentArtist.englishDescription);
             contactInfoInput.value = htmlBrToNewlines(dataManager.currentArtist.contactInfo);

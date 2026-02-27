@@ -12,7 +12,12 @@
         "contactInfo": "Andy: 07903672123 / Denise: 07943991972",
         "venueLocation": "9 RHYD MENAI, MENAI BRIDGE, LL59 5RG",
         "welshLocationInstructions": "Mae Rhyd Menai oddi ar yr A5, ger Garej Shell.<br>Mae parcio ar gael ar yr A5, nid yn Rhyd Menai. Yn anffodus, mae mynediad i’r stiwdio i lawr grisiau uchel ac nid yw’n addas ar gyfer rhai sydd â phroblemau symudedd",
-        "englishLocationInstructions": "Rhyd Menai is off the A5, near the Shell Garage.<br>Parking is available on the A5, not in Rhyd Menai. Unfortunately, access is down high rise steps and is not suitable for those with impaired mobility"
+        "englishLocationInstructions": "Rhyd Menai is off the A5, near the Shell Garage.<br>Parking is available on the A5, not in Rhyd Menai. Unfortunately, access is down high rise steps and is not suitable for those with impaired mobility",
+        "notice": {
+          "enabled": true,
+          "welshMessage": "Yn anffodus, oherwydd amgylchiadau annisgwyl, dydi'r artist yma ddim yn gallu cymryd rhan yn Stiwdios Agored Môn eleni. Ymddiheuriadau am unrhyw anghyfleustra.",
+          "englishMessage": "Unfortunately, due to unforeseen circumstances, this artist is unable to take part in Anglesey Open Studios this year. Apologies for any inconvenience."
+        }
       }
     ]
   },
