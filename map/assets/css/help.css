@@ -1,0 +1,175 @@
+/* ─── Full-bleed map image ─── */
+#help-map-full {
+width: 100%;
+background: #0c0c0e;
+line-height: 0;
+}
+
+#help-map-heading {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 20px 20px 16px;
+line-height: 1;
+border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#help-map-heading svg {
+color: var(--primary-light);
+flex-shrink: 0;
+}
+
+#help-map-full img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: contain;
+object-position: center;
+border: none;
+border-radius: 0;
+margin: 0;
+max-width: 100%;
+}
+
+/* ─── Help Page ─── */
+
+body {
+background-color: #0c0c0e;
+}
+
+#help-page {
+max-width: 720px;
+margin: 0 auto;
+padding: 28px 16px 48px;
+animation: cardFadeIn 0.5s ease-out both;
+}
+
+/* ─── Title in heading ─── */
+.help-title {
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 38px;
+font-weight: 700;
+color: #fff;
+margin: 0 0 6px;
+line-height: 1.2;
+}
+
+.help-subtitle {
+font-size: 22px;
+color: rgba(255, 255, 255, 0.45);
+margin: 0;
+font-style: italic;
+padding: 0;
+max-width: none;
+line-height: 1.4;
+}
+
+/* ─── Cards ─── */
+.help-cards {
+display: flex;
+flex-direction: column;
+gap: 16px;
+margin-bottom: 24px;
+}
+
+.help-card {
+background: linear-gradient(160deg, #151518 0%, #111114 100%);
+border: 1px solid rgba(255, 255, 255, 0.06);
+border-radius: 16px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+
+.help-card-header {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 16px 18px 12px;
+font-size: 20px;
+font-weight: 600;
+color: var(--primary-light);
+letter-spacing: 0.3px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.help-card-header svg {
+flex-shrink: 0;
+opacity: 0.8;
+}
+
+.help-img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: contain;
+object-position: center;
+border: none;
+border-radius: 0;
+margin: 0 auto;
+background: #0c0c0e;
+max-width: 100%;
+}
+
+.help-card-caption {
+font-size: 20px;
+line-height: 1.7;
+color: rgba(255, 255, 255, 0.65);
+margin: 0;
+padding: 16px 18px 10px;
+max-width: none;
+}
+
+.help-card-caption-welsh {
+font-weight: 700;
+color: rgba(255, 255, 255, 0.85);
+padding-top: 0;
+padding-bottom: 14px;
+border-top: none;
+}
+
+/* ─── Tips section ─── */
+.help-tips {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.help-tip {
+display: flex;
+align-items: flex-start;
+gap: 14px;
+padding: 18px 20px;
+background: rgba(255, 255, 255, 0.025);
+border: 1px solid rgba(255, 255, 255, 0.05);
+border-radius: 12px;
+font-size: 20px;
+color: rgba(255, 255, 255, 0.7);
+line-height: 1.6;
+}
+
+.help-tip strong {
+color: #fff;
+font-weight: 600;
+}
+
+.help-tip-icon {
+flex-shrink: 0;
+width: 36px;
+height: 36px;
+border-radius: 8px;
+background: rgba(16, 148, 138, 0.12);
+border: 1px solid rgba(16, 148, 138, 0.2);
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--primary-light);
+}
+
+.tip-welsh {
+display: block;
+margin-top: 6px;
+font-weight: 700;
+color: rgba(255, 255, 255, 0.88);
+font-size: 19px;
+}
