@@ -12,6 +12,14 @@ gap: 12px;
 padding: 20px 20px 16px;
 line-height: 1;
 border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+width: 100%;
+box-sizing: border-box;
+}
+
+#help-map-heading .help-heading-text {
+flex: 1;
+text-align: center;
+justify-content: center;
 }
 
 #help-map-heading svg {
@@ -52,6 +60,7 @@ font-weight: 700;
 color: #fff;
 margin: 0 0 6px;
 line-height: 1.2;
+text-align: center;
 }
 
 .help-subtitle {
@@ -62,6 +71,7 @@ font-style: italic;
 padding: 0;
 max-width: none;
 line-height: 1.4;
+text-align: center;
 }
 
 /* ─── Cards ─── */
@@ -155,11 +165,11 @@ font-weight: 600;
 
 .help-tip-icon {
 flex-shrink: 0;
-width: 36px;
-height: 36px;
+width: 64px;
+height: 64px;
 border-radius: 8px;
-background: rgba(16, 148, 138, 0.12);
-border: 1px solid rgba(16, 148, 138, 0.2);
+	background: rgb(from var(--primary) r g b / 0.12);
+	border: 1px solid rgb(from var(--primary) r g b / 0.2);
 display: flex;
 align-items: center;
 justify-content: center;
@@ -172,4 +182,54 @@ margin-top: 6px;
 font-weight: 700;
 color: rgba(255, 255, 255, 0.88);
 font-size: 19px;
+}
+
+/* ─── Scroll-down button ─── */
+#scroll-down-btn {
+position: fixed;
+bottom: 24px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+align-items: center;
+gap: 8px;
+padding: 10px 22px;
+background: rgb(from var(--primary) r g b / 0.85);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+/* border: 1px solid rgba(103, 199, 192, 0.3); */
+border: 1px solid rgb(from var(--primary) r g b / 1);
+border-radius: 100px;
+color: #fff;
+font-family: 'Inter', sans-serif;
+font-size: 16px;
+font-weight: 600;
+letter-spacing: 0.3px;
+cursor: pointer;
+z-index: 100;
+transition: opacity 0.35s ease, transform 0.35s ease;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+#scroll-down-btn:hover {
+background: rgb(from var(--primary) r g b / 1);
+}
+
+#scroll-down-btn:active {
+transform: translateX(-50%) scale(0.95);
+}
+
+#scroll-down-btn.hidden {
+opacity: 0;
+pointer-events: none;
+transform: translateX(-50%) translateY(12px);
+}
+
+#scroll-down-btn svg {
+animation: bounceArrow 1.8s ease-in-out infinite;
+}
+
+@keyframes bounceArrow {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(4px); }
 }

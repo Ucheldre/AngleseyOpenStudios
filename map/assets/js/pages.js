@@ -3,11 +3,46 @@ document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 }, { passive: false });
 
+/* ─── Scroll-down button ─── */
+function initScrollDownButton() {
+    const btn = document.getElementById('scroll-down-btn');
+    if (!btn) return;
+
+    const THRESHOLD = 60;
+
+    function getScrollTop() {
+        return (document.scrollingElement || document.documentElement).scrollTop || window.pageYOffset || 0;
+    }
+
+    btn.addEventListener('click', function () {
+        var el = document.scrollingElement || document.documentElement;
+        el.scrollBy
+            ? el.scrollBy({ top: window.innerHeight * 0.75, behavior: 'smooth' })
+            : (el.scrollTop += window.innerHeight * 0.75);
+    });
+
+    function onScroll() {
+        if (getScrollTop() > THRESHOLD) {
+            btn.classList.add('hidden');
+        } else {
+            btn.classList.remove('hidden');
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('scroll', onScroll, { passive: true });
+    
+    // Initial check
+    onScroll();
+}
+
+initScrollDownButton();
+
 // SVG icons for info rows
 const ICONS = {
-    contact: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
-    location: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
-    directions: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>`
+    contact: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
+    location: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    directions: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>`
 };
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -115,9 +150,11 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
 
         document.getElementById('artist-data').innerHTML = artistsHtml;
-
-        // Smooth scroll to first artist name
-        smoothScroll("#artistName", 600);
+        
+        // Trigger scroll check after content is loaded and rendered
+        setTimeout(() => {
+            window.dispatchEvent(new Event('scroll'));
+        }, 100);
 
     } catch (error) {
         console.error('Error loading artist data:', error);
