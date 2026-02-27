@@ -2,7 +2,7 @@
 <html lang="en" onresize="onResizeProc()">
 
 <head>
-    <title>Anglesey Open Studios | 2025</title>
+    <title>Anglesey Open Studios</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -17,7 +17,7 @@
         <div class="d-flex flex-grow-1 justify-content-center align-items-center">
             <div class="text-center animate__animated animate__fadeIn">
                 <h3>Anglesey Open Studios | Stiwdios Agored Môn</h3>
-                <h4>2025</h4>
+                <h4 id="year"></h4>
                 <br>
                 <img src="./assets/logo.webp" onclick="window.location='map\/index.html?time=' + Date.now();">
                 <br><br>
@@ -28,7 +28,7 @@
         <!-- Full width bootstrap footer -->
         <div class="d-flex flex-shrink-0 justify-content-center align-items-center">
             <div class="text-center animate__animated animate__fadeIn">
-                <h6>&copy; Canolfan Ucheldre Centre 2025</h6>
+                <h6>&copy; Canolfan Ucheldre Centre <span id="footerYear"></span></h6>
             </div>
         </div>
 </body>
@@ -36,6 +36,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="assets/easy_background.js"></script>
 <script>
+    const y = new Date().getFullYear();
+    document.title = 'Anglesey Open Studios | ' + y;
+    document.getElementById('year').textContent = y;
+    document.getElementById('footerYear').textContent = y;
+
     document.addEventListener('contextmenu', event => event.preventDefault());
 
     easy_background("body", {

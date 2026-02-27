@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                     </div>
                     <div class="artist-body">
                         <h1 class="artist-name" ${index === 0 ? 'id="artistName"' : ''}>${artist.name}</h1>
-                        <p class="artist-venue-label">${artist.venueLocation}</p>
 
                         ${noticeHtml}
 
@@ -89,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <div class="info-row">
                                 <div class="info-icon contact">${ICONS.contact}</div>
                                 <div class="info-content">
-                                    <div class="info-label">Contact</div>
+                                    <div class="info-label">Contact / Cysylltu</div>
                                     <div class="info-text">${artist.contactInfo}</div>
                                 </div>
                             </div>
@@ -97,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <div class="info-row">
                                 <div class="info-icon location">${ICONS.location}</div>
                                 <div class="info-content">
-                                    <div class="info-label">Location</div>
+                                    <div class="info-label">Location / Lleoliad</div>
                                     <div class="info-text">${artist.venueLocation}</div>
                                 </div>
                             </div>
