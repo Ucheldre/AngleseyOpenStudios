@@ -1,3 +1,7 @@
+// Derive the absolute base URL of this page's directory, so asset paths
+// work correctly on any host (e.g. GitHub Pages at a sub-path).
+const BASE_URL = window.location.href.split('?')[0].replace(/[^/]*$/, '');
+
 function onResizeProc() {
     // Go to same page but not cached
     window.location.href = window.location.href.split('?')[0] + "?time=" + Date.now();
@@ -113,7 +117,7 @@ var mapinfoButton = new ol.layer.Vector({
     source: new ol.source.Vector(),
     style: new ol.style.Style({
         image: new ol.style.Icon({
-            src: './assets/img/help.png?time=' + Date.now(),
+            src: BASE_URL + 'assets/img/help.png?time=' + Date.now(),
         })
     })
 });
@@ -129,7 +133,7 @@ var markers = new ol.layer.Vector({
     style: new ol.style.Style({
         image: new ol.style.Icon({
             anchor: [0.5, 0.9],
-            src: './assets/img/markers/marker.png?time=' + Date.now(),
+            src: BASE_URL + 'assets/img/markers/marker.png?time=' + Date.now(),
         })
     })
 });
@@ -149,7 +153,7 @@ const ICONS = {
 // Fetch and process markers from JSON
 async function fetchMarkers() {
     try {
-        const response = await fetch('./markers.json?t=' + Date.now());
+        const response = await fetch(BASE_URL + 'markers.json?t=' + Date.now());
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -263,7 +267,7 @@ function showArtistPage(id) {
         artistsHtml += `
             <article class="artist-card" style="animation-delay: ${index * 0.15}s">
                 <div class="artist-hero">
-                    <img src="./assets/img/artists/${artist.id}.webp" alt="${artist.name}">
+                    <img src="${BASE_URL}assets/img/artists/${artist.id}.webp" alt="${artist.name}">
                 </div>
                 <div class="artist-body">
                     <h1 class="artist-name" ${index === 0 ? 'id="artistName"' : ''}>${artist.name}</h1>
@@ -387,7 +391,7 @@ function showHelpPage() {
         </div>
 
         <div id="help-map-bottom">
-            <img src="./assets/img/infoMap1.webp" alt="Map marker guide">
+            <img src="${BASE_URL}assets/img/infoMap1.webp" alt="Map marker guide">
         </div>
 
         <button id="scroll-down-btn" aria-label="Scroll down">
