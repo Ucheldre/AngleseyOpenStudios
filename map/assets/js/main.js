@@ -156,6 +156,9 @@ async function fetchMarkers() {
 }
 
 fetchMarkers().then(markersData => {
+    // Cache markers data so embedded pages can access it without a network request
+    try { sessionStorage.setItem('markersData', JSON.stringify(markersData)); } catch(e) {}
+
     markersData.forEach(markerData => {
         // Create feature
         const feature = new ol.Feature({

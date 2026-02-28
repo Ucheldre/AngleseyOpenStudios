@@ -45,6 +45,25 @@ const ICONS = {
     directions: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>`
 };
 
+// Fetch markers.jsonc with retry logic (fallback if sessionStorage cache is unavailable)
+async function fetchMarkersWithRetry(retries = 3) {
+    const baseUrl = window.location.href.split('?')[0].split('/').slice(0, -1).join('/');
+    for (let i = 0; i < retries; i++) {
+        try {
+            const response = await fetch(baseUrl + '/markers.jsonc');
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const text = await response.text();
+            const jsonText = text.replace(/\/\/.*$/gm, '');
+            return JSON.parse(jsonText);
+        } catch (e) {
+            if (i < retries - 1) {
+                await new Promise(r => setTimeout(r, 500 * (i + 1)));
+            }
+        }
+    }
+    return null;
+}
+
 document.addEventListener('DOMContentLoaded', async function () {
 
     // Get the id from the URL
@@ -57,16 +76,18 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     try {
-        // Fetch the markers data — use absolute URL based on page location for iframe compatibility
-        const baseUrl = window.location.href.split('?')[0].split('/').slice(0, -1).join('/');
-        const response = await fetch(baseUrl + '/markers.jsonc');
-        if (!response.ok) {
-            throw new Error(`Failed to load data (HTTP ${response.status})`);
+        // Try sessionStorage first (cached by parent map page), fall back to fetch
+        let data;
+        const cached = sessionStorage.getItem('markersData');
+        if (cached) {
+            try { data = JSON.parse(cached); } catch(e) { data = null; }
         }
-        const text = await response.text();
-        // Remove comments from the JSONC file
-        const jsonText = text.replace(/\/\/.*$/gm, '');
-        const data = JSON.parse(jsonText);
+        if (!data) {
+            data = await fetchMarkersWithRetry();
+        }
+        if (!data) {
+            throw new Error('Could not load markers data');
+        }
 
         // Find the marker with the matching ID
         const marker = data.find(marker => marker.id === id || marker.id === `${id}`);
