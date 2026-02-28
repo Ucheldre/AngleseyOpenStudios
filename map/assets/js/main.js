@@ -209,11 +209,7 @@ map.on('click', function(evt) {
 function infoPageContent(name, url) {
     document.getElementById("infoPage").style.display = "block";
     document.getElementById("hideMap").style.display = "block";
-    document.getElementById("infoPageContent").data = url;
     document.getElementById("infoPageContent").src = url;
-    document.querySelector('#infoPageContent *').addEventListener("contextmenu", function(event) {
-        event.preventDefault();
-    });
 }
 
 let idleTimer; // global variable to store the idle timer
@@ -250,9 +246,7 @@ document.addEventListener("click", function(event) {
 closeInfoPage = function() {
     document.getElementById("infoPage").style.display = "none";
     document.getElementById("hideMap").style.display = "none";
-    // if (navigator.onLine) {
-    //     window.location = "https://hbidamian.github.io/AngleseyArtWeek/";
-    // }
+    document.getElementById("infoPageContent").src = "about:blank";
 }
 
 toastr.options = {
