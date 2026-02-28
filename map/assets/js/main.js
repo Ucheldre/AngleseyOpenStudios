@@ -263,7 +263,7 @@ function showArtistPage(id) {
         artistsHtml += `
             <article class="artist-card" style="animation-delay: ${index * 0.15}s">
                 <div class="artist-hero">
-                    <img src="./assets/img/artists/${artist.id}.webp" alt="${artist.name}" onerror="this.closest('.artist-hero').style.display='none'">
+                    <img src="./assets/img/artists/${artist.id}.webp" alt="${artist.name}">
                 </div>
                 <div class="artist-body">
                     <h1 class="artist-name" ${index === 0 ? 'id="artistName"' : ''}>${artist.name}</h1>
@@ -320,6 +320,22 @@ function showArtistPage(id) {
         </button>`;
 
     openInfoPage(html);
+
+    // Retry image loads on CDN failure (0 B / connection-reset, up to 3 attempts)
+    document.querySelectorAll('#artist-data .artist-hero img').forEach(function(img) {
+        img.onerror = function() {
+            var retries = parseInt(this.dataset.retries || '0') + 1;
+            this.dataset.retries = retries;
+            if (retries <= 3) {
+                var base = this.src.replace(/[?#].*$/, '');
+                var self = this;
+                setTimeout(function() { self.src = base + '?r=' + retries; }, 800 * retries);
+            } else {
+                var hero = this.closest('.artist-hero');
+                if (hero) hero.style.display = 'none';
+            }
+        };
+    });
 }
 
 /* ─── Render Help Page ─── */
