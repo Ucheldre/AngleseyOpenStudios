@@ -326,10 +326,10 @@ function showArtistPage(id) {
         img.onerror = function() {
             var retries = parseInt(this.dataset.retries || '0') + 1;
             this.dataset.retries = retries;
-            if (retries <= 3) {
+            if (retries <= 10) {
                 var base = this.src.replace(/[?#].*$/, '');
                 var self = this;
-                setTimeout(function() { self.src = base + '?r=' + retries; }, 800 * retries);
+                setTimeout(function() { self.src = base + '?r=' + retries; }, 50 + retries);
             } else {
                 var hero = this.closest('.artist-hero');
                 if (hero) hero.style.display = 'none';
