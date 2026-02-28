@@ -41,10 +41,6 @@ max-width: 100%;
 
 /* ─── Help Page ─── */
 
-body {
-background-color: #0c0c0e;
-}
-
 #help-page {
 max-width: 720px;
 margin: 0 auto;

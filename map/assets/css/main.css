@@ -59,14 +59,41 @@ body,
     z-index: 100;
     top: 0;
     left: 0;
-    margin: 0 !important;
-    height: 100% !important;
-    width: 100% !important;
+    margin: 0;
+    height: 100%;
+    width: 100%;
     padding: 0;
     border: none;
     overflow-y: auto;
     overflow-x: hidden;
-    background: transparent;
+    background: #0c0c0e;
+    box-sizing: border-box;
+}
+
+/* Override fixed positioning for scroll button inside the panel */
+#infoPageContent #scroll-down-btn {
+    position: sticky;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -60px;
+}
+#infoPageContent #scroll-down-btn.hidden {
+    transform: translateX(-50%) translateY(12px);
+}
+#infoPageContent #scroll-down-btn:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+/* Scope page styles inside the panel */
+#infoPageContent #artist-data {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    text-align: center;
+    justify-content: center;
+    word-break: break-word;
+    word-wrap: break-word;
 }
 
 #hideMap {
