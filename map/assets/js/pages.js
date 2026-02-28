@@ -57,8 +57,12 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     try {
-        // Fetch the markers data
-        const response = await fetch('./markers.jsonc');
+        // Fetch the markers data — use absolute URL based on page location for iframe compatibility
+        const baseUrl = window.location.href.split('?')[0].split('/').slice(0, -1).join('/');
+        const response = await fetch(baseUrl + '/markers.jsonc');
+        if (!response.ok) {
+            throw new Error(`Failed to load data (HTTP ${response.status})`);
+        }
         const text = await response.text();
         // Remove comments from the JSONC file
         const jsonText = text.replace(/\/\/.*$/gm, '');
