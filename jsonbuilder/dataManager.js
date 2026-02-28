@@ -10,9 +10,7 @@ class DataManager {
 
     loadFromJSON(jsonString) {
         try {
-            // Handle JSONC by removing comments
-            const cleanedJson = jsonString.replace(/\/\/.*$/gm, '');
-            this.markers = JSON.parse(cleanedJson);
+            this.markers = JSON.parse(jsonString);
             if (this.onChange) this.onChange();
             return true;
         } catch (error) {

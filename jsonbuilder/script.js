@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'markers.jsonc';
+        a.download = 'markers.json';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -464,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
         refreshUI();
         startAutoSave();
     } else {
-        // Start with an empty set instead of loading markers.jsonc
+        // Start with an empty set instead of loading markers.json
         console.log('Starting with a new empty set');
         refreshUI();
         startAutoSave();

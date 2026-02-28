@@ -149,7 +149,7 @@ const ICONS = {
 // Fetch and process markers from JSON
 async function fetchMarkers() {
     try {
-        const response = await fetch('./markers.jsonc');
+        const response = await fetch('./markers.json?t=' + Date.now());
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -263,7 +263,7 @@ function showArtistPage(id) {
         artistsHtml += `
             <article class="artist-card" style="animation-delay: ${index * 0.15}s">
                 <div class="artist-hero">
-                    <img src="./assets/img/artists/${artist.id}.webp" alt="${artist.name}">
+                    <img src="./assets/img/artists/${artist.id}.webp" alt="${artist.name}" onerror="this.closest('.artist-hero').style.display='none'">
                 </div>
                 <div class="artist-body">
                     <h1 class="artist-name" ${index === 0 ? 'id="artistName"' : ''}>${artist.name}</h1>
