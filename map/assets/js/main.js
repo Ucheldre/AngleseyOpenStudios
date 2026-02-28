@@ -329,7 +329,8 @@ function showArtistPage(id) {
             if (retries <= 10) {
                 var base = this.src.replace(/[?#].*$/, '');
                 var self = this;
-                setTimeout(function() { self.src = base + '?r=' + retries; }, 50 + retries);
+                self.src = base + '?r=' + retries;
+                console.warn(`Image load failed for ${base}, retrying (${retries})...`);
             } else {
                 var hero = this.closest('.artist-hero');
                 if (hero) hero.style.display = 'none';
