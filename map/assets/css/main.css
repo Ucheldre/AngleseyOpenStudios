@@ -141,6 +141,18 @@ body,
     transform: scale(1.1);
 }
 
+.closeInfoPage.dark-mode {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.18);
+}
+
+.closeInfoPage.dark-mode:hover {
+    background-color: rgba(255, 80, 80, 0.25);
+    border-color: rgba(255, 80, 80, 0.4);
+    color: #ff6b6b;
+}
+
 .closeInfoPage:active {
     transform: scale(0.95);
     background-color: rgba(255, 80, 80, 0.35);

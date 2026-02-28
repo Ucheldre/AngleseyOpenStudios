@@ -27,7 +27,8 @@ color: var(--primary-light);
 flex-shrink: 0;
 }
 
-#help-map-full img {
+#help-map-full img,
+#help-map-bottom img {
 width: 100%;
 height: auto;
 display: block;
@@ -37,6 +38,12 @@ border: none;
 border-radius: 0;
 margin: 0;
 max-width: 100%;
+}
+
+#help-map-bottom {
+width: 100%;
+background: #0c0c0e;
+line-height: 0;
 }
 
 /* ─── Help Page ─── */

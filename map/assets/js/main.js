@@ -333,7 +333,6 @@ function showHelpPage() {
                     <p class="help-subtitle">Sut i ddefnyddio'r map</p>
                 </div>
             </div>
-            <img src="./assets/img/infoMap1.png" alt="Map marker guide">
         </div>
 
         <div id="help-page">
@@ -370,6 +369,10 @@ function showHelpPage() {
             </div>
         </div>
 
+        <div id="help-map-bottom">
+            <img src="./assets/img/infoMap1.webp" alt="Map marker guide">
+        </div>
+
         <button id="scroll-down-btn" aria-label="Scroll down">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             Scroll down
@@ -386,11 +389,39 @@ function openInfoPage(html) {
     document.getElementById("infoPage").style.display = "block";
     document.getElementById("hideMap").style.display = "block";
     initScrollButton();
+    initCloseButtonDarkMode();
 }
 
-function infoPageContent(name, url) {
-    // Legacy compat — not used anymore but kept in case
-    openInfoPage('<div class="loading"><p>Loading...</p></div>');
+/* ─── Close-button dark mode when overlapping the map image ─── */
+function initCloseButtonDarkMode() {
+    const container = document.getElementById('infoPageContent');
+    const btn = document.querySelector('.closeInfoPage');
+    if (!btn || !container) return;
+
+    // Remove any previous listener
+    if (container._darkModeScroll) {
+        container.removeEventListener('scroll', container._darkModeScroll);
+    }
+
+    function checkOverlap() {
+        const img = container.querySelector('#help-map-bottom img, #help-map-full img');
+        if (!img) {
+            btn.classList.remove('dark-mode');
+            return;
+        }
+        const btnRect = btn.getBoundingClientRect();
+        const imgRect = img.getBoundingClientRect();
+        const overlaps = btnRect.right > imgRect.left &&
+                         btnRect.left < imgRect.right &&
+                         btnRect.bottom > imgRect.top &&
+                         btnRect.top < imgRect.bottom;
+        btn.classList.toggle('dark-mode', overlaps);
+    }
+
+    container._darkModeScroll = checkOverlap;
+    container.addEventListener('scroll', checkOverlap, { passive: true });
+    // Initial check after content renders
+    requestAnimationFrame(checkOverlap);
 }
 
 let idleTimer; // global variable to store the idle timer
@@ -428,6 +459,7 @@ closeInfoPage = function() {
     document.getElementById("infoPage").style.display = "none";
     document.getElementById("hideMap").style.display = "none";
     document.getElementById("infoPageContent").innerHTML = "";
+    document.querySelector('.closeInfoPage').classList.remove('dark-mode');
 }
 
 toastr.options = {
