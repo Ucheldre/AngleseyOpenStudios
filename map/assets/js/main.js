@@ -167,8 +167,29 @@ async function fetchMarkers() {
     }
 }
 
+// Preload a single image with exponential-backoff retries (max 3 attempts)
+function preloadImage(src, attempt) {
+    attempt = attempt || 0;
+    var img = new Image();
+    img.onerror = function() {
+        if (attempt < 3) {
+            setTimeout(function() {
+                preloadImage(src, attempt + 1);
+            }, Math.pow(2, attempt) * 20); // 1s, 2s, 4s
+        }
+    };
+    img.src = attempt === 0 ? src : src.replace(/(\?r=\d+)?$/, '?r=' + attempt);
+}
+
 fetchMarkers().then(markersData => {
     markersDataCache = markersData;
+
+    // Preload all artist images so they're cached before the user clicks a marker
+    markersData.forEach(markerData => {
+        markerData.artist.forEach(artist => {
+            preloadImage(BASE_URL + 'assets/img/artists/' + artist.id + '.webp');
+        });
+    });
 
     markersData.forEach(markerData => {
         // Create feature
