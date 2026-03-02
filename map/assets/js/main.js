@@ -290,7 +290,7 @@ function showArtistPage(id) {
                         <div class="info-row">
                             <div class="info-icon contact">${ICONS.contact}</div>
                             <div class="info-content">
-                                <div class="info-label">Contact / Cysylltu</div>
+                                <div class="info-label">Contact / Cyswllt</div>
                                 <div class="info-text">${artist.contactInfo}</div>
                             </div>
                         </div>
@@ -361,10 +361,10 @@ function showHelpPage() {
                 <div class="help-card">
                     <div class="help-card-header">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-                        <span>Artist Pages / Tudalennau Artist</span>
+                        <span>Artist Pages / Tudalennau Arlunydd</span>
                     </div>
                     <p class="help-card-caption">Tap a numbered marker on the map to open the artist's information page.</p>
-                    <p class="help-card-caption help-card-caption-welsh">Tapiwch farcwr rhifol ar y map i agor tudalen gwybodaeth yr artist.</p>
+                    <p class="help-card-caption help-card-caption-welsh">Tapiwch y marciwr wedi'i rifo ar y map i agor tudalen gwybodaeth yr arlunydd.</p>
                 </div>
             </div>
 
@@ -375,7 +375,7 @@ function showHelpPage() {
                     </span>
                     <div>
                         <strong>Pinch to zoom</strong> the map to explore different areas of Anglesey.
-                        <span class="tip-welsh">Pinsiwch i chwyddo'r map i archwilio ardaloedd gwahanol o F&#244;n.</span>
+                        <span class="tip-welsh">Pinsiwch i chwyddo'r map i archwilio gwahanol ardaloedd o Ynys M&#x00f4;n.</span>
                     </div>
                 </div>
                 <div class="help-tip">
