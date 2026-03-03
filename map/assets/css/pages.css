@@ -108,7 +108,7 @@ background: #1a1a1e;
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 24px 24px 0;
+padding: 28px 28px 0;
 }
 
 .artist-hero img {
@@ -212,7 +212,7 @@ margin-bottom: 24px;
 
 .desc-label {
 display: inline-block;
-font-size: 11px;
+font-size: 14px;
 font-weight: 700;
 letter-spacing: 1.5px;
 text-transform: uppercase;
@@ -238,7 +238,7 @@ color: rgba(255, 255, 255, 0.88);
 .section-divider {
 border: none;
 height: 1px;
-background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08), transparent);
+background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
 margin: 28px 0;
 }
 
@@ -251,13 +251,15 @@ gap: 16px;
 
 .info-row {
 display: flex;
-align-items: flex-start;
+flex-direction: column;
+align-items: center;
 gap: 14px;
-padding: 14px 16px;
+padding: 20px 16px;
 background: rgba(255, 255, 255, 0.025);
 border-radius: 12px;
 border: 1px solid rgba(255, 255, 255, 0.04);
 transition: background 0.2s ease;
+text-align: center;
 }
 
 .info-row:hover {
@@ -293,10 +295,11 @@ color: rgba(255, 255, 255, 0.5);
 .info-content {
 flex: 1;
 min-width: 0;
+text-align: center;
 }
 
 .info-label {
-font-size: 11px;
+font-size: 14px;
 font-weight: 700;
 letter-spacing: 1.5px;
 text-transform: uppercase;
@@ -339,9 +342,22 @@ font-size: 18px;
 padding: 40px 20px;
 }
 
+/* ─── Help Card (full-bleed inside panel) ─── */
+.helpscreen-card {
+background: linear-gradient(160deg, #151518 0%, #111114 100%);
+border: none;
+border-radius: 0;
+overflow: hidden;
+margin: 0 0 0 -22px;
+width: calc(100% + 22px);
+min-height: 100%;
+animation: cardFadeIn 0.6s ease-out both;
+}
+
+
 /* ─── Help page ─── */
 div#help {
-max-width: 90%;
+max-width: 100%;
 padding: 0;
 }
 
