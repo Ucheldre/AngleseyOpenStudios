@@ -266,6 +266,7 @@ function showArtistPage(id) {
         }
 
         artistsHtml += `
+            ${index > 0 ? '<br><hr class="section-divider"><br>' : ''}
             <article class="artist-card" style="animation-delay: ${index * 0.15}s">
                 <div class="artist-hero">
                     <img src="${BASE_URL}assets/img/artists/${artist.id}.webp" alt="${artist.name}">
@@ -363,7 +364,6 @@ function showHelpPage() {
                     <div class="help-card">
                         <div class="help-card-header">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-                            <span>Artist Pages / Tudalennau Arlunydd</span>
                         </div>
                         <p class="help-card-caption">Tap a numbered marker on the map to open the artist's information page.</p>
                         <p class="help-card-caption help-card-caption-welsh">Tapiwch y marciwr wedi'i rifo ar y map i agor tudalen gwybodaeth yr arlunydd.</p>
@@ -384,7 +384,7 @@ function showHelpPage() {
                     </div>
                     <div class="help-tip">
                         <span class="help-tip-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
                         </span>
                         <div>
                             <strong>Close any panel</strong> using the &#x2715; button in the top-right corner.
@@ -392,11 +392,14 @@ function showHelpPage() {
                         </div>
                     </div>
                 </div>
-                <hr class="section-divider">
             </div>
-
+            <hr class="section-divider">
             <div id="help-map-bottom">
                 <img src="${BASE_URL}assets/img/infoMap1.webp" alt="Map marker guide">
+            </div>
+            <div class="help-map-message">
+                <p>This map is not an interactive map. To use the interactive map, close this help screen by tapping the &#x2715; button .</p>
+                <p>Dydy’r map yma ddim yn fap rhyngweithiol. I ddefnyddio’r map rhyngweithiol, cae’r sgrin gymorth yma drwy dapio’r botwm &#x2715;.</p>
             </div>
         </article>
 
