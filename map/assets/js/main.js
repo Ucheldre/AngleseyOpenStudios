@@ -328,41 +328,47 @@ function showArtistPage(id) {
 
     openInfoPage(html);
 
-    // Fade in image, hide loader, and retry on failure
+    // Fade in image, hide loader, and retry every second until loaded
     document.querySelectorAll('#artist-data .artist-hero img').forEach(function(img) {
-        function doRetry() {
+        if (img.complete && img.naturalWidth) {
+            img.style.opacity = '1';
+            var loader = img.previousElementSibling;
+            if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
+            return;
+        }
+
+        var retryInterval = setInterval(function() {
+            if (img.complete && img.naturalWidth > 0) {
+                clearInterval(retryInterval);
+                img.style.opacity = '1';
+                var loader = img.previousElementSibling;
+                if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
+                return;
+            }
+
             var retries = parseInt(img.dataset.retries || '0') + 1;
             img.dataset.retries = retries;
             if (retries <= 10) {
                 var base = img.src.replace(/[?#].*$/, '');
                 img.src = base + '?r=' + retries;
-                console.warn(`Image load failed for ${base}, retrying (${retries})...`);
+                console.warn(`Image not loaded for ${base}, retrying (${retries})...`);
             } else {
+                clearInterval(retryInterval);
                 var hero = img.closest('.artist-hero');
                 if (hero) hero.style.display = 'none';
             }
-        }
+        }, 1000);
 
         img.onload = function() {
+            clearInterval(retryInterval);
             this.style.opacity = '1';
             var loader = this.previousElementSibling;
             if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
         };
 
-        img.onerror = doRetry;
-
-        // Proactive timeout: if not loaded within 3s, retry immediately
-        setTimeout(function() {
-            if (!img.complete || img.naturalWidth === 0) {
-                doRetry();
-            }
-        }, 3000);
-
-        if (img.complete && img.naturalWidth) {
-            img.style.opacity = '1';
-            var loader = img.previousElementSibling;
-            if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
-        }
+        img.onerror = function() {
+            // onerror will be caught by the interval on the next tick
+        };
     });
 }
 
