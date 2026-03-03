@@ -328,35 +328,41 @@ function showArtistPage(id) {
 
     openInfoPage(html);
 
-    // Fade in image and hide loader on load
+    // Fade in image, hide loader, and retry on failure
     document.querySelectorAll('#artist-data .artist-hero img').forEach(function(img) {
+        function doRetry() {
+            var retries = parseInt(img.dataset.retries || '0') + 1;
+            img.dataset.retries = retries;
+            if (retries <= 10) {
+                var base = img.src.replace(/[?#].*$/, '');
+                img.src = base + '?r=' + retries;
+                console.warn(`Image load failed for ${base}, retrying (${retries})...`);
+            } else {
+                var hero = img.closest('.artist-hero');
+                if (hero) hero.style.display = 'none';
+            }
+        }
+
         img.onload = function() {
             this.style.opacity = '1';
             var loader = this.previousElementSibling;
             if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
         };
+
+        img.onerror = doRetry;
+
+        // Proactive timeout: if not loaded within 3s, retry immediately
+        setTimeout(function() {
+            if (!img.complete || img.naturalWidth === 0) {
+                doRetry();
+            }
+        }, 3000);
+
         if (img.complete && img.naturalWidth) {
             img.style.opacity = '1';
             var loader = img.previousElementSibling;
             if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
         }
-    });
-
-    // Retry image loads on CDN failure (0 B / connection-reset, up to 3 attempts)
-    document.querySelectorAll('#artist-data .artist-hero img').forEach(function(img) {
-        img.onerror = function() {
-            var retries = parseInt(this.dataset.retries || '0') + 1;
-            this.dataset.retries = retries;
-            if (retries <= 10) {
-                var base = this.src.replace(/[?#].*$/, '');
-                var self = this;
-                self.src = base + '?r=' + retries;
-                console.warn(`Image load failed for ${base}, retrying (${retries})...`);
-            } else {
-                var hero = this.closest('.artist-hero');
-                if (hero) hero.style.display = 'none';
-            }
-        };
     });
 }
 
