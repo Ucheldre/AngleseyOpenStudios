@@ -337,15 +337,8 @@ function showArtistPage(id) {
             return;
         }
 
-        var retryInterval = setInterval(function() {
-            if (img.complete && img.naturalWidth > 0) {
-                clearInterval(retryInterval);
-                img.style.opacity = '1';
-                var loader = img.previousElementSibling;
-                if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
-                return;
-            }
-
+        function attemptRetry() {
+            if (img.complete && img.naturalWidth > 0) return; // already loaded
             var retries = parseInt(img.dataset.retries || '0') + 1;
             img.dataset.retries = retries;
             if (retries <= 10) {
@@ -357,7 +350,10 @@ function showArtistPage(id) {
                 var hero = img.closest('.artist-hero');
                 if (hero) hero.style.display = 'none';
             }
-        }, 1000);
+        }
+
+        // Poll every second regardless of browser error state
+        var retryInterval = setInterval(attemptRetry, 1000);
 
         img.onload = function() {
             clearInterval(retryInterval);
@@ -366,8 +362,9 @@ function showArtistPage(id) {
             if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
         };
 
+        // Also retry immediately on error — don't wait for the next interval tick
         img.onerror = function() {
-            // onerror will be caught by the interval on the next tick
+            attemptRetry();
         };
     });
 }
