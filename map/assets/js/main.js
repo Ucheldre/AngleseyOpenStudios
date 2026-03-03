@@ -269,7 +269,8 @@ function showArtistPage(id) {
             ${index > 0 ? '<br><hr class="section-divider"><br>' : ''}
             <article class="artist-card" style="animation-delay: ${index * 0.15}s">
                 <div class="artist-hero">
-                    <img src="${BASE_URL}assets/img/artists/${artist.id}.webp" alt="${artist.name}">
+                    <div class="artist-hero-loader"></div>
+                    <img src="${BASE_URL}assets/img/artists/${artist.id}.webp" alt="${artist.name}" style="opacity:0;transition:opacity 0.4s ease;">
                 </div>
                 <div class="artist-body">
                     <h1 class="artist-name" ${index === 0 ? 'id="artistName"' : ''}>${artist.name}</h1>
@@ -326,6 +327,20 @@ function showArtistPage(id) {
         </button>`;
 
     openInfoPage(html);
+
+    // Fade in image and hide loader on load
+    document.querySelectorAll('#artist-data .artist-hero img').forEach(function(img) {
+        img.onload = function() {
+            this.style.opacity = '1';
+            var loader = this.previousElementSibling;
+            if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
+        };
+        if (img.complete && img.naturalWidth) {
+            img.style.opacity = '1';
+            var loader = img.previousElementSibling;
+            if (loader && loader.classList.contains('artist-hero-loader')) loader.style.display = 'none';
+        }
+    });
 
     // Retry image loads on CDN failure (0 B / connection-reset, up to 3 attempts)
     document.querySelectorAll('#artist-data .artist-hero img').forEach(function(img) {
