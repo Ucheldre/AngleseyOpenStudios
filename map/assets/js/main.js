@@ -307,7 +307,7 @@ function showArtistPage(id) {
                         <div class="info-row">
                             <div class="info-icon contact">${ICONS.contact}</div>
                             <div class="info-content">
-                                <div class="info-label">Contact / Cyswllt</div>
+                                <div class="info-label">Cyswllt / Contact</div>
                                 <div class="info-text">${artist.contactInfo}</div>
                             </div>
                         </div>
@@ -315,7 +315,7 @@ function showArtistPage(id) {
                         <div class="info-row">
                             <div class="info-icon location">${ICONS.location}</div>
                             <div class="info-content">
-                                <div class="info-label">Location / Lleoliad</div>
+                                <div class="info-label">Lleoliad / Location</div>
                                 <div class="info-text">${artist.venueLocation}</div>
                             </div>
                         </div>
@@ -323,9 +323,9 @@ function showArtistPage(id) {
                         <div class="info-row">
                             <div class="info-icon directions">${ICONS.directions}</div>
                             <div class="info-content">
-                                <div class="info-label">How to find me / Sut i ddod o hyd i mi</div>
-                                <div class="info-text">${artist.englishLocationInstructions}</div>
+                                <div class="info-label">Sut i ddod o hyd i mi / How to find me</div>
                                 <div class="info-text-welsh">${artist.welshLocationInstructions}</div>
+                                <div class="info-text">${artist.englishLocationInstructions}</div>
                             </div>
                         </div>
                     </div>
@@ -335,9 +335,9 @@ function showArtistPage(id) {
 
     const html = `
         <div id="artist-data">${artistsHtml}</div>
-        <button id="scroll-down-btn" aria-label="Scroll down">
+        <button id="scroll-down-btn" aria-label="Sgroliwch i lawr / Scroll down">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            Scroll down
+            Sgroliwch i lawr / Scroll down
         </button>`;
 
     openInfoPage(html);
@@ -388,8 +388,8 @@ function showHelpPage() {
                 <div id="help-map-heading">
                     <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                     <div class="help-heading-text">
-                        <h1 class="help-title">How to use the map</h1>
-                        <p class="help-subtitle">Sut i ddefnyddio'r map</p>
+                        <h1 class="help-title">Sut i ddefnyddio'r map</h1>
+                        <p class="help-subtitle">How to use the map</p>
                     </div>
                 </div>
             </div>
@@ -400,8 +400,8 @@ function showHelpPage() {
                         <div class="help-card-header">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
                         </div>
-                        <p class="help-card-caption">Tap a numbered marker on the map to open the artist's information page.</p>
                         <p class="help-card-caption help-card-caption-welsh">Tapiwch y marciwr wedi'i rifo ar y map i agor tudalen gwybodaeth yr arlunydd.</p>
+                        <p class="help-card-caption">Tap a numbered marker on the map to open the artist's information page.</p>
                     </div>
                 </div>
 
@@ -413,8 +413,8 @@ function showHelpPage() {
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
                         </span>
                         <div>
-                            <strong>Pinch to zoom</strong> the map to explore different areas of Anglesey.
                             <span class="tip-welsh">Pinsiwch i chwyddo'r map i archwilio gwahanol ardaloedd o Ynys M&#x00f4;n.</span>
+                            <strong>Pinch to zoom</strong> the map to explore different areas of Anglesey.
                         </div>
                     </div>
                     <div class="help-tip">
@@ -422,8 +422,8 @@ function showHelpPage() {
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
                         </span>
                         <div>
-                            <strong>Close any panel</strong> using the &#x2715; button in the top-right corner.
                             <span class="tip-welsh">Caewch unrhyw banel gan ddefnyddio'r botwm &#x2715; yn y gornel dde uchaf.</span>
+                            <strong>Close any panel</strong> using the &#x2715; button in the top-right corner.
                         </div>
                     </div>
                     <div class="help-tip">
@@ -431,8 +431,8 @@ function showHelpPage() {
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
                         </span>
                         <div>
-                            <strong>Switch between light and dark mode</strong> using the button in the top-left corner of any panel.
                             <span class="tip-welsh">Newidiwch rhwng modd golau a thywyll gan ddefnyddio'r botwm yn y gornel chwith uchaf ar unrhyw banel.</span>
+                            <strong>Switch between light and dark mode</strong> using the button in the top-left corner of any panel.
                         </div>
                     </div>
                 </div>
@@ -442,14 +442,14 @@ function showHelpPage() {
                 <img src="${BASE_URL}assets/img/infoMap1.webp" alt="Map marker guide">
             </div>
             <div class="help-map-message">
+                <p>Dydy'r map yma ddim yn fap rhyngweithiol. I ddefnyddio'r map rhyngweithiol, cae'r sgrin gymorth yma drwy dapio'r botwm &#x2715;.</p>
                 <p>This map is not an interactive map. To use the interactive map, close this help screen by tapping the &#x2715; button .</p>
-                <p>Dydy’r map yma ddim yn fap rhyngweithiol. I ddefnyddio’r map rhyngweithiol, cae’r sgrin gymorth yma drwy dapio’r botwm &#x2715;.</p>
             </div>
         </article>
 
-        <button id="scroll-down-btn" aria-label="Scroll down">
+        <button id="scroll-down-btn" aria-label="Sgroliwch i lawr / Scroll down">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            Scroll down
+            Sgroliwch i lawr / Scroll down
         </button>`;
 
     openInfoPage(html);
