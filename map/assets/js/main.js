@@ -16,6 +16,94 @@ function toggleTheme() {
     localStorage.setItem('mapTheme', isLight ? 'light' : 'dark');
 }
 
+/* ─── Font Size Toggle (7 levels) ─── */
+const FONT_SIZES = ['smallest', 'smaller', 'small', 'normal', 'large', 'larger', 'largest'];
+const FONT_SIZE_LABELS = {
+    smallest: 'Lleiaf / Smallest',
+    smaller:   'Bychain / Smaller',
+    small:    'Bach / Small',
+    normal:   'Arferol / Normal',
+    large:    'Mawr / Large',
+    larger:   'Mwy  / Larger',
+    largest:  'Mwyaf / Largest'
+};
+
+(function initFontSize() {
+    const saved = localStorage.getItem('mapFontSize');
+    const size = FONT_SIZES.includes(saved) ? saved : 'normal';
+    document.getElementById('infoPage').setAttribute('data-fontsize', size);
+    updateFontSizeButton(size);
+    // Sync slider position
+    const slider = document.getElementById('fontSizeSlider');
+    if (slider) slider.value = FONT_SIZES.indexOf(size);
+    updateFontSizePanelLabel(size);
+})();
+
+function toggleFontSizePanel() {
+    const panel = document.getElementById('fontSizePanel');
+    const isOpen = panel.classList.contains('open');
+    if (isOpen) {
+        panel.classList.remove('open');
+    } else {
+        // Sync slider to current saved value before opening
+        const infoPage = document.getElementById('infoPage');
+        const current = infoPage.getAttribute('data-fontsize') || 'normal';
+        const slider = document.getElementById('fontSizeSlider');
+        slider.value = FONT_SIZES.indexOf(current);
+        updateFontSizePanelLabel(current);
+        panel.classList.add('open');
+    }
+}
+
+function confirmFontSize() {
+    const slider = document.getElementById('fontSizeSlider');
+    const size = FONT_SIZES[parseInt(slider.value)];
+    const infoPage = document.getElementById('infoPage');
+    infoPage.setAttribute('data-fontsize', size);
+    localStorage.setItem('mapFontSize', size);
+    updateFontSizeButton(size);
+    document.getElementById('fontSizePanel').classList.remove('open');
+    toastr.info(FONT_SIZE_LABELS[size], 'Maint Ffont / Font Size');
+}
+
+function updateFontSizeButton(size) {
+    const btn = document.querySelector('.fontSizeBtn-label');
+    if (!btn) return;
+    const scales = { smallest: '16px', smaller: '18px', small: '19px', normal: '22px', large: '23px', larger: '25px', largest: '28px' };
+    btn.style.fontSize = scales[size] || '22px';
+}
+
+function updateFontSizePanelLabel(size) {
+    const label = document.getElementById('fontSizePanelValue');
+    if (label) label.textContent = FONT_SIZE_LABELS[size] || '';
+}
+
+// Live preview as user drags the slider
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('fontSizeSlider');
+    if (slider) {
+        slider.addEventListener('input', function() {
+            const size = FONT_SIZES[parseInt(this.value)];
+            document.getElementById('infoPage').setAttribute('data-fontsize', size);
+            updateFontSizePanelLabel(size);
+            updateFontSizeButton(size);
+        });
+    }
+
+    // Close panel when clicking outside of it (revert to saved value)
+    document.addEventListener('click', function(e) {
+        const panel = document.getElementById('fontSizePanel');
+        const btn = document.querySelector('.fontSizeBtn');
+        if (!panel || !panel.classList.contains('open')) return;
+        if (panel.contains(e.target) || btn.contains(e.target)) return;
+        // Revert to saved value
+        const saved = localStorage.getItem('mapFontSize') || 'normal';
+        document.getElementById('infoPage').setAttribute('data-fontsize', saved);
+        updateFontSizeButton(saved);
+        panel.classList.remove('open');
+    });
+});
+
 function onResizeProc() {
     // Go to same page but not cached
     window.location.href = window.location.href.split('?')[0] + "?time=" + Date.now();
@@ -471,6 +559,7 @@ function initCloseButtonDarkMode() {
     const container = document.getElementById('infoPageContent');
     const closeBtn = document.querySelector('.closeInfoPage');
     const themeBtn = document.querySelector('.themeToggleBtn');
+    const fontBtn = document.querySelector('.fontSizeBtn');
     if (!container) return;
 
     // Remove any previous listener
@@ -483,6 +572,7 @@ function initCloseButtonDarkMode() {
         if (!img) {
             if (closeBtn) closeBtn.classList.remove('dark-mode');
             if (themeBtn) themeBtn.classList.remove('dark-mode');
+            if (fontBtn) fontBtn.classList.remove('dark-mode');
             return;
         }
         const imgRect = img.getBoundingClientRect();
@@ -505,6 +595,16 @@ function initCloseButtonDarkMode() {
                                tbRect.bottom > imgRect.top &&
                                tbRect.top < imgRect.bottom;
             themeBtn.classList.toggle('dark-mode', tbOverlaps);
+        }
+
+        // Check font size button overlap
+        if (fontBtn) {
+            const fbRect = fontBtn.getBoundingClientRect();
+            const fbOverlaps = fbRect.right > imgRect.left &&
+                               fbRect.left < imgRect.right &&
+                               fbRect.bottom > imgRect.top &&
+                               fbRect.top < imgRect.bottom;
+            fontBtn.classList.toggle('dark-mode', fbOverlaps);
         }
     }
 
@@ -551,6 +651,8 @@ closeInfoPage = function() {
     document.getElementById("infoPageContent").innerHTML = "";
     document.querySelector('.closeInfoPage').classList.remove('dark-mode');
     document.querySelector('.themeToggleBtn').classList.remove('dark-mode');
+    document.querySelector('.fontSizeBtn').classList.remove('dark-mode');
+    document.getElementById('fontSizePanel').classList.remove('open');
 }
 
 toastr.options = {

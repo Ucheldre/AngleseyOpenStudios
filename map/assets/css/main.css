@@ -62,12 +62,13 @@ body,
     margin: 0;
     height: 100%;
     width: 100%;
-    padding: 0 0 0 22px;
+    padding: 0;
     border: none;
     overflow-y: auto;
     overflow-x: hidden;
     background: #18181d;
     box-sizing: border-box;
+    scrollbar-gutter: stable;
 }
 
 /* Override fixed positioning for scroll button inside the panel */
@@ -116,8 +117,8 @@ body,
     right: 14px;
     left: auto;
     padding: 0;
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +126,7 @@ body,
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 1;
     cursor: pointer;
@@ -170,6 +171,246 @@ body,
     background-color: rgba(255, 80, 80, 0.35);
 }
 
+/* ─── Font Size Button ─── */
+.fontSizeBtn {
+    position: absolute;
+    z-index: 200;
+    top: 84px;
+    left: 14px;
+    right: auto;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.fontSizeBtn-label {
+    pointer-events: none;
+    font-size: inherit;
+}
+
+.fontSizeBtn:hover {
+    background-color: rgba(100, 180, 255, 0.2);
+    border-color: rgba(100, 180, 255, 0.4);
+    color: #64b4ff;
+    transform: scale(1.1);
+}
+
+.fontSizeBtn:active {
+    transform: scale(0.95);
+    background-color: rgba(100, 180, 255, 0.35);
+}
+
+.fontSizeBtn.dark-mode {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.18);
+}
+
+.fontSizeBtn.dark-mode:hover {
+    background-color: rgba(100, 180, 255, 0.3);
+    border-color: rgba(100, 180, 255, 0.5);
+    color: #2070b0;
+}
+
+body.light-theme .fontSizeBtn {
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .fontSizeBtn:hover {
+    background-color: rgba(50, 100, 200, 0.15);
+    border-color: rgba(50, 100, 200, 0.3);
+    color: #3060b0;
+}
+
+/* ─── Font Size Slider Panel ─── */
+.fontSizePanel {
+    position: absolute;
+    z-index: 250;
+    top: 154px;
+    left: 14px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px 12px;
+    min-width: 180px;
+    background-color: rgba(30, 30, 35, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+    animation: fontPanelIn 0.2s ease-out;
+}
+
+.fontSizePanel.open {
+    display: flex;
+}
+
+@keyframes fontPanelIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fontSizePanel-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+}
+
+.fontSizePanel-title {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.fontSizePanel-value {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.3px;
+}
+
+.fontSizePanel-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2px;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    margin-top: -4px;
+}
+
+/* Slider track */
+.fontSizeSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    outline: none;
+    cursor: pointer;
+}
+
+.fontSizeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--primary, #64b4ff);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.fontSizeSlider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.fontSizeSlider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--primary, #64b4ff);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Confirm (tick) button */
+.fontSizeConfirmBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin-top: 2px;
+    background: var(--primary, #64b4ff);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.fontSizeConfirmBtn:hover {
+    background: var(--primary-light, #90ccff);
+    transform: scale(1.1);
+}
+
+.fontSizeConfirmBtn:active {
+    transform: scale(0.95);
+}
+
+/* Light theme overrides for the slider panel */
+body.light-theme .fontSizePanel {
+    background-color: rgba(250, 250, 252, 0.95);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .fontSizePanel-title {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+body.light-theme .fontSizePanel-value {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+body.light-theme .fontSizePanel-labels {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+body.light-theme .fontSizeSlider {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .fontSizeSlider::-webkit-slider-thumb {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .fontSizeSlider::-moz-range-thumb {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* ─── Font Size Scaling ─── */
+#infoPage { --font-scale: 1; }
+#infoPage[data-fontsize="smallest"] { --font-scale: 0.75; }
+#infoPage[data-fontsize="smaller"]  { --font-scale: 0.825; }
+#infoPage[data-fontsize="small"]    { --font-scale: 0.875; }
+#infoPage[data-fontsize="normal"]   { --font-scale: 1; }
+#infoPage[data-fontsize="large"]    { --font-scale: 1.15; }
+#infoPage[data-fontsize="larger"]   { --font-scale: 1.35; }
+#infoPage[data-fontsize="largest"]  { --font-scale: 1.6; }
+
 /* ─── Theme Toggle Button ─── */
 .themeToggleBtn {
     position: absolute;
@@ -178,8 +419,8 @@ body,
     left: 14px;
     right: auto;
     padding: 0;
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,7 +428,7 @@ body,
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 1;
     cursor: pointer;

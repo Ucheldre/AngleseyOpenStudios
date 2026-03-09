@@ -319,3 +319,14 @@ body.light-theme .help-tip strong {
 body.light-theme .tip-welsh {
     color: #1a1a1a;
 }
+
+/* ═══════════════════════════════════════════
+   FONT SIZE SCALING — Help Page Overrides
+   ═══════════════════════════════════════════ */
+
+#infoPage[data-fontsize] .help-title            { font-size: calc(36px * var(--font-scale)); }
+#infoPage[data-fontsize] .help-subtitle         { font-size: calc(18px * var(--font-scale)); }
+#infoPage[data-fontsize] .help-card-caption      { font-size: calc(20px * var(--font-scale)); }
+#infoPage[data-fontsize] .help-tip               { font-size: calc(20px * var(--font-scale)); }
+#infoPage[data-fontsize] .tip-welsh              { font-size: calc(19px * var(--font-scale)); }
+#infoPage[data-fontsize] .help-map-message       { font-size: calc(14px * var(--font-scale)); }

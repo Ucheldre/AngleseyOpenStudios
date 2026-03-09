@@ -363,8 +363,8 @@ background: linear-gradient(160deg, #232328 0%, #1e1e23 100%);
 border: none;
 border-radius: 0;
 overflow: hidden;
-margin: 0 0 0 -22px;
-width: calc(100% + 22px);
+margin: 0;
+width: 100%;
 min-height: 100%;
 animation: cardFadeIn 0.6s ease-out both;
 }
@@ -586,4 +586,24 @@ body.light-theme .helpscreen-card {
 body.light-theme #scroll-down-btn {
     color: #fff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ═══════════════════════════════════════════
+   FONT SIZE SCALING — Pages Overrides
+   ═══════════════════════════════════════════ */
+
+/* Artist page text elements */
+#infoPage[data-fontsize] .artist-name          { font-size: calc(36px * var(--font-scale)); }
+#infoPage[data-fontsize] .artist-venue-label    { font-size: calc(18px * var(--font-scale)); }
+#infoPage[data-fontsize] .notice-banner p       { font-size: calc(20px * var(--font-scale)); }
+#infoPage[data-fontsize] .desc-label            { font-size: calc(14px * var(--font-scale)); }
+#infoPage[data-fontsize] .desc-text             { font-size: calc(20px * var(--font-scale)); }
+#infoPage[data-fontsize] .info-label            { font-size: calc(14px * var(--font-scale)); }
+#infoPage[data-fontsize] .info-text             { font-size: calc(20px * var(--font-scale)); }
+#infoPage[data-fontsize] .info-text-welsh       { font-size: calc(19px * var(--font-scale)); }
+
+/* Responsive override for scaled artist name */
+@media (max-width: 600px) {
+    #infoPage[data-fontsize] .artist-name       { font-size: calc(28px * var(--font-scale)); }
+    #infoPage[data-fontsize] .desc-text         { font-size: calc(18px * var(--font-scale)); }
 }
