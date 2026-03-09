@@ -153,9 +153,112 @@ body,
     color: #ff6b6b;
 }
 
+.themeToggleBtn.dark-mode {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.18);
+}
+
+.themeToggleBtn.dark-mode:hover {
+    background-color: rgba(255, 200, 50, 0.3);
+    border-color: rgba(255, 200, 50, 0.5);
+    color: #b38a00;
+}
+
 .closeInfoPage:active {
     transform: scale(0.95);
     background-color: rgba(255, 80, 80, 0.35);
+}
+
+/* ─── Theme Toggle Button ─── */
+.themeToggleBtn {
+    position: absolute;
+    z-index: 200;
+    top: 14px;
+    left: 14px;
+    right: auto;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.themeToggleBtn:hover {
+    background-color: rgba(255, 200, 50, 0.2);
+    border-color: rgba(255, 200, 50, 0.4);
+    color: #ffc832;
+    transform: scale(1.1);
+}
+
+.themeToggleBtn:active {
+    transform: scale(0.95);
+    background-color: rgba(255, 200, 50, 0.35);
+}
+
+/* Sun icon shown in dark mode (click to go light), moon shown in light mode */
+.themeToggleBtn .icon-moon { display: none; }
+.themeToggleBtn .icon-sun  { display: block; }
+
+body.light-theme .themeToggleBtn .icon-moon { display: block; }
+body.light-theme .themeToggleBtn .icon-sun  { display: none; }
+
+body.light-theme .themeToggleBtn {
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .themeToggleBtn:hover {
+    background-color: rgba(100, 80, 200, 0.15);
+    border-color: rgba(100, 80, 200, 0.3);
+    color: #5040b0;
+}
+
+/* ═══════════════════════════════════════════
+   LIGHT THEME OVERRIDES
+   ═══════════════════════════════════════════ */
+
+body.light-theme #infoPage {
+    background-color: #f5f5f7;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+}
+
+body.light-theme #infoPageContent {
+    background: #fafafa;
+    color: #1a1a1a;
+}
+
+body.light-theme #hideMap {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+body.light-theme .closeInfoPage {
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .closeInfoPage:hover {
+    background-color: rgba(255, 80, 80, 0.15);
+    border-color: rgba(255, 80, 80, 0.35);
+    color: #e04040;
 }
 
 div[class="ol-overlay-container ol-selectable"] div {

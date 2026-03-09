@@ -2,6 +2,20 @@
 // work correctly on any host (e.g. GitHub Pages at a sub-path).
 const BASE_URL = window.location.href.split('?')[0].replace(/[^/]*$/, '');
 
+/* ─── Theme Toggle (Light / Dark) ─── */
+(function initTheme() {
+    const saved = localStorage.getItem('mapTheme');
+    if (saved !== 'dark') {
+        document.body.classList.add('light-theme');
+    }
+})();
+
+function toggleTheme() {
+    document.body.classList.toggle('light-theme');
+    const isLight = document.body.classList.contains('light-theme');
+    localStorage.setItem('mapTheme', isLight ? 'light' : 'dark');
+}
+
 function onResizeProc() {
     // Go to same page but not cached
     window.location.href = window.location.href.split('?')[0] + "?time=" + Date.now();
@@ -412,6 +426,15 @@ function showHelpPage() {
                             <span class="tip-welsh">Caewch unrhyw banel gan ddefnyddio'r botwm &#x2715; yn y gornel dde uchaf.</span>
                         </div>
                     </div>
+                    <div class="help-tip">
+                        <span class="help-tip-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        </span>
+                        <div>
+                            <strong>Switch between light and dark mode</strong> using the button in the top-left corner of any panel.
+                            <span class="tip-welsh">Newidiwch rhwng modd golau a thywyll gan ddefnyddio'r botwm yn y gornel chwith uchaf ar unrhyw banel.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <hr class="section-divider">
@@ -446,8 +469,9 @@ function openInfoPage(html) {
 /* ─── Close-button dark mode when overlapping the map image ─── */
 function initCloseButtonDarkMode() {
     const container = document.getElementById('infoPageContent');
-    const btn = document.querySelector('.closeInfoPage');
-    if (!btn || !container) return;
+    const closeBtn = document.querySelector('.closeInfoPage');
+    const themeBtn = document.querySelector('.themeToggleBtn');
+    if (!container) return;
 
     // Remove any previous listener
     if (container._darkModeScroll) {
@@ -457,16 +481,31 @@ function initCloseButtonDarkMode() {
     function checkOverlap() {
         const img = container.querySelector('#help-map-bottom img, #help-map-full img');
         if (!img) {
-            btn.classList.remove('dark-mode');
+            if (closeBtn) closeBtn.classList.remove('dark-mode');
+            if (themeBtn) themeBtn.classList.remove('dark-mode');
             return;
         }
-        const btnRect = btn.getBoundingClientRect();
         const imgRect = img.getBoundingClientRect();
-        const overlaps = btnRect.right > imgRect.left &&
-                         btnRect.left < imgRect.right &&
-                         btnRect.bottom > imgRect.top &&
-                         btnRect.top < imgRect.bottom;
-        btn.classList.toggle('dark-mode', overlaps);
+
+        // Check close button overlap
+        if (closeBtn) {
+            const cbRect = closeBtn.getBoundingClientRect();
+            const cbOverlaps = cbRect.right > imgRect.left &&
+                               cbRect.left < imgRect.right &&
+                               cbRect.bottom > imgRect.top &&
+                               cbRect.top < imgRect.bottom;
+            closeBtn.classList.toggle('dark-mode', cbOverlaps);
+        }
+
+        // Check theme toggle button overlap
+        if (themeBtn) {
+            const tbRect = themeBtn.getBoundingClientRect();
+            const tbOverlaps = tbRect.right > imgRect.left &&
+                               tbRect.left < imgRect.right &&
+                               tbRect.bottom > imgRect.top &&
+                               tbRect.top < imgRect.bottom;
+            themeBtn.classList.toggle('dark-mode', tbOverlaps);
+        }
     }
 
     container._darkModeScroll = checkOverlap;
@@ -511,6 +550,7 @@ closeInfoPage = function() {
     document.getElementById("hideMap").style.display = "none";
     document.getElementById("infoPageContent").innerHTML = "";
     document.querySelector('.closeInfoPage').classList.remove('dark-mode');
+    document.querySelector('.themeToggleBtn').classList.remove('dark-mode');
 }
 
 toastr.options = {

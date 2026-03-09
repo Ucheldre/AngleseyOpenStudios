@@ -259,3 +259,63 @@ animation: bounceArrow 1.8s ease-in-out infinite;
 0%, 100% { transform: translateY(0); }
 50% { transform: translateY(4px); }
 }
+
+/* ═══════════════════════════════════════════
+   LIGHT THEME — Help Page Overrides
+   ═══════════════════════════════════════════ */
+
+body.light-theme #help-map-full,
+body.light-theme #help-map-bottom {
+    background: #f0f0f2;
+}
+
+body.light-theme #help-map-heading {
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .help-title {
+    color: #1a1a1a;
+}
+
+body.light-theme .help-subtitle {
+    color: var(--primary-dark);
+}
+
+body.light-theme #help-page {
+    background: linear-gradient(160deg, #ffffff 0%, #f8f8fa 100%);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .help-card-header {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+body.light-theme .help-card-caption {
+    color: #333;
+}
+
+body.light-theme .help-card-caption-welsh {
+    color: #1a1a1a;
+}
+
+body.light-theme .help-map-message {
+    color: #444;
+}
+
+body.light-theme .help-tip {
+    background: rgba(0, 0, 0, 0.025);
+    border-color: rgba(0, 0, 0, 0.06);
+    color: #444;
+}
+
+body.light-theme .help-tip:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+body.light-theme .help-tip strong {
+    color: #1a1a1a;
+}
+
+body.light-theme .tip-welsh {
+    color: #1a1a1a;
+}
