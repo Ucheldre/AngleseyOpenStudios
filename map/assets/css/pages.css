@@ -18,18 +18,18 @@ box-sizing: border-box;
 /* Scrollbar — thick & high-contrast for accessibility */
 #infoPageContent::-webkit-scrollbar {
 width: 22px;
-background-color: #1a1a1e;
+background-color: #252529;
 }
 
 #infoPageContent::-webkit-scrollbar-track {
-background-color: #1a1a1e;
-border-left: 1px solid rgba(255, 255, 255, 0.06);
+background-color: #252529;
+border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 #infoPageContent::-webkit-scrollbar-thumb {
 border-radius: 12px;
 background-color: var(--primary);
-border: 4px solid #1a1a1e;
+border: 4px solid #252529;
 min-height: 48px;
 }
 
@@ -72,8 +72,8 @@ letter-spacing: 0.5px;
 
 /* ─── Artist Card ─── */
 .artist-card {
-background: linear-gradient(160deg, #151518 0%, #111114 100%);
-border: 1px solid rgba(255, 255, 255, 0.06);
+background: linear-gradient(160deg, #232328 0%, #1e1e23 100%);
+border: 1px solid rgba(255, 255, 255, 0.10);
 border-radius: 20px;
 overflow: hidden;
 margin-bottom: 0;
@@ -104,7 +104,7 @@ transform: translateY(0);
 .artist-hero {
 position: relative;
 width: 100%;
-background: #1a1a1e;
+background: #2a2a30;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -146,7 +146,7 @@ bottom: 0;
 left: 0;
 right: 0;
 height: 40%;
-background: linear-gradient(to top, #151518 0%, transparent 100%);
+background: linear-gradient(to top, #232328 0%, transparent 100%);
 pointer-events: none;
 }
 
@@ -231,7 +231,7 @@ font-size: 14px;
 font-weight: 700;
 letter-spacing: 1.5px;
 text-transform: uppercase;
-color: rgba(255, 255, 255, 0.35);
+color: rgba(255, 255, 255, 0.45);
 margin-bottom: 8px;
 }
 
@@ -252,8 +252,8 @@ color: rgba(255, 255, 255, 0.88);
 /* ─── Divider ─── */
 .section-divider {
 border: none;
-height: 1px;
-background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+height: 2px;
+background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35), transparent);
 margin: 28px 0;
 }
 
@@ -270,15 +270,15 @@ flex-direction: column;
 align-items: center;
 gap: 14px;
 padding: 20px 16px;
-background: rgba(255, 255, 255, 0.025);
+background: rgba(255, 255, 255, 0.05);
 border-radius: 12px;
-border: 1px solid rgba(255, 255, 255, 0.04);
+border: 1px solid rgba(255, 255, 255, 0.08);
 transition: background 0.2s ease;
 text-align: center;
 }
 
 .info-row:hover {
-background: rgba(255, 255, 255, 0.045);
+background: rgba(255, 255, 255, 0.08);
 }
 
 .info-icon {
@@ -318,7 +318,7 @@ font-size: 14px;
 font-weight: 700;
 letter-spacing: 1.5px;
 text-transform: uppercase;
-color: rgba(255, 255, 255, 0.35);
+color: rgba(255, 255, 255, 0.45);
 margin-bottom: 4px;
 }
 
@@ -346,7 +346,7 @@ font-weight: 700;
 color: rgba(255, 255, 255, 0.88);
 margin-top: 6px;
 padding-top: 6px;
-border-top: 1px solid rgba(255, 255, 255, 0.08);
+border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* ─── Alert ─── */
@@ -359,7 +359,7 @@ padding: 40px 20px;
 
 /* ─── Help Card (full-bleed inside panel) ─── */
 .helpscreen-card {
-background: linear-gradient(160deg, #151518 0%, #111114 100%);
+background: linear-gradient(160deg, #232328 0%, #1e1e23 100%);
 border: none;
 border-radius: 0;
 overflow: hidden;
@@ -563,7 +563,7 @@ body.light-theme .info-icon.contact {
 
 /* Section divider */
 body.light-theme .section-divider {
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.15), transparent);
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.25), transparent);
 }
 
 /* Loading */
