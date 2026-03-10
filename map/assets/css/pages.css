@@ -423,10 +423,10 @@ display: flex;
 align-items: center;
 gap: 8px;
 padding: 10px 22px;
-	background: rgb(from var(--primary) r g b / 0.85);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgb(from var(--primary-light) r g b / 0.3);
+background: rgb(from var(--primary) r g b / 0.85);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgb(from var(--primary-light) r g b / 0.3);
 border-radius: 100px;
 color: #fff;
 font-family: 'Inter', sans-serif;
@@ -586,6 +586,7 @@ body.light-theme .helpscreen-card {
 body.light-theme #scroll-down-btn {
     color: #fff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: rgb(from var(--primary-dark) r g b / 0.85);
 }
 
 /* ═══════════════════════════════════════════
