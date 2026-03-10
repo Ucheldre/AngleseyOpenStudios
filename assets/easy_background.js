@@ -1,29 +1,23 @@
 function easy_background(e, t) {
+	// Pre-load all slide images so transitions are instant
+	var preloaded = t.slide.map(function(src) {
+		var img = new Image();
+		img.src = src;
+		return img;
+	});
+
 	// Create a container for the background layers
 	var container = document.createElement("div");
 	container.classList.add("easy_background_container");
-	container.style.position = "fixed";
-	container.style.top = 0;
-	container.style.left = 0;
-	container.style.width = "100%";
-	container.style.height = "100%";
-	container.style.zIndex = -1;
+	container.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;";
 	document.body.insertBefore(container, document.body.firstChild);
 
 	// Create two layered divs to allow cross-fading
 	var layer1 = document.createElement("div");
 	var layer2 = document.createElement("div");
+	var transMs = t.transitionDuration || 1000;
 	[layer1, layer2].forEach(function(layer) {
-		layer.style.position = "absolute";
-		layer.style.top = 0;
-		layer.style.left = 0;
-		layer.style.right = 0;
-		layer.style.bottom = 0;
-		layer.style.backgroundSize = "cover";
-		layer.style.backgroundRepeat = "no-repeat";
-		layer.style.backgroundPosition = "center center";
-		layer.style.transition = "opacity " + (t.transitionDuration || 1000) + "ms ease-in-out";
-		layer.style.opacity = 0;
+		layer.style.cssText = "position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;background-position:center center;opacity:0;will-change:opacity;transition:opacity " + transMs + "ms ease-in-out;";
 		container.appendChild(layer);
 	});
 	

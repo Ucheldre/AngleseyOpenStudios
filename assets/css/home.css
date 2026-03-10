@@ -1,5 +1,5 @@
 @import url('./theme.css');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+/* Google Fonts loaded via <link> in HTML for faster parallel fetching */
 
 * {
 	user-select: none;
@@ -33,6 +33,7 @@ div.bg {
 	);
 	backdrop-filter: blur(7px) saturate(1.4) brightness(0.85);
 	-webkit-backdrop-filter: blur(7px) saturate(1.4) brightness(0.85);
+	will-change: backdrop-filter;
 	box-shadow:
 		inset 0  80px 80px -40px var(--primary-dark),
 		inset 0 -80px 80px -40px var(--secondary-dark),
@@ -106,11 +107,12 @@ div.bg {
 	            filter 0.4s ease;
 	cursor: pointer;
 	animation: breathe 4s ease-in-out infinite;
+	will-change: transform, filter;
 }
 
 .hero-logo:hover {
-	filter: drop-shadow(28px 8px 20px color-mix(in srgb, var(--secondary) 85%, transparent))
-	        drop-shadow(-28px -8px 20px color-mix(in srgb, var(--primary) 85%, transparent));
+	filter: drop-shadow(28px 8px 20px color-mix(in srgb, var(--secondary) 95%, transparent))
+	        drop-shadow(-28px -8px 20px color-mix(in srgb, var(--primary) 95%, transparent));
 }
 
 @keyframes breathe {

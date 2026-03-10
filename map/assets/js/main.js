@@ -105,23 +105,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function onResizeProc() {
-    // Go to same page but not cached
-    window.location.href = window.location.href.split('?')[0] + "?time=" + Date.now();
-    window.history.pushState(null, null, window.location.href.split('?')[0]);
-    window.location.reload(true);
+// onResizeProc removed — reloading on every resize caused severe sluggishness.
+// The map view auto-adjusts via OpenLayers' built-in resize handling.
 
-}
-
-// Get all the elements on the page
-const allElements = document.querySelectorAll('*');
-
-// Loop through all the elements and add the contextmenu event listener
-allElements.forEach(element => {
-  element.addEventListener('contextmenu', event => {
-    event.preventDefault();
-  });
-});
+// Prevent context menu globally (single listener instead of per-element)
+document.addEventListener('contextmenu', e => e.preventDefault());
 
 // Disable all pointer events other than click/touch/drag. 
 // This prevents accidental zooming on mobile devices.
@@ -220,7 +208,7 @@ var mapinfoButton = new ol.layer.Vector({
     source: new ol.source.Vector(),
     style: new ol.style.Style({
         image: new ol.style.Icon({
-            src: BASE_URL + 'assets/img/help.png?time=' + Date.now(),
+            src: BASE_URL + 'assets/img/help.png',
         })
     })
 });
@@ -236,7 +224,7 @@ var markers = new ol.layer.Vector({
     style: new ol.style.Style({
         image: new ol.style.Icon({
             anchor: [0.5, 0.9],
-            src: BASE_URL + 'assets/img/markers/marker.png?time=' + Date.now(),
+            src: BASE_URL + 'assets/img/markers/marker.png',
         })
     })
 });
@@ -256,7 +244,7 @@ const ICONS = {
 // Fetch and process markers from JSON
 async function fetchMarkers() {
     try {
-        const response = await fetch(BASE_URL + 'markers.json?t=' + Date.now());
+        const response = await fetch(BASE_URL + 'markers.json');
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -616,17 +604,9 @@ function initCloseButtonDarkMode() {
 }
 
 let idleTimer; // global variable to store the idle timer
-// add event listeners for mouse and keyboard events
-document.addEventListener("mousemove", resetIdleTimer);
-document.addEventListener("keypress", resetIdleTimer);
-document.addEventListener("touchstart", resetIdleTimer);
-document.addEventListener("touchmove", resetIdleTimer);
-document.addEventListener("touchend", resetIdleTimer);
-document.addEventListener("touchcancel", resetIdleTimer);
-document.addEventListener("wheel", resetIdleTimer);
-document.addEventListener("scroll", resetIdleTimer);
-document.addEventListener("mousedown", resetIdleTimer);
-document.addEventListener("click", resetIdleTimer);
+// Consolidate idle-reset into a single set of passive listeners
+const IDLE_EVENTS = ['mousemove', 'keypress', 'touchstart', 'touchmove', 'scroll', 'mousedown', 'click'];
+IDLE_EVENTS.forEach(evt => document.addEventListener(evt, resetIdleTimer, { passive: true }));
 
 // start the idle timer when the page loads
 resetIdleTimer();
