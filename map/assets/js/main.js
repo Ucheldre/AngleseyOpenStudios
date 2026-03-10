@@ -16,20 +16,21 @@ function toggleTheme() {
     localStorage.setItem('mapTheme', isLight ? 'light' : 'dark');
 }
 
-/* ─── Font Size Toggle (7 levels) ─── */
-const FONT_SIZES = ['smallest', 'smaller', 'small', 'normal', 'large', 'larger', 'largest'];
+/* ─── Font Size Toggle (5 levels) ─── */
+const FONT_SIZES = ['smallest', 'smaller', 'normal', 'larger', 'largest'];
 const FONT_SIZE_LABELS = {
     smallest: 'Lleiaf / Smallest',
-    smaller:   'Bychain / Smaller',
-    small:    'Bach / Small',
+    smaller:  'Bychain / Smaller',
     normal:   'Arferol / Normal',
-    large:    'Mawr / Large',
     larger:   'Mwy  / Larger',
     largest:  'Mwyaf / Largest'
 };
 
 (function initFontSize() {
-    const saved = localStorage.getItem('mapFontSize');
+    let saved = localStorage.getItem('mapFontSize');
+    // Migrate old 7-level names to new 5-level names
+    const migration = { small: 'smaller', large: 'larger' };
+    if (migration[saved]) { saved = migration[saved]; localStorage.setItem('mapFontSize', saved); }
     const size = FONT_SIZES.includes(saved) ? saved : 'normal';
     document.getElementById('infoPage').setAttribute('data-fontsize', size);
     updateFontSizeButton(size);
@@ -69,7 +70,7 @@ function confirmFontSize() {
 function updateFontSizeButton(size) {
     const btn = document.querySelector('.fontSizeBtn-label');
     if (!btn) return;
-    const scales = { smallest: '16px', smaller: '18px', small: '19px', normal: '22px', large: '23px', larger: '25px', largest: '28px' };
+    const scales = { smallest: '16px', smaller: '18px', normal: '22px', larger: '25px', largest: '28px' };
     btn.style.fontSize = scales[size] || '22px';
 }
 

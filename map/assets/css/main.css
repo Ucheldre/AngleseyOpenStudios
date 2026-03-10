@@ -402,14 +402,12 @@ body.light-theme .fontSizeSlider::-moz-range-thumb {
 }
 
 /* ─── Font Size Scaling ─── */
-#infoPage { --font-scale: 1; }
+#infoPage { --font-scale: 1.35; }
 #infoPage[data-fontsize="smallest"] { --font-scale: 0.75; }
-#infoPage[data-fontsize="smaller"]  { --font-scale: 0.825; }
-#infoPage[data-fontsize="small"]    { --font-scale: 0.875; }
-#infoPage[data-fontsize="normal"]   { --font-scale: 1; }
-#infoPage[data-fontsize="large"]    { --font-scale: 1.15; }
-#infoPage[data-fontsize="larger"]   { --font-scale: 1.35; }
-#infoPage[data-fontsize="largest"]  { --font-scale: 1.6; }
+#infoPage[data-fontsize="smaller"]  { --font-scale: 1; }
+#infoPage[data-fontsize="normal"]   { --font-scale: 1.35; }
+#infoPage[data-fontsize="larger"]   { --font-scale: 1.6; }
+#infoPage[data-fontsize="largest"]  { --font-scale: 1.85; }
 
 /* ─── Theme Toggle Button ─── */
 .themeToggleBtn {
