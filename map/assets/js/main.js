@@ -536,9 +536,10 @@ function showHelpPage() {
 function openInfoPage(html) {
     const content = document.getElementById("infoPageContent");
     content.innerHTML = html;
-    content.scrollTop = 0;
     document.getElementById("infoPage").style.display = "block";
     document.getElementById("hideMap").style.display = "block";
+    // Reset scroll after the panel is visible so the element has layout
+    content.scrollTop = 0;
     initScrollButton();
     initCloseButtonDarkMode();
 }
