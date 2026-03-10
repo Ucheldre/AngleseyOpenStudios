@@ -1,5 +1,5 @@
 @import url('./theme.css');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 * {
 	user-select: none;
@@ -34,10 +34,10 @@ div.bg {
 	backdrop-filter: blur(7px) saturate(1.4) brightness(0.85);
 	-webkit-backdrop-filter: blur(7px) saturate(1.4) brightness(0.85);
 	box-shadow:
-		inset 0  80px 80px -40px var(--primary),
-		inset 0 -80px 80px -40px var(--secondary),
-		inset  80px 0 80px -40px var(--primary),
-		inset -80px 0 80px -40px var(--secondary);
+		inset 0  80px 80px -40px var(--primary-dark),
+		inset 0 -80px 80px -40px var(--secondary-dark),
+		inset  80px 0 80px -40px var(--primary-dark),
+		inset -80px 0 80px -40px var(--secondary-dark);
 	position: fixed;
 	inset: 0;
 }
@@ -46,7 +46,7 @@ div.bg {
 .hero-card {
 	position: relative;
 	z-index: 10;
-	padding: 2rem;
+	padding: 1.2rem 2rem;
 	width: 100%;
 	max-width: 100%;
 	display: flex;
@@ -59,9 +59,9 @@ div.bg {
 .hero-title {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
-	font-size: clamp(2.8rem, 7vw, 5rem);
+	font-size: clamp(3.2rem, 8vw, 5.5rem);
 	letter-spacing: 0.02em;
-	line-height: 1.2;
+	line-height: 1.15;
 	margin: 0 0 0.1em 0;
 	text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
 	text-align: center;
@@ -69,10 +69,10 @@ div.bg {
 
 .hero-subtitle {
 	font-family: 'Playfair Display', serif;
-	font-weight: 400;
+	font-weight: 600;
 	font-style: italic;
-	font-size: clamp(1.8rem, 4.5vw, 3rem);
-	opacity: 0.85;
+	font-size: clamp(2rem, 5vw, 3.4rem);
+	opacity: 0.85 !important;
 	margin: 0;
 	text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 	text-align: center;
@@ -80,27 +80,27 @@ div.bg {
 
 .hero-year {
 	font-family: 'Inter', sans-serif;
-	font-weight: 300;
-	font-size: clamp(1.4rem, 3vw, 2rem);
+	font-weight: 500;
+	font-size: clamp(1.6rem, 3.5vw, 2.4rem);
 	letter-spacing: 0.3em;
 	text-transform: uppercase;
-	opacity: 0.7;
-	margin: 0.3rem 0 0 0;
+	opacity: 0.8;
+	margin: 0.2rem 0 0 0;
 	text-align: center;
 }
 
 .divider {
-	width: 60px;
-	height: 2px;
+	width: 80px;
+	height: 5px;
 	background: linear-gradient(90deg, var(--primary-light), var(--secondary));
 	border: none;
-	margin: 1.2rem auto;
+	margin: 0.8rem auto;
 	border-radius: 2px;
 }
 
 /* ---------- logo ---------- */
 .hero-logo {
-	height: clamp(220px, 38vmin, 400px) !important;
+	height: clamp(300px, 36vmin, 400px) !important;
 	filter: drop-shadow(0 4px 24px rgba(16, 148, 138, 0.35));
 	transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
 	            filter 0.4s ease;
@@ -109,9 +109,8 @@ div.bg {
 }
 
 .hero-logo:hover {
-	transform: scale(1.06);
-	filter: drop-shadow(0 6px 32px rgba(16, 148, 138, 0.55))
-	        drop-shadow(0 0 60px rgba(208, 180, 134, 0.25));
+	filter: drop-shadow(28px 8px 20px color-mix(in srgb, var(--secondary) 85%, transparent))
+	        drop-shadow(-28px -8px 20px color-mix(in srgb, var(--primary) 85%, transparent));
 }
 
 @keyframes breathe {
@@ -153,18 +152,20 @@ div.bg {
 .cta-primary {
 	display: block;
 	font-family: 'Inter', sans-serif;
-	font-weight: 400;
-	font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+	font-weight: 600;
+	font-size: clamp(1.4rem, 2.8vw, 1.9rem);
 	letter-spacing: 0.03em;
-	opacity: 0.9;
+	opacity: 1;
 }
 
 .cta-secondary {
 	display: block;
-	margin-top: 0.4rem;
-	font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+	margin-top: 0.3rem;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	font-size: clamp(1.15rem, 2.2vw, 1.5rem);
 	font-style: italic;
-	opacity: 0.65;
+	opacity: 0.85;
 	letter-spacing: 0.02em;
 }
 
@@ -179,15 +180,13 @@ div.bg {
 .site-footer {
 	position: relative;
 	z-index: 10;
-	font-size: 0.8rem;
-	letter-spacing: 0.06em;
-	opacity: 0.5;
-	transition: opacity 0.3s;
-	padding-bottom: 1rem;
-}
-
-.site-footer:hover {
-	opacity: 0.8;
+	width: 100%;
+	font-size: 1.1rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	color: rgba(255, 255, 255, 1);
+	padding: 1rem 1rem;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* ---------- responsive ---------- */
