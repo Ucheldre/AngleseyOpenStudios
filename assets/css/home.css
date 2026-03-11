@@ -57,26 +57,46 @@ div.bg {
 }
 
 /* ---------- typography ---------- */
-.hero-title {
-	font-family: 'Playfair Display', serif;
-	font-weight: 700;
-	font-size: clamp(3.2rem, 8vw, 5.5rem);
-	letter-spacing: 0.02em;
-	line-height: 1.15;
+/* wrapper keeps a stable height so nothing jumps when text swaps */
+.hero-title-wrapper {
+	position: relative;
+	min-height: clamp(3.8rem, 9vw, 6.4rem);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0 0 0.1em 0;
-	text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
-	text-align: center;
+	perspective: 800px;
+	overflow: visible;
 }
 
-.hero-subtitle {
+.hero-title {
 	font-family: 'Playfair Display', serif;
-	font-weight: 600;
 	font-style: italic;
-	font-size: clamp(2rem, 5vw, 3.4rem);
-	opacity: 0.85 !important;
+	font-weight: 600;
+	font-size: clamp(2.6rem, 6.5vw, 4.2rem);
+	letter-spacing: 0.02em;
+	line-height: 1.15;
 	margin: 0;
-	text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+	text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
 	text-align: center;
+	will-change: transform, opacity;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	transition:
+		transform  0.7s cubic-bezier(0.4, 0, 0.2, 1),
+		opacity    0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- flip out (top-half disappears) --- */
+.hero-title.flip-out {
+	transform: rotateX(90deg) scale(0.95);
+	opacity: 0;
+}
+
+/* --- flip in (arrives from bottom-half) --- */
+.hero-title.flip-in {
+	transform: rotateX(-90deg) scale(0.95);
+	opacity: 0;
 }
 
 .hero-year {

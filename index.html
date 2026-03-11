@@ -30,12 +30,9 @@
         <div class="d-flex flex-grow-1 justify-content-center align-items-center">
             <div class="hero-card text-center animate__animated animate__fadeIn">
 
-                <p class="hero-title animate__animated animate__fadeInDown stagger-1">
-                    Anglesey Open Studios
-                </p>
-                <p class="hero-subtitle animate__animated animate__fadeInDown stagger-2">
-                    Stiwdios Agored Môn
-                </p>
+                <div class="hero-title-wrapper animate__animated animate__fadeInDown stagger-1">
+                    <p class="hero-title" id="heroTitle">Anglesey Open Studios</p>
+                </div>
                 <p class="hero-year animate__animated animate__fadeIn stagger-3" id="year"></p>
 
                 <hr class="divider animate__animated animate__fadeIn stagger-3">
@@ -49,8 +46,8 @@
                 <hr class="divider animate__animated animate__fadeIn stagger-4">
 
                 <div class="animate__animated animate__fadeInUp stagger-5">
-                    <span class="cta-primary">Click to explore the interactive map</span>
-                    <span class="cta-secondary">Cliciwch i ddefnyddio'r map rhyngweithiol</span>
+                    <span class="cta-primary">Cliciwch i ddefnyddio'r map rhyngweithiol</span>
+                    <span class="cta-secondary">Click to explore the interactive map</span>
                 </div>
 
             </div>
@@ -73,6 +70,35 @@
     document.getElementById('footerYear').textContent = y;
 
     document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // --- Hero title text switcher (3D flip) ---
+    (function () {
+        const el      = document.getElementById('heroTitle');
+        const texts   = ['Anglesey Open Studios', 'Stiwdios Agored Môn'];
+        let idx       = 0;
+        const FLIP    = 700; // ms – matches CSS transition duration
+
+        setTimeout(() => setInterval(() => {
+            const nextIdx = 1 - idx;
+
+            // 1) flip out
+            el.classList.add('flip-out');
+
+            setTimeout(() => {
+                // 2) swap text while hidden
+                idx = nextIdx;
+                el.textContent = texts[idx];
+
+                // 3) stage entrance position
+                el.classList.remove('flip-out');
+                el.classList.add('flip-in');
+                void el.offsetWidth; // force reflow
+
+                // 4) flip in
+                el.classList.remove('flip-in');
+            }, FLIP);
+        }, 5000), 5000);
+    })();
 
     easy_background("body", {
         slide: [
