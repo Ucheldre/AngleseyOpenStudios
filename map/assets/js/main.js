@@ -105,6 +105,196 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+/* ─── Map Theme Selector ─── */
+const MAP_THEMES = {
+    standard: {
+        name: 'Standard',
+        source: () => new ol.source.OSM({
+            attributions: [
+                'Maps © OpenStreetMap | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
+            ],
+        })
+    },
+    light: {
+        name: 'Light',
+        source: () => new ol.source.XYZ({
+            url: 'https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+            attributions: [
+                'Maps © CartoDB | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
+            ],
+        })
+    },
+    dark: {
+        name: 'Dark',
+        source: () => new ol.source.XYZ({
+            url: 'https://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+            attributions: [
+                'Maps © CartoDB | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
+            ],
+        })
+    },
+    satellite: {
+        name: 'Satellite',
+        source: () => new ol.source.XYZ({
+            url: 'https://mt{0-3}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+            attributions: [
+                'Maps © Google | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
+            ],
+        })
+    }
+};
+
+let currentMapTheme = 'standard';
+let mapBaseLayer = null;
+
+function initMapTheme() {
+    currentMapTheme = 'standard';
+    updateMapThemeUI();
+}
+
+function toggleMapThemePanel() {
+    const panel = document.getElementById('mapThemePanel');
+    const btn = document.querySelector('.mapThemeBtn');
+    const isOpen = panel.classList.contains('open');
+    if (isOpen) {
+        panel.classList.remove('open');
+    } else {
+        panel.classList.add('open');
+    }
+}
+
+function disableMapThemeButton() {
+    const btn = document.querySelector('.mapThemeBtn');
+    if (btn) {
+        btn.disabled = true;
+        btn.style.pointerEvents = 'none';
+        btn.style.opacity = '0.5';
+        btn.classList.add('disabled');
+    }
+}
+
+function enableMapThemeButton() {
+    const btn = document.querySelector('.mapThemeBtn');
+    if (btn) {
+        btn.disabled = false;
+        btn.style.pointerEvents = 'auto';
+        btn.style.opacity = '1';
+        btn.classList.remove('disabled');
+    }
+}
+
+function switchMapTheme(theme) {
+    if (!MAP_THEMES[theme]) {
+        console.warn('Unknown map theme:', theme);
+        return;
+    }
+    
+    currentMapTheme = theme;
+    
+    // Update the UI to show which theme is selected
+    updateMapThemeUI();
+    
+    // Switch the map layer if the map is ready
+    if (mapBaseLayer && map) {
+        const newSource = MAP_THEMES[theme].source();
+        mapBaseLayer.setSource(newSource);
+        toastr.info(`${MAP_THEMES[theme].name} theme applied`, 'Map Theme');
+    }
+    
+    // Close the panel
+    const panel = document.getElementById('mapThemePanel');
+    if (panel) panel.classList.remove('open');
+}
+
+function updateMapThemeUI() {
+    // Update button states
+    document.querySelectorAll('.mapThemeOption').forEach(btn => {
+        const theme = btn.getAttribute('data-theme');
+        if (theme === currentMapTheme) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+// Create map theme selector dynamically and add to document
+function createMapThemeSelector() {
+    // Create button
+    const btn = document.createElement('button');
+    btn.className = 'mapThemeBtn';
+    btn.setAttribute('aria-label', 'Change map theme');
+    btn.onclick = toggleMapThemePanel;
+    btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><path d="M12 1v6m6.16-1.86l-4.24 4.24m6.14 6.02v-6m-1.86-6.16l-4.24 4.24M1 12h6m-1.86 6.16l4.24-4.24M11 23v-6M4.16 20.84l4.24-4.24"/></svg><span>Map Themes</span>';
+    
+    // Create panel
+    const panel = document.createElement('div');
+    panel.className = 'mapThemePanel';
+    panel.id = 'mapThemePanel';
+    
+    // Panel header
+    const header = document.createElement('div');
+    header.className = 'mapThemePanel-header';
+    const title = document.createElement('span');
+    title.className = 'mapThemePanel-title';
+    title.textContent = 'Map Theme';
+    header.appendChild(title);
+    
+    // Panel options
+    const options = document.createElement('div');
+    options.className = 'mapThemePanel-options';
+    
+    const themeConfigs = [
+        { theme: 'standard', emoji: '📍', label: 'Standard' },
+        { theme: 'light', emoji: '☀️', label: 'Light' },
+        { theme: 'dark', emoji: '🌙', label: 'Dark' },
+        { theme: 'satellite', emoji: '🛰️', label: 'Satellite' }
+    ];
+    
+    themeConfigs.forEach(config => {
+        const optBtn = document.createElement('button');
+        optBtn.className = 'mapThemeOption';
+        optBtn.setAttribute('data-theme', config.theme);
+        optBtn.setAttribute('aria-label', `${config.label} map theme`);
+        optBtn.onclick = () => switchMapTheme(config.theme);
+        
+        const icon = document.createElement('div');
+        icon.className = 'mapThemeOption-icon';
+        icon.textContent = config.emoji;
+        
+        const label = document.createElement('div');
+        label.className = 'mapThemeOption-label';
+        label.textContent = config.label;
+        
+        optBtn.appendChild(icon);
+        optBtn.appendChild(label);
+        options.appendChild(optBtn);
+    });
+    
+    panel.appendChild(header);
+    panel.appendChild(options);
+    
+    // Add to document
+    document.body.appendChild(btn);
+    document.body.appendChild(panel);
+}
+
+// Create theme selector when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    createMapThemeSelector();
+});
+
+// Close theme panel when clicking outside
+document.addEventListener('click', function(e) {
+    const panel = document.getElementById('mapThemePanel');
+    const btn = document.querySelector('.mapThemeBtn');
+    if (!panel || !panel.classList.contains('open')) return;
+    if (panel.contains(e.target) || btn.contains(e.target)) return;
+    panel.classList.remove('open');
+});
+
+
+
 // onResizeProc removed — reloading on every resize caused severe sluggishness.
 // The map view auto-adjusts via OpenLayers' built-in resize handling.
 
@@ -163,6 +353,14 @@ var interactions = new ol.interaction.defaults({
     pinchRotate: true,
 });
 
+// Initialize the map theme before creating the map
+initMapTheme();
+
+// Create base map layer with current theme
+mapBaseLayer = new ol.layer.Tile({
+    source: MAP_THEMES[currentMapTheme].source()
+});
+
 var map = new ol.Map({
     target: 'map',
     controls: ol.control.defaults({
@@ -177,15 +375,7 @@ var map = new ol.Map({
         new ol.control.ScaleLine()
     ]),
     interactions: interactions,
-    layers: [
-        new ol.layer.Tile({
-            source: new ol.source.OSM({
-                attributions: [
-                    'Maps © OpenStreetMap | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
-                ],
-            })
-        })
-    ],
+    layers: [mapBaseLayer],
     view: new ol.View({
         center: ol.proj.fromLonLat([-4.3808, 53.2845]),
         zoom: 11,
@@ -542,6 +732,7 @@ function openInfoPage(html) {
     content.scrollTop = 0;
     initScrollButton();
     initCloseButtonDarkMode();
+    disableMapThemeButton();
 }
 
 /* ─── Close-button dark mode when overlapping the map image ─── */
@@ -635,6 +826,7 @@ closeInfoPage = function() {
     document.querySelector('.themeToggleBtn').classList.remove('dark-mode');
     document.querySelector('.fontSizeBtn').classList.remove('dark-mode');
     document.getElementById('fontSizePanel').classList.remove('open');
+    enableMapThemeButton();
 }
 
 toastr.options = {

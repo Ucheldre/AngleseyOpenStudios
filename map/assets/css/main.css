@@ -243,7 +243,7 @@ body.light-theme .fontSizeBtn:hover {
 .fontSizePanel {
     position: absolute;
     z-index: 250;
-    top: 154px;
+    top: 224px;
     left: 14px;
     display: none;
     flex-direction: column;
@@ -518,4 +518,174 @@ div[class="ol-overlay-container ol-selectable"] div {
     100% {
         opacity: 1;
     }
+}
+
+/* ─── Map Theme Selector Button ─── */
+.mapThemeBtn {
+    position: fixed;
+    z-index: 200;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    background: linear-gradient(135deg, rgba(181, 181, 181, 0.15) 0%, rgba(100, 100, 100, 0.1) 100%);
+    border: 1.5px solid rgba(50, 150, 100, 0.35);
+    border-radius: 32px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.3px;
+}
+
+.mapThemeBtn:hover {
+    background: linear-gradient(135deg, rgba(181, 181, 181, 0.25) 0%, rgba(100, 100, 100, 0.15) 100%);
+    border-color: rgba(100, 100, 100, 0.35);
+    color: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 6px 24px rgba(83, 83, 83, 0.25);
+    transform: translateX(-50%) translateY(-2px);
+}
+
+.mapThemeBtn:active {
+    transform: translateX(-50%) translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mapThemeBtn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+
+
+/* ─── Map Theme Panel ─── */
+.mapThemePanel {
+    position: fixed;
+    z-index: 250;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 20px 24px;
+    min-width: 340px;
+    background: linear-gradient(180deg, rgba(250, 250, 252, 0.96) 0%, rgba(245, 245, 248, 0.98) 100%);
+    border: 1.5px solid rgba(50, 150, 100, 0.2);
+    border-radius: 24px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    animation: themePanelIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mapThemePanel.open {
+    display: flex;
+}
+
+@keyframes themePanelIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.mapThemePanel-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(50, 150, 100, 0.15);
+}
+
+.mapThemePanel-title {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: 0.4px;
+}
+
+.mapThemePanel-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.mapThemeOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 10px;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1.5px solid rgba(50, 150, 100, 0.15);
+    border-radius: 14px;
+    color: rgba(0, 0, 0, 0.55);
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.mapThemeOption:hover {
+    background: rgba(50, 150, 100, 0.1);
+    border-color: rgba(50, 150, 100, 0.3);
+    color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(50, 150, 100, 0.15);
+}
+
+.mapThemeOption:active {
+    transform: translateY(-1px);
+}
+
+.mapThemeOption.active {
+    background: linear-gradient(135deg, rgba(50, 150, 100, 0.2) 0%, rgba(40, 130, 90, 0.12) 100%);
+    border-color: rgba(50, 150, 100, 0.4);
+    color: #2a8060;
+    box-shadow: 0 0 16px rgba(50, 150, 100, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.mapThemeOption-icon {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.mapThemeOption:hover .mapThemeOption-icon {
+    transform: scale(1.1);
+}
+
+.mapThemeOption-label {
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+
+
+
+
+.mapThemeBtn:disabled,
+.mapThemeBtn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
