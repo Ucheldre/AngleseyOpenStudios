@@ -249,7 +249,7 @@ function createMapThemeSelector() {
     
     const themeConfigs = [
         { theme: 'standard', emoji: '📍', label: 'Standard' },
-        { theme: 'light', emoji: '🪙', label: 'Monochrome' },
+        { theme: 'light', emoji: '⚫️', label: 'Monochrome' },
         // { theme: 'dark', emoji: '🌙', label: 'Dark' },
         { theme: 'satellite', emoji: '🛰️', label: 'Satellite' }
     ];
