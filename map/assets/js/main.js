@@ -110,13 +110,16 @@ const MAP_THEMES = {
     standard: {
         name: 'Standard',
         source: () => new ol.source.OSM({
+            url: 'https://mt{0-3}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
             attributions: [
-                'Maps © OpenStreetMap | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
+                // 'Maps © OpenStreetMap',
+                'Maps © Google',
+                ' | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
             ],
         })
     },
     light: {
-        name: 'Light',
+        name: 'Monochrome',
         source: () => new ol.source.XYZ({
             url: 'https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
             attributions: [
@@ -136,7 +139,7 @@ const MAP_THEMES = {
     satellite: {
         name: 'Satellite',
         source: () => new ol.source.XYZ({
-            url: 'https://mt{0-3}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+            url: 'https://mt{0-3}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
             attributions: [
                 'Maps © Google | Project © Canolfan Ucheldre Centre - Anglesey Arts Forum',
             ],
@@ -246,8 +249,8 @@ function createMapThemeSelector() {
     
     const themeConfigs = [
         { theme: 'standard', emoji: '📍', label: 'Standard' },
-        { theme: 'light', emoji: '☀️', label: 'Light' },
-        { theme: 'dark', emoji: '🌙', label: 'Dark' },
+        { theme: 'light', emoji: '🪙', label: 'Monochrome' },
+        // { theme: 'dark', emoji: '🌙', label: 'Dark' },
         { theme: 'satellite', emoji: '🛰️', label: 'Satellite' }
     ];
     
